@@ -1,0 +1,215 @@
+{% extends "layouts/service/base.html" %}
+
+{% block pageTitle %}
+  Fee register prototype
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Fee register prototype
+        <span class="govuk-caption-xl">Version 3</span>
+      </h1>{{releaseVersion | log }}
+
+        <a href="/signin" role="button" class="govuk-button govuk-button--start">
+          Start prototype
+        </a>
+
+
+
+        <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                All pages
+              </span>
+            </summary>
+
+            <div class="govuk-details__text">
+
+              <li><a href="/sign-in">
+                Sign in
+              </a></li>
+
+              <li><a href="/all-fees">
+                All fees
+              </a></li>
+
+              <li><a href="/draft-fees">
+                Draft fees
+              </a></li>
+
+              <li><a href="/create-a-fee">
+                Create a fee
+              </a></li>
+
+              <li><a href="/upload-fee">
+                Upload a fee
+              </a></li>
+
+              <li><a href="/reference-data">
+                Reference data
+              </a></li>
+
+              <li><a href="/fee-created">
+                Fee created
+              </a></li>
+
+              <li><a href="/fee0001-summary">
+                Fee page summary (FEE0001)
+              </a></li>
+
+              <li><a href="/fee0001-previous-version">
+                Fee page previous versions (FEE0001)
+              </a></li>
+
+              <li><a href="/fee0001-edit">
+                Fee page edit fee version (FEE0001)
+              </a></li>
+
+
+
+              <br>
+
+      </details>
+
+
+        <p class="govuk-body govuk-!-f-19">In development </p>
+        <p class="govuk-body govuk-!-f-19"> 4th July 2018 - present 2018, Payments sprint 40 - present</p>
+
+        <div class="govuk-body govuk-!-f-19"><strong class="govuk-body govuk-!-w-bold">What's new:</strong>
+          <li>Updated reform header, 1st navigation and 2nd navigation</li>
+          <li>Search and filter fees based on fee code</li>
+          <li>In fee view summary mocked up</li>
+          <li>Editing feilds to create a new version of a fee</li>
+        </div>
+
+      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+
+      <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Previous prototype versions
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              <ul class="govuk-list govuk-list--bullet">
+
+                <li><a href="https://fee-register-prototype-v2.herokuapp.com/index" target="_blank">Version 2</a></li>
+                <ul class="govuk-list govuk-list--bullet"> <p class="govuk-body govuk-!-f-19"> 9th May - 4th July 2018, Payments sprint 36, 37, 38, 39
+                  <div class="govuk-body govuk-!-f-19"><strong class="govuk-body govuk-!-w-bold">What's new:</strong>
+                    <li>Alignment to reform header, 1st navigation and 2nd navigation</li>
+                    <li>Search fees based on fee code</li>
+                    <li>Label elements on create a fee updated</li>
+                    <li>Fee code inserted at top of create a fee page</li>
+                    </div>
+                </ul>
+
+                      <li><a href="https://fee-register-prototype-v1.herokuapp.com/index" target="_blank">Version 1</a></li>
+                      <ul class="govuk-list govuk-list--bullet"> <p class="govuk-body govuk-!-f-19"> 25th April - 9th May 2018, Payments sprint 35</p>
+                        <div class="govuk-body govuk-!-f-19"><strong class="govuk-body govuk-!-w-bold">What's new:</strong>
+                          <li>Initial design mock up</li>
+                          </div>
+                      </ul>
+
+              </ul>
+            </div>
+          </details>
+
+
+      <br>
+
+
+    </div>
+
+            <div class="govuk-grid-column-one-third">
+
+          <div class="submenu"></div>
+          <br>
+          <h2 class="govuk-heading-m">
+            Controls
+          </h2>
+
+          <details class="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Set parameters
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <p> No parameters to set </p>
+        </div>
+        </details>
+
+    <nav role="navigation" aria-labelledby="subsection-title">
+      <ul class="govuk-list govuk-body-s">
+        <li>
+          <a class="govuk-body govuk-!-f-19" href="/prototype-admin/clear-data">
+            Clear session
+          </a>
+        </li>
+
+        <br>
+
+
+        <div class="submenu"></div>
+        <br>
+        <h2 class="govuk-heading-m">
+          Fees and payments prototypes
+        </h2>
+
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-body-s">
+            <li>
+              <a class="govuk-body govuk-!-f-19" href="https://manage-payments-prototype.herokuapp.com/">
+                Manage payments to HMCTS
+              </a>
+            </li>
+            <li>
+              <a class="govuk-body govuk-!-f-19" href="https://fee-register-prototype.herokuapp.com/">
+                Fee register
+              </a>
+            </li>
+            <li>
+              <a class="govuk-body govuk-!-f-19" href="https://payment-by-account-prototype.herokuapp.com/">
+                Payment by account
+              </a>
+            </li>
+            <li>
+              <a class="govuk-body govuk-!-f-19" href="https://payments-ui-prototype.herokuapp.com/">
+                Payments UI
+              </a>
+            </li>
+            <li>
+              <a class="govuk-body govuk-!-f-19" href="https://caseworker-prototype.herokuapp.com/">
+                Caseworker
+              </a>
+            </li>
+            <li>
+              <a class="govuk-body govuk-!-f-19" href="https://service-pay-screens-prototype.herokuapp.com/">
+                In service payment screens
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+          <!-- <span class="hod-printer side-space icon-medium"></span>
+
+
+        <button href="/index-test"  class="btn"><i class="fa fa-search"></i></button> -->
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

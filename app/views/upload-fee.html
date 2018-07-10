@@ -1,0 +1,48 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Upload a fee
+{% endblock %}
+
+{% block content %}
+<br>
+
+  <div class="jui-width-container">
+
+
+
+            <main role="main" class="govuk-main-wrapper">
+
+
+              <h1 class="govuk-heading-xl">Upload a fee</h1>
+
+
+              <div class="govuk-form-group">
+                <span id="dob-hint" class="govuk-hint">
+                    File must be a CSV file
+                  </span>
+
+              <label class="govuk-label" for="file-upload-1">
+                Upload a file
+              </label>
+              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+
+            <button href="/" role="button" class="govuk-button">
+                Save and continue
+              </button>
+
+
+            </main>
+
+
+
+
+
+
+
+    </div>
+
+
+
+{% endblock %}

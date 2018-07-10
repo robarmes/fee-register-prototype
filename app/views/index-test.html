@@ -1,0 +1,146 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<br>
+
+  <div class="jui-width-container">
+
+
+                <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <p>govuk-grid-column-one-third - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis, pharetra neque at, convallis urna. Nullam blandit laoreet maximus.
+                  Sed feugiat ullamcorper tortor. Cras nec luctus magna. Vestibulum id sollicitudin erat. Cras rutrum pharetra nulla, eget sagittis orci condimentum id.</p>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+                <p>govuk-grid-column-one-half - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis, pharetra neque at, convallis urna. Nullam blandit laoreet maximus.
+                  Sed feugiat ullamcorper tortor. Cras nec luctus magna. Vestibulum id sollicitudin erat. Cras rutrum pharetra nulla, eget sagittis orci condimentum id.</p>
+              </div>
+              <div class="govuk-grid-column-one-half">
+                <p>govuk-grid-column-one-half - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis, pharetra neque at, convallis urna. Nullam blandit laoreet maximus.
+                  Sed feugiat ullamcorper tortor. Cras nec luctus magna. Vestibulum id sollicitudin erat. Cras rutrum pharetra nulla, eget sagittis orci condimentum id.</p>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <p>govuk-grid-column-one-third - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis, pharetra neque at, convallis urna. Nullam blandit laoreet maximus.
+                  Sed feugiat ullamcorper tortor. Cras nec luctus magna. Vestibulum id sollicitudin erat. Cras rutrum pharetra nulla, eget sagittis orci condimentum id.</p>
+              </div>
+              <div class="govuk-grid-column-one-third">
+                <p>govuk-grid-column-one-third - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis. </p>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-third">
+                <p>govuk-grid-column-one-third - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis. </p>
+              </div>
+              <div class="govuk-grid-column-two-thirds">
+                <p>govuk-grid-column-two-thirds - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus. Vivamus in ipsum iaculis, pharetra neque at, convallis urna. Nullam blandit laoreet maximus.
+                  Sed feugiat ullamcorper tortor. Cras nec luctus magna. Vestibulum id sollicitudin erat. Cras rutrum pharetra nulla, eget sagittis orci condimentum id.</p>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-quarter">
+                <p>govuk-grid-column-one-quarter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus.</p>
+              </div>
+              <div class="govuk-grid-column-one-quarter">
+                <p>govuk-grid-column-one-quarter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus.</p>
+              </div>
+              <div class="govuk-grid-column-one-quarter">
+                <p>govuk-grid-column-one-quarter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus.</p>
+              </div>
+              <div class="govuk-grid-column-one-quarter">
+                <p>govuk-grid-column-one-quarter - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Mauris eleifend venenatis turpis, non eleifend est laoreet in.
+                  Integer porta erat metus.</p>
+              </div>
+            </div>
+
+            <a href="/index" role="button" class="govuk-button">
+              home
+            </a>
+
+            <a href="/index-fee-test" role="button" class="govuk-button">
+              In a fee
+            </a>
+
+            <main role="main" class="govuk-main-wrapper">
+
+              {% if success %}
+                {{ juiAlert(
+                  {
+                    "icon": true,
+                    "iconClasses": "jui-alert__icon--success",
+                    "iconText": "Success!",
+                    "alertText": success,
+                    "alertClasses": "jui-alert--success"
+                  })
+                }}
+              {% endif %}
+
+              <h1 class="govuk-heading-l">Dashboard</h1>
+
+              {{ govukTable({
+                  "classes": "",
+                  "caption": "Your cases",
+                  "captionClasses": "govuk-heading-m",
+                  "firstCellIsHeader": true,
+                  "head": [
+                    {"text": "Case number"},
+                    {"text": "Parties"},
+                    {"text": "Type"},
+                    {"text": "Status"},
+                    {"text": "Start date"},
+                    {"text": "Date of last event"}
+                  ],
+                  "rows": caseList
+                }) }}
+
+                {{ govukButton({
+                  "text": "Get new case",
+                  "href": "./get-new-case"
+                }) }}
+
+            </main>
+
+
+
+
+
+
+
+    </div>
+
+
+
+{% endblock %}

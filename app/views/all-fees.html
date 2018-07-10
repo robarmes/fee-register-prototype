@@ -1,0 +1,270 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  All fees
+{% endblock %}
+
+{% block content %}
+<br>
+
+  <div class="jui-width-container">
+
+      <main role="main" class="govuk-main-wrapper">
+                <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+                <h1 class="govuk-heading-xl">All fees</h1>
+              </div>
+            </div>
+
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-one-half">
+
+
+                  <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a fee"> -->
+
+                  <form class="example">
+                    <span id="nationality-hint" class="govuk-hint">
+                        Search for a fee
+                      </span>
+                      <input type="text" id="myInput" onkeyup="myFunction()" placeholder="">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                  </form>
+
+
+
+
+
+
+                  <br>
+                  <br>
+
+              </div>
+            </div>
+
+
+                <div class="govuk-grid-row">
+
+                  <div class="govuk-grid-column-one-quarter">
+                  <h2 class="govuk-heading-m">Filter by</h2>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="sort">
+                      Fee type
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="published" selected >All</option>
+                      <option value="updated">Fixed</option>
+                      <option value="views">Ranged</option>
+                    </select>
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="sort">
+                      Amount type
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="published" selected >All</option>
+                      <option value="updated">Flat</option>
+                      <option value="views">Percentage</option>
+                      <option value="views">Volume</option>
+                    </select>
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="sort">
+                      Jurisdiction 1
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="published" selected >All</option>
+                      <option value="updated">Civil</option>
+                      <option value="views">Family</option>
+                      <option value="views">Tribunal</option>
+                    </select>
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="sort">
+                      Jurisdiction 2
+                    </label>
+                    <select class="govuk-select" id="sort" name="sort">
+                      <option value="published" selected >All</option>
+                      <option value="updated">County court</option>
+                      <option value="views">High court</option>
+                      <option value="views">Magistrates court</option>
+                      <option value="updated">Court of protection</option>
+                      <option value="views">Family court</option>
+                      <option value="views">Probate registry</option>
+                      <option value="updated">Gambling tribunal</option>
+                      <option value="views">Gender recognition panel</option>
+                      <option value="views">Immigration and asylum chamber</option>
+                      <option value="updated">Property chamber</option>
+                      <option value="views">Tax chamber</option>
+                      <option value="views">Upper tribunal immigration and asylum chamber</option>
+                      <option value="updated">Upper tribunal lands chamber</option>
+
+                    </select>
+                  </div>
+
+
+
+
+                </div>
+                  <div class="govuk-grid-column-three-quarters">
+                    <h2 class="govuk-heading-m">Results</h2>
+                    <p>7 fees</p>
+                    <table id="myTable">
+                      <tr class="header">
+                        <th>Code</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                        <th>Amount type</th>
+                        <th>Type value</th>
+                        <th>Jurisdiction 1</th>
+                        <th>Jurisdiction 2</th>
+                        <th>Service</th>
+                        <th>Event</th>
+                        <th>Channel</th>
+                        <th>Version</th>
+                      </tr>
+
+                      <tbody class="govuk-table__body">
+                      <tr>
+                        <td class="govuk-table__cell"><a href="/fee0001-summary">FEE0001<a/></td>
+                        <td class="govuk-table__cell">Filing an application for a divorce</td>
+                        <td class="govuk-table__cell">Fixed</td>
+                        <td class="govuk-table__cell">Flat</td>
+                        <td class="govuk-table__cell">£550.00</td>
+                        <td>Family</td>
+                        <td>Family court</td>
+                        <td>Divorce</td>
+                        <td>Issue</td>
+                        <td>Defult</td>
+                        <td>4</td>
+                      </tr>
+
+                      <tr>
+                        <td><a href="">FEE0002<a/></td>
+                          <td >Additional copies of the grant representation</td>
+                          <td >Fixed</td>
+                          <td >Volume</td>
+                          <td >£0.5</td>
+                          <td >Family</td>
+                          <td >Probate registry</td>
+                          <td >Probate</td>
+                          <td >Copies</td>
+                          <td >Defult</td>
+                          <td >3</td>
+                      </tr>
+
+                      <tr>
+                        <td><a href="">FEE0003<a/></td>
+                        <td>Recovery of Land</td>
+                        <td>Fixed</td>
+                        <td>Flat</td>
+                        <td>£480.00</td>
+                        <td>Civil</td>
+                        <td>High court</td>
+                        <td>Possession claim</td>
+                        <td>Issue</td>
+                        <td>Defult</td>
+                        <td>3</td>
+                      </tr>
+
+                      <tr>
+                        <td><a href="">FEE0004<a/></td>
+                        <td>Recovery of Land</td>
+                        <td>Fixed</td>
+                        <td>Flat</td>
+                        <td>£355.00</td>
+                        <td>Civil</td>
+                        <td>County court</td>
+                        <td>Possession claim</td>
+                        <td>Issue</td>
+                        <td>Defult</td>
+                        <td>4</td>
+                      </tr>
+
+                      <tr>
+                        <td><a href="">FEE0005<a/></td>
+                        <td>Recovery of Land - online</td>
+                        <td>Fixed</td>
+                        <td>Flat</td>
+                        <td>£325.00</td>
+                        <td>Civil</td>
+                        <td>County court</td>
+                        <td>Possession claim</td>
+                        <td>Issue</td>
+                        <td>Defult</td>
+                        <td>4</td>
+                      </tr>
+
+                      <tr>
+                        <td><a href="">FEE0006<a/></td>
+                        <td>Where the party filing the request is legally aided</td>
+                        <td>Fixed</td>
+                        <td>Flat</td>
+                        <td>£200.00</td>
+                        <td>Family</td>
+                        <td>County court</td>
+                        <td>General</td>
+                        <td>Cost assessment</td>
+                        <td>Defult</td>
+                        <td>3</td>
+                      </tr>
+
+                      <tr>
+                        <td><a href="">FEE0007<a/></td>
+                        <td>Where the party filing the request is legally aided</td>
+                        <td>Fixed</td>
+                        <td>Flat</td>
+                        <td>£220.00</td>
+                        <td>Civil</td>
+                        <td>Probate registry</td>
+                        <td>Probate</td>
+                        <td>Cost assessment</td>
+                        <td>Defult</td>
+                        <td>4</td>
+                      </tr>
+
+                      </tbody>
+
+                    </table>
+                <br>
+                <br>
+              </div>
+            </div>
+
+
+
+
+
+
+    </main>
+
+          </div>
+
+
+    {% endblock %} {% block page_scripts %}
+    <script>
+    function myFunction() {
+      // Declare variables
+      var input, filter, table, tr, td, i;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+
+      // Loop through all table rows, and hide those who don't match the search query
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+    </script>
+    {% endblock %}

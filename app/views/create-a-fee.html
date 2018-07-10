@@ -1,0 +1,399 @@
+conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Create a fee
+{% endblock %}
+
+{% block content %}
+<br>
+
+  <div class="jui-width-container">
+
+    <main role="main" class="govuk-main-wrapper">
+
+
+                <div class="govuk-grid-row">
+              <div class="govuk-grid-column-full">
+
+                <h1 class="govuk-heading-xl">Create a fee</h1>
+
+
+                <div class="govuk-inset-text">
+                  Fee code:
+                  <br>
+                  <strong>FEE0089</strong>
+                </div>
+
+                <div class="govuk-grid-row">
+                  <div class="govuk-grid-column-one-quarter">
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                      Natural account code (optional)
+                    </label>
+                    <span id="email-hint" class="govuk-hint">
+
+                    </span>
+                    <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+                  </div>
+
+                </div>
+                </div>
+
+                <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-third">
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="more-detail">
+                      Description
+                    </label>
+                    <span id="more-detail-hint" class="govuk-hint">
+
+                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                  </div>
+
+                </div>
+                </div>
+
+              <div class="govuk-grid-row">
+                <div class="govuk-grid-column-one-quarter">
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                      From date
+                    </label>
+                    <span id="email-hint" class="govuk-hint">
+
+                    </span>
+                    <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+                  </div>
+
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="email">
+                    To date (optional)
+                    </label>
+                    <span id="email-hint" class="govuk-hint">
+
+                    </span>
+                    <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+                  </div>
+
+                  <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                          <h1 class="govuk-fieldset__heading">
+                            Fee Type
+                          </h1>
+                        </legend>
+                        <div class="govuk-radios" data-module="radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="fee-type-conditional-1" name="fee-type" type="radio" value="email" data-aria-controls="conditional-fee-type-conditional-1">
+                            <label class="govuk-label govuk-radios__label" for="fee-type-conditional-1">
+                            Fixed
+                          </label>
+                          </div>
+
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="fee-type-conditional-2" name="fee-type" type="radio" value="phone" data-aria-controls="conditional-fee-type-conditional-2">
+                            <label class="govuk-label govuk-radios__label" for="fee-type-conditional-2">
+                            Ranged
+                          </label>
+                          </div>
+                          <div class="govuk-radios__conditional" id="conditional-fee-type-conditional-2">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="for-more-than">
+                                From more than
+                              </label>
+                              <input class="govuk-input" id="for-more-than" name="for-more-than" type="text">
+                            </div>
+
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="up-to">
+                                  Up to (optional)
+                                </label>
+                              <input class="govuk-input" id="up-to" name="up-to" type="text">
+                            </div>
+
+                            <div class="govuk-form-group">
+                                <fieldset class="govuk-fieldset">
+                                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                    <h1 class="govuk-fieldset__heading">
+                                      Ranged units
+                                    </h1>
+                                  </legend>
+                                  <div class="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="where-do-you-live-1" name="ranged-units" type="radio" value="england">
+                                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                                      GBP
+                                    </label>
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                      <input class="govuk-radios__input" id="where-do-you-live-2" name="ranged-units" type="radio" value="scotland">
+                                      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                      Volume
+                                    </label>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+
+                          </div>
+
+                        </div>
+                      </fieldset>
+                    </div>
+
+
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                          <h1 class="govuk-fieldset__heading">
+                            Amount Type
+                          </h1>
+                        </legend>
+                        <div class="govuk-radios" data-module="radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-contacted-conditional-1" name="amount-type" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                            Flat
+                          </label>
+                          </div>
+                          <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="contact-by-email">
+                        Amount (£)
+                      </label>
+                              <input class="govuk-input" id="contact-by-email" name="contact-by-email" type="text">
+                            </div>
+
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                            Percentage
+                          </label>
+                          </div>
+                          <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="contact-by-phone">
+                        Percentage %
+                      </label>
+                              <input class="govuk-input" id="contact-by-phone" name="contact-by-phone" type="text">
+                            </div>
+
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="how-contacted-conditional-3" name="amount-type" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3">
+                            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                            Volume
+                          </label>
+                          </div>
+                          <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="contact-by-text">
+                        Amount (£)
+                      </label>
+                              <input class="govuk-input" id="contact-by-text" name="contact-by-text" type="text">
+                            </div>
+
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+
+                </div>
+              </div>
+
+
+                <div class="govuk-grid-row">
+                      <div class="govuk-grid-column-one-third">
+
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="select-1">
+                      Applicant
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">Personal</option>
+                        <option value="2">All</option>
+                        <option value="3">Professional</option>
+                      </select>
+                </div>
+
+                <div class="govuk-form-group"><label class="govuk-label" for="select-1">
+                      Jurisdiction 1
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">Civil</option>
+                        <option value="2">Family</option>
+                        <option value="3">Tribunal</option>
+                      </select>
+                </div>
+
+                <div class="govuk-form-group"><label class="govuk-label" for="select-1">
+                      Jurisdiction 2
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">County court</option>
+                        <option value="2">High court</option>
+                        <option value="3">Magistrates court</option>
+                        <option value="4">Court of protection</option>
+                        <option value="5">Family court</option>
+                        <option value="6">Probate registry</option>
+                        <option value="7">Gambling tribunal</option>
+                        <option value="8">Gender recognition panel</option>
+                        <option value="9">Immigration and asylum chamber</option>
+                        <option value="10">Property chamber</option>
+                        <option value="11">Tax chamber</option>
+                        <option value="12">Upper tribunal immigration and asylum chamber</option>
+                        <option value="13">Upper tribunal lands chamber</option>
+                      </select>
+                </div>
+
+                <div class="govuk-form-group"><label class="govuk-label" for="select-1">
+                      Service
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">Civil money claims</option>
+                        <option value="2">Possession claim</option>
+                        <option value="3">Insolvency</option>
+                        <option value="4">Private law</option>
+                        <option value="5">Public law</option>
+                        <option value="6">Divorce</option>
+                        <option value="7">Adoption</option>
+                        <option value="8">Gambling</option>
+                        <option value="9">Gender recognition</option>
+                        <option value="10">Immigration and asylum</option>
+                        <option value="11">Property</option>
+                        <option value="12">Tax</option>
+                        <option value="13">Probate</option>
+                        <option value="14">General</option>
+                        <option value="15">Magistrates</option>
+                      </select>
+                </div>
+
+                <div class="govuk-form-group"><label class="govuk-label" for="select-1">
+                      Channel
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">Online</option>
+                        <option value="2">Bluk</option>
+                        <option value="3">Defult</option>
+                      </select>
+                </div>
+
+                <div class="govuk-form-group"><label class="govuk-label" for="select-1">
+                      Event
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">Enforcement</option>
+                        <option value="2">Appeal</option>
+                        <option value="3">Search</option>
+                        <option value="4">Issue</option>
+                        <option value="5">General application</option>
+                        <option value="6">Copies</option>
+                        <option value="7">Hearing</option>
+                        <option value="8">Miscellaneous</option>
+                        <option value="9">Cost assessment</option>
+                      </select>
+                </div>
+
+                <div class="govuk-form-group"><label class="govuk-label" for="select-1">
+                      Direction
+                    </label>
+                  <select class="govuk-select" id="select-1" name="select-1">
+                        <option value="0"selected>Select</option>
+                        <option value="1">Cost recovery</option>
+                        <option value="2">Enhanced</option>
+                        <option value="3">Licence</option>
+                        <option value="4">Partial cost recovery</option>
+                        <option value="5">Pre cost recovery</option>
+                        <option value="6">Reduced churn</option>
+                        <option value="7">Simplified</option>
+                      </select>
+                </div>
+
+            </div>
+          </div>
+
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-quarter">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                Fee Order Name (optional)
+              </label>
+              <span id="email-hint" class="govuk-hint">
+
+              </span>
+              <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                Statutory Instrument (optional)
+              </label>
+              <span id="email-hint" class="govuk-hint">
+
+              </span>
+              <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="email">
+                SI REF ID (optional)
+              </label>
+              <span id="email-hint" class="govuk-hint">
+
+              </span>
+              <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+            </div>
+
+              <a href="/fee-created" role="button" class="govuk-button">
+                Save and continue
+              </a>
+
+              <br>
+
+              <!-- <a class="govuk-body govuk-!-font-size-19" href="/fee-created" >Save and exit</a> -->
+
+              <br>
+              <br>
+              <br>
+
+          </div>
+          </div>
+
+
+
+
+
+
+
+              </div>
+            </div>
+
+
+
+
+
+
+    </main>
+
+
+    </div>
+
+
+
+
+
+  {% endblock %}
