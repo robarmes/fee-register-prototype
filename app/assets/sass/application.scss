@@ -305,3 +305,84 @@ mark.comment {
 .black-text {
   color: black;
 }
+
+//SECONDARY NAV - DESIGN SYSTEM STYLE
+
+.app-c-navigation {
+	padding-right: 15px;
+	padding-left: 0px;
+	background-color: #fff;
+	font-family: "nta", Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 20px
+  border-bottom: 1px solid #bfc1c3;
+}
+
+@media print {
+.app-c-navigation {
+	font-family: sans-serif
+}
+}
+
+@media (min-width: 40.0625em) {
+.app-c-navigation {
+	font-size: 19px;
+	line-height: 25px
+}
+}
+
+@media print {
+.app-c-navigation {
+	font-size: 14pt;
+	line-height: 1.15
+}
+}
+
+@media (max-width: 40.0525em) {
+.app-c-navigation {
+
+}
+}
+.app-c-navigation__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.app-c-navigation__list>li {
+	box-sizing: border-box;
+	height: 53px;
+  margin-right: 25px;
+	float: left;
+	line-height: 53px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.app-c-navigation__list>li:hover {
+	border-bottom: 4px solid #2b8cc4;
+
+}
+.app-c-navigation__list>li.app-c-navigation--current-page {
+	border-bottom: 4px solid #005ea5 !important;
+}
+.app-c-navigation__list>li.app-c-navigation--current-page a:hover {
+	color: #005ea5;
+}
+.app-c-navigation__list>li a {
+	font-weight: 700;
+	display: block;
+	padding: 0px 5px 0px 0px;
+	color: #000;
+	text-decoration: none;
+}
+.app-c-navigation__list>li a:visited {
+	color: #005ea5;
+}
+.app-c-navigation__list>li a:hover, .app-c-navigation__list>li a:focus {
+	color: #005ea5;
+	background-color: inherit;
+}
+
+//END
