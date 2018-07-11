@@ -228,3 +228,80 @@ mark.comment {
 }
 
 //END
+
+
+//DRAFT FEE SUMBISSION
+
+/* The alert message box */
+.delete-alert {
+    padding: 20px;
+    background-color: #fceaeb;
+    border-left: 10px solid #df3034;
+    margin-bottom: 15px;
+    font-family: nta, Arial, sans-serif;
+    font-size: 19px;
+}
+
+.submit-alert {
+    padding: 20px;
+    background-color: #eaf6f5;
+    border-left: 10px solid #28a197;
+    margin-bottom: 15px;
+    font-family: nta, Arial, sans-serif;
+    font-size: 19px;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    float: right;
+    text-decoration: underline;
+    color: #005ea5;
+    font-size: 19px;
+    font-family: nta, Arial, sans-serif;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: #2b8cc4;
+}
+
+//END
+
+//2ND button
+
+.govuk-button2 {
+    font-family: "nta", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 19px;
+    text-decoration: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 38px;
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding: 10px 10px;
+    border: 2px solid transparent;
+    border-radius: 0;
+    color: black;
+    background-color: #bfc1c3;
+    -webkit-box-shadow: 0 2px 0 #003618;
+    box-shadow: 0 2px 0 #003618;
+    text-align: center;
+    vertical-align: top;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+.black-text {
+  color: black;
+}
