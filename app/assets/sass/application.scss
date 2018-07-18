@@ -14,6 +14,15 @@ $govuk-global-styles: true;
 // JUI styles
 @import "jui/all";
 
+.govuk-grid-column-three-quarters {
+  float: left;
+  width: 100%;
+
+  @media screen and (min-width: 650px) {
+    width: 75%;
+  }
+}
+
 .submenu{
   background: 	#005ea5;
   height: 10px;
@@ -149,17 +158,17 @@ mark.comment {
         float: left;
         width: 20%;
         padding: 10px;
-        background: #2b8cc4;
+        background: #00823b;
+        height: 39px;
         color: white;
         font-size: 17px;
-        border: 1px solid #2b8cc4;
+
         border-left: none; /* Prevent double borders */
         cursor: pointer;
       }
 
       form.example button:hover {
-        background: #3699d3;
-        border: 1px solid #2b8cc4;
+        background: #006435;
       }
 
       /* Clear floats */
@@ -170,10 +179,7 @@ mark.comment {
       }
 
 
-      .govuk-grid-column-three-quarters {
-    width: 75%;
-    float: left;
-    }
+
 
 
 
@@ -181,26 +187,26 @@ mark.comment {
 
 //FEE TABLE Search
 
-#myInput {
-  font-family: "nta", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 80%;
-  height: 40px;
-  margin-top: 0;
-  padding: 5px;
-  border: 2px solid #0b0c0c;
-  border-radius: 0;
-  background: #fff;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
+// #myInput {
+//   font-family: "nta", Arial, sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+//   font-weight: 400;
+//   font-size: 16px;
+//   line-height: 20px;
+//   -webkit-box-sizing: border-box;
+//   box-sizing: border-box;
+//   width: 80%;
+//   height: 40px;
+//   margin-top: 0;
+//   padding: 5px;
+//   border: 2px solid #0b0c0c;
+//   border-radius: 0;
+//   background: #fff;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   appearance: none;
+// }
 
 
 #myTable {
@@ -209,6 +215,7 @@ mark.comment {
     border: 1px solid #fff; /* Add a grey border */
     font-size: 16px; /* Increase font-size */
     font-family: "nta",Arial,sans-serif;
+    float: right;
 
 }
 
@@ -292,7 +299,7 @@ mark.comment {
     padding: 10px 10px;
     border: 2px solid transparent;
     border-radius: 0;
-    color: black;
+    color: 000;
     background-color: #bfc1c3;
     -webkit-box-shadow: 0 2px 0 #003618;
     box-shadow: 0 2px 0 #003618;
@@ -304,4 +311,112 @@ mark.comment {
 
 .black-text {
   color: black;
+}
+
+// RESPONSIVE table
+
+body {
+  line-height: 1.25;
+}
+
+table {
+  border-bottom: 1px solid #fff;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em 0;
+  text-align: left;
+
+}
+
+table th {
+
+}
+
+@media screen and (max-width: 650px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+  }
+
+  table tr {
+    border-bottom: 5px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+
+.search-button-float {
+  padding-top: 0px;
+
+  @media screen and (min-width: 650px) {
+    padding-top: 40px;
+
+  }
+}
+
+.linked-payment-ref {
+  padding-left: 0px;
+
+  @media screen and (min-width: 650px) {
+    padding-left: 7px;
+
+  }
 }
