@@ -1,0 +1,49 @@
+{% extends "layouts/service/base.html" %}
+
+{% block pageTitle %}
+  Fee register prototype
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <a href="/index" class="govuk-back-link">Back</a>
+  </div>
+
+      <div class="govuk-grid-row">
+        <h1 class="govuk-heading-xl">
+          Currency input
+        </h1>
+      </div>
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-quarter">
+
+          <div class="govuk-currency-input">
+            <label class="govuk-label" for="contact-by-email">
+            Amount
+          </label>
+            <div class="govuk-currency-input__inner">
+              <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+              <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}

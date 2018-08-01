@@ -67,14 +67,14 @@
                       <a class="govuk-breadcrumbs__link" href="fee0001-summary">FEE0001</a>
                     </li>
 
-                    <li class="govuk-breadcrumbs__list-item" aria-current="page">Editable</li>
+                    <li class="govuk-breadcrumbs__list-item" aria-current="page">Create a new version</li>
                   </ol>
                 </div>
 
             <br>
             <br>
 
-            <h1 class="govuk-heading-xl">Editable</h1>
+            <h1 class="govuk-heading-xl">Create a new version</h1>
 
             <div class="govuk-grid-row">
             <div class="govuk-grid-column-one-third">
@@ -95,24 +95,24 @@
             <div class="govuk-grid-column-one-quarter">
 
               <div class="govuk-form-group">
-                <label class="govuk-label" for="email">
-                  From date
-                </label>
-                <span id="email-hint" class="govuk-hint">
+              <label class="govuk-label" for="email">
+                From date
+              </label>
+              <span class="govuk-hint">
 
-                </span>
-                <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" value="23 Apr 1995">
-              </div>
+              </span>
+                <input class="govuk-input" type="text" name="birthday" value="04/23/1995">
+            </div>
 
-              <div class="govuk-form-group">
-                <label class="govuk-label" for="email">
-                To date
-                </label>
-                <span id="email-hint" class="govuk-hint">
+            <div class="govuk-form-group">
+            <label class="govuk-label" for="email">
+              To date
+            </label>
+            <span class="govuk-hint">
 
-                </span>
-                <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" value="Present">
-              </div>
+            </span>
+              <input class="govuk-input" type="text" name="birthday" value="01/01/2017">
+          </div>
 
               <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
@@ -192,22 +192,23 @@
                         Amount Type
                       </h1>
                     </legend>
-                    <span id="email-hint" class="govuk-hint">
-
-                    </span>
                     <div class="govuk-radios" data-module="radios">
                       <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="amount-type" type="radio" checked="true" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                        <input class="govuk-radios__input" id="how-contacted-conditional-1" checked="true" name="amount-type" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
                         <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
                         Flat
                       </label>
                       </div>
                       <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="contact-by-email" value"550.00">
-                    Amount (£)
-                  </label>
-                          <input class="govuk-input" id="contact-by-email" name="contact-by-email" type="text" value="550.00">
+
+                        <div class="govuk-currency-input">
+                          <label class="govuk-label" for="contact-by-email">
+                          Amount
+                        </label>
+                          <div class="govuk-currency-input__inner">
+                            <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                            <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" value="550.00" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                          </div>
                         </div>
 
                       </div>
@@ -218,11 +219,14 @@
                       </label>
                       </div>
                       <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="contact-by-phone">
-                    Percentage %
-                  </label>
-                          <input class="govuk-input" id="contact-by-phone" name="contact-by-phone" type="text">
+                        <div class="govuk-currency-input">
+                          <label class="govuk-label" for="contact-by-email">
+                          Amount
+                        </label>
+                          <div class="govuk-currency-input__inner">
+                            <span class="govuk-currency-input__inner__unit govuk-body">%</span>
+                            <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                          </div>
                         </div>
 
                       </div>
@@ -233,11 +237,14 @@
                       </label>
                       </div>
                       <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
-                        <div class="govuk-form-group">
-                          <label class="govuk-label" for="contact-by-text">
-                    Amount (£)
-                  </label>
-                          <input class="govuk-input" id="contact-by-text" name="contact-by-text" type="text">
+                        <div class="govuk-currency-input">
+                          <label class="govuk-label" for="contact-by-email">
+                          Amount
+                        </label>
+                          <div class="govuk-currency-input__inner">
+                            <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                            <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                          </div>
                         </div>
 
                       </div>
@@ -314,6 +321,22 @@
             </div>
           </div>
 
+          <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="more-detail">
+                Reason for creating new fee version
+              </label>
+              <span id="more-detail-hint" class="govuk-hint">
+
+              </span>
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+          </div>
+          </div>
+
 
 
 
@@ -330,7 +353,7 @@
                       </strong>
                     </div>
 
-                    <a href="/fee0001-summary" role="button" class="govuk-button">
+                    <a href="/fee0001-new-version-confirmation" role="button" class="govuk-button">
                       Save and continue
                     </a>
 
@@ -350,4 +373,24 @@
 
 
 
+{% endblock %}
+{% block page_scripts %}
+<script>
+
+$(function() {
+  $('input[name="birthday"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'),10)
+  }, function(start, end, label) {
+    var years = moment().diff(start, 'years');
+    // alert("You are " + years + " years old!");
+  });
+
+});
+
+
+
+</script>
 {% endblock %}

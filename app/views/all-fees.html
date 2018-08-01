@@ -90,10 +90,10 @@
                     <label class="govuk-label" for="sort">
                       Fee type
                     </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="published" selected >All</option>
-                      <option value="updated">Fixed</option>
-                      <option value="views">Ranged</option>
+                    <select class="govuk-select" id="sort" name="sort" data-rel="Type">
+                      <option value="All" selected >All</option>
+                      <option value="Fixed">Fixed</option>
+                      <option value="Ranged">Ranged</option>
                     </select>
                   </div>
 
@@ -101,11 +101,11 @@
                     <label class="govuk-label" for="sort">
                       Amount type
                     </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="published" selected >All</option>
-                      <option value="updated">Flat</option>
-                      <option value="views">Percentage</option>
-                      <option value="views">Volume</option>
+                    <select class="govuk-select" id="sort" name="sort" data-rel="Amount type">
+                      <option value="All" selected >All</option>
+                      <option value="Flat">Flat</option>
+                      <option value="Percentage">Percentage</option>
+                      <option value="Volume">Volume</option>
                     </select>
                   </div>
 
@@ -113,11 +113,11 @@
                     <label class="govuk-label" for="sort">
                       Jurisdiction 1
                     </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="published" selected >All</option>
-                      <option value="updated">Civil</option>
-                      <option value="views">Family</option>
-                      <option value="views">Tribunal</option>
+                    <select class="govuk-select" id="sort" name="sort" data-rel="Jurisdiction 1">
+                      <option value="All" selected >All</option>
+                      <option value="Civil">Civil</option>
+                      <option value="Family">Family</option>
+                      <option value="Tribunal">Tribunal</option>
                     </select>
                   </div>
 
@@ -125,21 +125,21 @@
                     <label class="govuk-label" for="sort">
                       Jurisdiction 2
                     </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="published" selected >All</option>
-                      <option value="updated">County court</option>
-                      <option value="views">High court</option>
-                      <option value="views">Magistrates court</option>
-                      <option value="updated">Court of protection</option>
-                      <option value="views">Family court</option>
-                      <option value="views">Probate registry</option>
-                      <option value="updated">Gambling tribunal</option>
-                      <option value="views">Gender recognition panel</option>
-                      <option value="views">Immigration and asylum chamber</option>
-                      <option value="updated">Property chamber</option>
-                      <option value="views">Tax chamber</option>
-                      <option value="views">Upper tribunal immigration and asylum chamber</option>
-                      <option value="updated">Upper tribunal lands chamber</option>
+                    <select class="govuk-select" id="sort" name="sort" data-rel="Jurisdiction 2">
+                      <option value="All" selected >All</option>
+                      <option value="County court">County court</option>
+                      <option value="High court">High court</option>
+                      <option value="Magistrates court">Magistrates court</option>
+                      <option value="Court of protection">Court of protection</option>
+                      <option value="Family court">Family court</option>
+                      <option value="Probate registry">Probate registry</option>
+                      <option value="Gambling tribunal">Gambling tribunal</option>
+                      <option value="Gender recognition panel">Gender recognition panel</option>
+                      <option value="Immigration and asylum chamber">Immigration and asylum chamber</option>
+                      <option value="Property chamber">Property chamber</option>
+                      <option value="Tax chamber">Tax chamber</option>
+                      <option value="Upper tribunal immigration and asylum chamber">Upper tribunal immigration and asylum chamber</option>
+                      <option value="Upper tribunal lands chamber">Upper tribunal lands chamber</option>
 
                     </select>
                   </div>
@@ -148,23 +148,23 @@
                     <label class="govuk-label" for="sort">
                       Service
                     </label>
-                    <select class="govuk-select" id="sort" name="sort">
-                      <option value="published" selected >All</option>
-                      <option value="updated">Civil money claims</option>
-                      <option value="views">Possession claim</option>
-                      <option value="views">Insolvency</option>
-                      <option value="updated">Private law</option>
-                      <option value="views">Public law</option>
-                      <option value="views">Divorce</option>
-                      <option value="updated">Adoption</option>
-                      <option value="views">Gambling</option>
-                      <option value="views">Gender recognition</option>
-                      <option value="updated">Immigration and asylum</option>
-                      <option value="views">Property</option>
-                      <option value="views">Tax</option>
-                      <option value="updated">Probate</option>
-                      <option value="updated">General</option>
-                      <option value="updated">Magistrates</option>
+                    <select class="govuk-select" id="service" name="sort" data-rel="Service">
+                      <option value="All" selected >All</option>
+                      <option value="Civil money claims">Civil money claims</option>
+                      <option value="Possession claim">Possession claim</option>
+                      <option value="Insolvency">Insolvency</option>
+                      <option value="Private law">Private law</option>
+                      <option value="Public law">Public law</option>
+                      <option value="Divorce">Divorce</option>
+                      <option value="Adoption">Adoption</option>
+                      <option value="Gambling">Gambling</option>
+                      <option value="Gender recognition">Gender recognition</option>
+                      <option value="Immigration and asylum">Immigration and asylum</option>
+                      <option value="Property">Property</option>
+                      <option value="Tax">Tax</option>
+                      <option value="Probate">Probate</option>
+                      <option value="General">General</option>
+                      <option value="Magistrates">Magistrates</option>
 
                     </select>
                   </div>
@@ -177,7 +177,7 @@
                 </div>
                   <div class="govuk-grid-column-three-quarters">
                     <h2 class="govuk-heading-m">Results</h2>
-                    <p>15 fees</p>
+                    <p id="numberOfRows">15 fees</p>
                     <table class="govuk-body govuk-!-font-size-16" id="testtable">
               <caption class="govuk-table__caption"></caption>
               <thead class="govuk-!-font-size-16">
@@ -497,6 +497,51 @@
           }
         }
       }
+    }
+
+
+    var columnNames = {
+      code: 'Code',
+      service: 'Service'
+    };
+
+    var dropDowns = document.querySelectorAll('.govuk-select');
+    var table = document.getElementById("testtable");
+    var tbody = document.querySelectorAll('#testtable tbody tr');
+
+
+    // for each of the drop downs, do something
+    Array.from(dropDowns).forEach(function (dropDown) {
+      console.log( dropDown.getAttribute('data-rel') );
+      // everytime you change the value of the dropdown
+      dropDown.addEventListener('change', doSomething);
+    });
+
+
+    function doSomething(event) {
+      var dropdown = event.target;
+      var numberOfRows = 0;
+
+      // make the rows visible
+      Array.from(tbody).forEach(tr => tr.style.display = 'table-row');
+      if (dropdown.value === 'All') {
+        return false;
+      }
+
+
+      for (var i = 0; i < tbody.length; i++) {
+        var tableRow = tbody[i];
+        var dataRel = dropdown.getAttribute('data-rel');
+        var column = tableRow.querySelector('[data-label="'+dataRel+'"]');
+        console.log( dropdown.value );
+        if (column.innerHTML !== dropdown.value) {
+          tableRow.style.display = 'none';
+        } else {
+          numberOfRows = numberOfRows + 1;
+        }
+      }
+
+      document.getElementById('numberOfRows').innerHTML = numberOfRows + ' fees';
     }
     </script>
     {% endblock %}

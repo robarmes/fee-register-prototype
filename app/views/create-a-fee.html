@@ -15,6 +15,8 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
                 <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
 
+
+
                 <h1 class="govuk-heading-xl">Create a fee</h1>
 
 
@@ -75,25 +77,98 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
               <div class="govuk-grid-row">
                 <div class="govuk-grid-column-one-quarter">
 
+                  <!-- <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                      <p class="govuk-body govuk-!-font-weight-bold">From date<span class="govuk-caption-m">  For example, 31 3 1980</span></p>
+                    <div class="govuk-date-input" id="dob">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="dob-day">
+                          Day
+                        </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="dob-month">
+                          Month
+                        </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="dob-year">
+                          Year
+                        </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                        </div>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div> -->
+
                   <div class="govuk-form-group">
-                    <label class="govuk-label" for="email">
-                      From date
-                    </label>
-                    <span id="email-hint" class="govuk-hint">
+                  <label class="govuk-label" for="email">
+                    From date
+                  </label>
+                  <span class="govuk-hint">
 
-                    </span>
-                    <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+                  </span>
+                    <input class="govuk-input" type="text" name="birthday" value="01/01/2017">
+                </div>
+
+                <!-- <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+                    <p class="govuk-body govuk-!-font-weight-regular"><strong>To date</strong> (optional)<span class="govuk-caption-m">  For example, 31 3 1980</span></p>
+                  <div class="govuk-date-input" id="dob">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="dob-day">
+                        Day
+                      </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="dob-month">
+                        Month
+                      </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2 " id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
+
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="dob-year">
+                        Year
+                      </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                      </div>
+                    </div>
                   </div>
+                </fieldset>
+              </div> -->
 
-                  <div class="govuk-form-group">
-                    <label class="govuk-label" for="email">
-                    To date (optional)
-                    </label>
-                    <span id="email-hint" class="govuk-hint">
 
-                    </span>
-                    <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
-                  </div>
+                <div class="govuk-form-group">
+                <label class="govuk-label" for="email">
+                  To date (optional)
+                </label>
+                <span class="govuk-hint">
+
+                </span>
+                  <input class="govuk-input" type="text" name="birthday" value="01/01/2017">
+              </div>
+
+
+
+
 
                   <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
@@ -178,11 +253,15 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
                           </label>
                           </div>
                           <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
-                            <div class="govuk-form-group">
+
+                            <div class="govuk-currency-input">
                               <label class="govuk-label" for="contact-by-email">
-                        Amount (£)
-                      </label>
-                              <input class="govuk-input" id="contact-by-email" name="contact-by-email" type="text">
+                              Amount
+                            </label>
+                              <div class="govuk-currency-input__inner">
+                                <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                                <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                              </div>
                             </div>
 
                           </div>
@@ -193,11 +272,14 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
                           </label>
                           </div>
                           <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label" for="contact-by-phone">
-                        Percentage %
-                      </label>
-                              <input class="govuk-input" id="contact-by-phone" name="contact-by-phone" type="text">
+                            <div class="govuk-currency-input">
+                              <label class="govuk-label" for="contact-by-email">
+                              Amount
+                            </label>
+                              <div class="govuk-currency-input__inner">
+                                <span class="govuk-currency-input__inner__unit govuk-body">%</span>
+                                <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                              </div>
                             </div>
 
                           </div>
@@ -208,11 +290,14 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
                           </label>
                           </div>
                           <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
-                            <div class="govuk-form-group">
-                              <label class="govuk-label" for="contact-by-text">
-                        Amount (£)
-                      </label>
-                              <input class="govuk-input" id="contact-by-text" name="contact-by-text" type="text">
+                            <div class="govuk-currency-input">
+                              <label class="govuk-label" for="contact-by-email">
+                              Amount
+                            </label>
+                              <div class="govuk-currency-input__inner">
+                                <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                                <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                              </div>
                             </div>
 
                           </div>
@@ -412,4 +497,24 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
 
 
 
+  {% endblock %}
+  {% block page_scripts %}
+  <script>
+
+  $(function() {
+    $('input[name="birthday"]').daterangepicker({
+      singleDatePicker: true,
+      showDropdowns: true,
+      minYear: 1901,
+      maxYear: parseInt(moment().format('YYYY'),10)
+    }, function(start, end, label) {
+      var years = moment().diff(start, 'years');
+      // alert("You are " + years + " years old!");
+    });
+
+  });
+
+
+
+  </script>
   {% endblock %}
