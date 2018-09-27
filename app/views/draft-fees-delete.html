@@ -5,7 +5,51 @@
 {% endblock %}
 
 {% block content %}
-<br>
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="jui-width-container">
+
+
+<ul class="hmcts-primary-navigation__list">
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link"  href="/all-fees">
+All fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" aria-current="page" href="/draft-fees">
+Draft fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/create-a-fee">
+Create a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/upload-fee">
+Upload a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/reference-data">
+Reference data
+</a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</nav>
 
   <div class="jui-width-container">
 
@@ -13,12 +57,20 @@
 
             <main role="main" class="govuk-main-wrapper">
 
-              <div class="delete-alert">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';"> Hide</span>
-                FEE0089 deleted
-              </div>
+            
 
-              <br>
+                  <div class="hmcts-alert">
+                  <span class="closebtn" onclick="this.parentElement.style.display='none';"> Hide</span>
+                  <svg class="hmcts-alert__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                  <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+                  C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+
+                  <span class="hmcts-alert__message">
+                  <span class="hmcts-alert__assistive">information</span>
+                  FEE0089 deleted
+                  </span>
+
+                  </div>
 
 
 
@@ -27,7 +79,7 @@
 
 
 
-              <h2 class="govuk-heading-m">Fees to submit</h2>
+              <h2 class="govuk-heading-l">Fees to submit</h2>
               <span id="nationality-hint" class="govuk-hint">
                   No fees to submit
                 </span>
@@ -38,7 +90,7 @@
               <br>
               <br>
 
-              <h2 class="govuk-heading-m">Fees pending approval</h2>
+              <h2 class="govuk-heading-l">Fees pending approval</h2>
               <span id="nationality-hint" class="govuk-hint">
                   No fees pending approval
                 </span>

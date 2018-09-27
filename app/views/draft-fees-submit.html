@@ -5,7 +5,51 @@
 {% endblock %}
 
 {% block content %}
-<br>
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="jui-width-container">
+
+
+<ul class="hmcts-primary-navigation__list">
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link"  href="/all-fees">
+All fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" aria-current="page" href="/draft-fees">
+Draft fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/create-a-fee">
+Create a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/upload-fee">
+Upload a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/reference-data">
+Reference data
+</a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</nav>
 
   <div class="jui-width-container">
 
@@ -13,10 +57,18 @@
 
             <main role="main" class="govuk-main-wrapper">
 
-              <div class="submit-alert">
+              <div class="hmcts-alert hmcts-alert--success">
                 <span class="closebtn" onclick="this.parentElement.style.display='none';"> Hide</span>
-                FEE0089 submitted
-              </div>
+                  <svg class="hmcts-alert__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                  <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+                  <span class="hmcts-alert__message">
+                  <span class="hmcts-alert__assistive">FEE0089 submitted</span>
+
+                  FEE0089 submitted
+                  </span>
+
+                  </div>
+
 
               <br>
 
@@ -25,21 +77,56 @@
               <h1 class="govuk-heading-xl">Draft fees</h1>
 
 
+              <table class="govuk-table">
+              <caption class="govuk-table__caption">Fees to submit <br><br> <span id="nationality-hint" class="govuk-hint">
+                    No fees to submit
+                  </span></caption>
+              </table>
 
-              <h2 class="govuk-heading-m">Fees to submit</h2>
+
+
+
+
+              <table class="govuk-table">
+        <caption class="govuk-table__caption">Fees pending approval</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+
+            <th class="govuk-table__header" scope="col">Code</th>
+            <th class="govuk-table__header" scope="col">Description</th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Amount type</th>
+            <th class="govuk-table__header" scope="col">Type value</th>
+            <th class="govuk-table__header" scope="col">Jurisdiction 1</th>
+            <th class="govuk-table__header" scope="col">Jurisdiction 2</th>
+            <th class="govuk-table__header" scope="col">Service</th>
+            <th class="govuk-table__header" scope="col">Event</th>
+            <th class="govuk-table__header" scope="col">Channel</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+
+            <td data-label="Code"><a href="">FEE0089<a/></td>
+            <td data-label="Description">An application for..</td>
+            <td data-label="Type">Fixed</td>
+            <td data-label="Amount type">Flat</td>
+            <td data-label="Type value">£25.00</td>
+            <td data-label="Jurisdiction 1">Tribunal</td>
+            <td data-label="Jurisdiction 2">Upper tribunal</td>
+            <td data-label="Service">Immigration and asylum</td>
+            <td data-label="Event">Issue</td>
+            <td data-label="Channel">Defult</td>
+
+          </tr>
+
+
+
+        </tbody>
+      </table>
               <span id="nationality-hint" class="govuk-hint">
-                  No fees to submit
-                </span>
 
-
-
-              <br>
-              <br>
-              <br>
-
-              <h2 class="govuk-heading-m">Fees pending approval</h2>
-              <span id="nationality-hint" class="govuk-hint">
-                  No fees pending approval
                 </span>
 
             </main>

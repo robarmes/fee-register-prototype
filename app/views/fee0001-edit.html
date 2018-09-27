@@ -5,6 +5,52 @@
 {% endblock %}
 
 {% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="jui-width-container">
+
+
+<ul class="hmcts-primary-navigation__list">
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/all-fees">
+All fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/draft-fees">
+Draft fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/create-a-fee">
+Create a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/upload-fee">
+Upload a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/reference-data">
+Reference data
+</a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</nav>
+
 
 
         <!-- <div class="jui-casebar">
@@ -114,7 +160,7 @@
               <input class="govuk-input" type="text" name="birthday" value="01/01/2017">
           </div>
 
-              <div class="govuk-form-group">
+              <!-- <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                       <h1 class="govuk-fieldset__heading">
@@ -181,10 +227,20 @@
 
                     </div>
                   </fieldset>
+                </div> -->
+
+                <div class="govuk-currency-input">
+                  <label class="govuk-label" for="contact-by-email">
+                  Amount
+                </label>
+                  <div class="govuk-currency-input__inner">
+                    <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                    <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" value="550.00" name="tickets-cost" data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                  </div>
                 </div>
 
 
-
+<!--
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -250,7 +306,9 @@
                       </div>
                     </div>
                   </fieldset>
-                </div>
+                </div> -->
+
+                <br>
 
                 <div class="govuk-form-group"><label class="govuk-label" for="select-1">
                       Service

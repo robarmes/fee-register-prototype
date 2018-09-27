@@ -5,7 +5,51 @@
 {% endblock %}
 
 {% block content %}
-<br>
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="jui-width-container">
+
+
+<ul class="hmcts-primary-navigation__list">
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/all-fees">
+All fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" aria-current="page" href="/draft-fees">
+Draft fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/create-a-fee">
+Create a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/upload-fee">
+Upload a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/reference-data">
+Reference data
+</a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</nav>
 
   <div class="jui-width-container">
 
@@ -18,11 +62,16 @@
 
 
 
-              <h2 class="govuk-heading-m">Fees to submit</h2>
+
+
               <table class="govuk-table">
-        <caption class="govuk-table__caption"></caption>
+
+        <caption class="govuk-table__caption">Fees to submit
+        </caption>
         <thead class="govuk-table__head">
+
           <tr class="govuk-table__row">
+
             <th class="govuk-table__header" scope="col">All<div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
               <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
@@ -66,7 +115,7 @@
         </tbody>
       </table>
 
-              <a href="/draft-fees-delete" role="button" class="govuk-button2">
+              <a href="/draft-fees-delete" role="button" class="govuk-button hmcts-button--secondary">
                   <div class= "black-text">Delete</div>
                 </a>
 
@@ -74,14 +123,16 @@
                   Submit
                 </a>
 
-              <br>
-              <br>
-              <br>
+            <br>
+            <br>
 
-              <h2 class="govuk-heading-m">Fees pending approval</h2>
-              <span id="nationality-hint" class="govuk-hint">
-                  No fees pending approval
-                </span>
+
+                <table class="govuk-table">
+                <caption class="govuk-table__caption">Fees pending approval<br><br> <span id="nationality-hint" class="govuk-hint">
+                        No fees pending approval
+                    </span></caption>
+                </table>
+
 
             </main>
 
