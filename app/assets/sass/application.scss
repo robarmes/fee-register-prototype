@@ -429,3 +429,63 @@ table th {
 
   }
 }
+.hmcts-primary-navigation__item-position {
+  float: right;
+}
+.second-nav {
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  &__menu {
+    margin: auto;
+    height: auto;
+    max-width: 1024px;
+    width: 100%;
+  }
+}
+.hidden {
+ display: none;
+}
+.show {
+  display: block;
+}
+.nav-links {
+  position: relative;
+  top: 0;
+}
+.second-nav.blue {
+  background: #005ea5;
+}
+.advanced-search-block {
+  background: #005ea5;
+  color: #fff;
+  label {
+    color: #fff;
+  }
+}
+.second-nav__menu {
+  ul li:first-of-type {
+    padding-left: 5px;
+  }
+  ul li {
+    display: inline-block;
+    padding: 0 5px;
+    width: 30%;
+  }
+}
+.row-no-border {
+  border-bottom: 0px;
+}
+
+.reset-button-float {
+    bottom: 10px;
+    position: relative;
+}
+
+.govuk-link--nounderline{
+  text-decoration: none;
+}
+
+.govuk-main-wrapper--maxhight {
+    min-height: 500px;
+}
