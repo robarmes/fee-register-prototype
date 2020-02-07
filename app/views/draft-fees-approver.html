@@ -1,0 +1,220 @@
+{% extends "layouts/admin/base.html" %}
+
+{% block pageTitle %}
+  Draft fees
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="hmcts-header__container">
+
+
+<ul class="hmcts-primary-navigation__list">
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/all-fees-approver">
+All fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" aria-current="page" href="/draft-fees-approver">
+Draft fees
+</a>
+</li>
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/reference-data-approver">
+Reference data
+</a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</nav>
+
+  <div class="hmcts-header__container">
+
+
+
+            <main role="main" class="govuk-main-wrapper">
+
+
+              <h1 class="govuk-heading-xl">Draft fees</h1>
+
+
+
+
+
+              <table class="govuk-table govuk-!-font-size-14">
+
+        <caption class="govuk-table__caption">Fees pending approval
+        </caption>
+        <thead class="govuk-table__head">
+
+          <tr class="govuk-table__row">
+
+            <th class="govuk-table__header" scope="col">All<div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+              <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+            </label>
+            </div></th>
+            <th class="govuk-table__header" scope="col">Code</th>
+            <th class="govuk-table__header" scope="col">Description</th>
+            <th class="govuk-table__header" scope="col">Type</th>
+            <th class="govuk-table__header" scope="col">Amount type</th>
+            <th class="govuk-table__header" scope="col">Type value</th>
+            <th class="govuk-table__header" scope="col">Jurisdiction 1</th>
+            <th class="govuk-table__header" scope="col">Jurisdiction 2</th>
+            <th class="govuk-table__header" scope="col">Service</th>
+            <th class="govuk-table__header" scope="col">Event</th>
+            <th class="govuk-table__header" scope="col">Channel</th>
+            <th class="govuk-table__header" scope="col">Reason</th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label=""><div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+              <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+            </label>
+            </div></td>
+            <td data-label="Code"><a href="">FEE0089</a></td>
+              <td colspan="10">
+                <table>
+                  <tr>
+                      <td data-label="Description">An application for..</td>
+                      <td data-label="Type">Fixed</td>
+                      <td data-label="Amount type">Flat</td>
+                      <td data-label="Type value">£25.00</td>
+                      <td data-label="Jurisdiction 1">Tribunal</td>
+                      <td data-label="Jurisdiction 2">Upper tribunal</td>
+                      <td data-label="Service">Immigration and asylum</td>
+                      <td data-label="Event">Issue</td>
+                      <td data-label="Channel">Defult</td>
+                      <td data-label="Reason">Immigration tribunal</td>
+
+                  </tr>
+                  <tr class='row-no-border'>
+                      <td data-label="Description">An application for..</td>
+                      <td data-label="Type">Fixed</td>
+                      <td data-label="Amount type">Volume</td>
+                      <td data-label="Type value">£50.00</td>
+                      <td data-label="Jurisdiction 1">Tribunal</td>
+                      <td data-label="Jurisdiction 2">Upper tribunal</td>
+                      <td data-label="Service">Immigration and asylum</td>
+                      <td data-label="Event">Issue</td>
+                      <td data-label="Channel">Defult</td>
+                      <td data-label="Reason">Asylum tribunal</td>
+                  </tr>
+                </table>
+              </td>
+          </tr>
+        </tbody>
+      </table>
+
+              <a href="/draft-fees-delete" role="button" class="govuk-button hmcts-button--secondary">
+                  <div class= "black-text">Delete</div>
+                </a>
+
+              <a href="/draft-fees-submit" role="button" class="govuk-button">
+                  Submit
+                </a>
+
+            <br>
+
+
+
+            <table class="govuk-body" id="testtable">
+                <caption class="govuk-table__caption">Approved Fees<span id="nationality-hint" class="govuk-hint">
+                    <thead class="font-12">
+                  <tr class="govuk-table__row">
+                    <th class="govuk-table__header" scope="col">Code</th>
+                    <th class="govuk-table__header" scope="col">Description</th>
+                    <th class="govuk-table__header" scope="col">Type</th>
+                    <th class="govuk-table__header" scope="col">Amount type</th>
+                    <th class="govuk-table__header" scope="col">Type value</th>
+                    <th class="govuk-table__header" scope="col">Jurisdiction 1</th>
+                    <th class="govuk-table__header" scope="col">Jurisdiction 2</th>
+                    <th class="govuk-table__header" scope="col">Service</th>
+                    <th class="govuk-table__header" scope="col">Event</th>
+                    <th class="govuk-table__header" scope="col">Channel</th>
+                    <th class="govuk-table__header" scope="col">Reason</th>
+  
+  
+  
+                  </tr>
+                </thead>
+                <tbody class="font-12">
+                  <tr>
+                    <td data-label="Code"><a href="/fee0001-summary">FEE0001</a></td>
+                    <td data-label="Description">Filing an application for a divorce</td>
+                    <td data-label="Type">Fixed</td>
+                    <td data-label="Amount type">Flat</td>
+                    <td data-label="Type value">£550.00</td>
+                    <td data-label="Jurisdiction 1">Family</td>
+                    <td data-label="Jurisdiction 2">Family court</td>
+                    <td data-label="Service">Divorce</td>
+                    <td data-label="Event">Issue</td>
+                    <td data-label="Channel">Defult</td>
+                    <td data-label="Reason">No Money</td>
+
+                  </tr>
+  
+                  <tr>
+                    <td data-label="Code"><a href="">FEE0002</a></td>
+                    <td data-label="Description">Additional copies of grant</td>
+                    <td data-label="Type">Fixed</td>
+                    <td data-label="Amount type">Flat</td>
+                    <td data-label="Type value">£0.50</td>
+                    <td data-label="Jurisdiction 1">Probate registry</td>
+                    <td data-label="Jurisdiction 2">Probate registry</td>
+                    <td data-label="Service">Probate</td>
+                    <td data-label="Event">Copies</td>
+                    <td data-label="Channel">Defult</td>
+                    <td data-label="Reason">No Money</td>
+                  </tr>
+  
+                  <tr>
+                    <td data-label="Code"><a href="">FEE0003</a></td>
+                    <td data-label="Description">Recovery of Land</td>
+                    <td data-label="Type">Fixed</td>
+                    <td data-label="Amount type">Flat</td>
+                    <td data-label="Type value">£480.00</td>
+                    <td data-label="Jurisdiction 1">Civil</td>
+                    <td data-label="Jurisdiction 2">High court</td>
+                    <td data-label="Service">Possession claim</td>
+                    <td data-label="Event">Issue</td>
+                    <td data-label="Channel">Defult</td>
+                    <td data-label="Reason">No Money</td>
+                  </tr>
+  
+                  <tr>
+                    <td data-label="Code"><a href="">FEE0004</a></td>
+                    <td data-label="Description">Where the party filing the request is legally aided</td>
+                    <td data-label="Type">Fixed</td>
+                    <td data-label="Amount type">Flat</td>
+                    <td data-label="Type value">£200.00</td>
+                    <td data-label="Jurisdiction 1">Family</td>
+                    <td data-label="Jurisdiction 2">County court</td>
+                    <td data-label="Service">General</td>
+                    <td data-label="Event">Cost assessment</td>
+                    <td data-label="Channel">Defult</td>
+                    <td data-label="Reason">No Money</td>
+                  </tr>
+  
+                </tbody>
+              </table>
+            </main>
+
+    </div>
+
+
+
+{% endblock %}
