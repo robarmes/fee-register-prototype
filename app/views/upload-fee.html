@@ -76,17 +76,37 @@ Reference data
               Save and continue
             </a>
 
+            <br>
+            <label class="govuk-label" for="file-upload-1">
+              Download the file to be used as a template before you upload any fees
+            </label>
+            <a href="Javascript:void(0);" onclick="download_csv();" role="button" class="govuk-button">
+              Download
+            </a>
 
             </main>
-
-
-
-
-
-
-
     </div>
+    {% endblock %}
+    {% block page_scripts %}
+    <script>
 
-
-
+       
+       
+      function download_csv() {
+        let data = [];
+      let csv = 'Name,Title, Post, Age\n';
+          data.forEach(function(row) {
+                  csv += row.join(',');
+                  csv += "\n";
+          });
+    
+          let hiddenElement = document.createElement('a');
+          hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);
+          hiddenElement.target = '_blank';
+          hiddenElement.download = 'sample.csv';
+          hiddenElement.click();
+      }
+      </script>
 {% endblock %}
+
+
