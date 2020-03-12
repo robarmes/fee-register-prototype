@@ -170,35 +170,24 @@ Reference data
   <div class="hmcts-header__container">
 
       <main role="main" class="govuk-main-wrapper">
-                <div class="govuk-grid-row">
+
+
+          <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
-                <h1 class="govuk-heading-xl">All fees</h1>
-              </div>
-            </div>
-
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-one-half">
-
-
-                  <!-- <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for a fee"> -->
+                <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">All fees</h1>
 
 
 
-                  <div class="govuk-form-group">
-                    <span id="nationality-hint" class="govuk-hint">
-                      Enter a decription or fee code
-                    </span>
+                <div class="" >
+                  <label class="govuk-label" for="email">
+                    Enter a decription or fee code
+                  </label>
 
-                        <input type="text" class="govuk-input" id="myInput" placeholder="">
-
-
-                        <!-- <button type="button" class="govuk-button" onclick="myFunction()">Search</button> -->
-
-
+                  <div style="display: inline">
+                      <input type="text" class="govuk-input govuk-!-width-one-third" id="myInput" placeholder="" >
+                      <button type="button" class="govuk-button" onclick="myFunction()">Search</button>
                   </div>
-
-
-
+                </div>
 
 
                   <!-- <form class="govuk-form-group">
@@ -221,66 +210,55 @@ Reference data
 
 
 
+                <h2 class="govuk-heading-m">Filter by</h2>
 
-
-              </div>
-              <div class="govuk-grid-column-one-half">
-
-                        <div class="govuk-form-group">
-                          <div class="search-button-float">
-                            <button type="button" class="govuk-button" onclick="myFunction()">Search</button>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                          <!-- <label class="govuk-label" for="sort">
+                            <b>View fees</b>
+                          </label>-->
+                          <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" data-rel="Amount type" value="All">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                                All
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" data-rel="Amount type" value="Flat">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                Live
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" data-rel="Amount type" value="Volume">
+                              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                                Discontinued
+                              </label>
+                            </div>
                           </div>
-
-                        </div>
-
-
-
-              </div>
-            </div>
+                    </fieldset>
+                </div>
 
 
 
 
-                <div class="govuk-grid-row">
-
-                  <div class="govuk-grid-column-one-quarter">
-                    <h2 class="govuk-heading-m">Filter by</h2>
-  
-                    <div class="govuk-form-group">
-                   <fieldset class="govuk-fieldset">
-                    <label class="govuk-label" for="sort">
-                      <b>View fees</b>
-                    </label>
-                    <div class="govuk-radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" data-rel="Amount type" value="All">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-                          All
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" data-rel="Amount type" value="Flat">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                          Live
-                        </label>
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" data-rel="Amount type" value="Volume">
-                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
-                          Discontinued
-                        </label>
-                      </div>
-                    </div>
-                  </fieldset>
-                    </div>
-                  </div>
-                  <div class="govuk-grid-column-three-quarters">
-                    <h2 class="govuk-heading-m">Results</h2>
-                    <p id="numberOfRows">15 fees</p>
-                    <table class="govuk-body" id="testtable">
-              <caption class="govuk-table__caption"></caption>
-              <thead class="font-12">
+          <div class="">
+            <h2 class="govuk-heading-m">Results</h2>
+            <!-- <p id="numberOfRows">15 fees</p>  -->
+            <table class="govuk-body" id="testtable">
+              <thead class="font-14">
                 <tr class="govuk-table__row">
+                  <th class="govuk-table__header" scope="col" style="width:90px;">Fee code</th>
+                  <th class="govuk-table__header" scope="col" style="width:95px;">Amount</th>
+                  <th class="govuk-table__header" scope="col" style="width:135px;">Jurisdiction 1</th>
+                  <th class="govuk-table__header" scope="col" style="width:137px;">Jurisdiction 2</th>
+                  <th class="govuk-table__header" scope="col">Service</th>
+                  <th class="govuk-table__header" scope="col">Description</th>
+                  <th class="govuk-table__header" scope="col" style="padding-left:10px;">Type</th>
+                  <th class="govuk-table__header" scope="col">Amount type</th>
+
+                  <!--
                   <th class="govuk-table__header" scope="col">Code</th>
                   <th class="govuk-table__header" scope="col">Description</th>
                   <th class="govuk-table__header" scope="col">Type</th>
@@ -291,205 +269,193 @@ Reference data
                   <th class="govuk-table__header" scope="col">Service</th>
                   <th class="govuk-table__header" scope="col">Event</th>
                   <th class="govuk-table__header" scope="col">Channel</th>
-
-
-
+                  -->
                 </tr>
               </thead>
-              <tbody class="font-12">
+
+
+              <tbody class="font-14">
                 <tr>
                   <td data-label="Code"><a href="/fee0001-summary">FEE0001</a></td>
-                  <td data-label="Description">Filing an application for a divorce</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£550.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£550.00</td>
+                  <td data-label="Service">Divorce</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Family court</td>
-                  <td data-label="Service">Divorce</td>
+                  <td data-label="Type">Fixed</td>
+                  <td data-label="Amount type" style="padding-left:10px;">Flat</td>
+                  <td data-label="Description">Filing an application for a divorce</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0002</a></td>
-                  <td data-label="Description">Additional copies of grant</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£0.50</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£0.50</td>
+                  <td data-label="Service">Probate</td>
                   <td data-label="Jurisdiction 1">Probate registry</td>
                   <td data-label="Jurisdiction 2">Probate registry</td>
-                  <td data-label="Service">Probate</td>
+                  <td data-label="Description">Additional copies of grant</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Flat</td>
+                  <!--
                   <td data-label="Event">Copies</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0003</a></td>
-                  <td data-label="Description">Recovery of Land</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£480.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£480.00</td>
+                  <td data-label="Service">Possession claim</td>
                   <td data-label="Jurisdiction 1">Civil</td>
                   <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Service">Possession claim</td>
+                  <td data-label="Description">Recovery of Land</td>
+                  <td data-label="Type"  style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Flat</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0004</a></td>
-                  <td data-label="Description">Where the party filing the request is legally aided</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£200.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">County court</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">Where the party filing the request is legally aided</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Flat</td>
+
+                  <!--
                   <td data-label="Event">Cost assessment</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0005</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
-                  <td data-label="Type value">£50.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Ranged</td>
+                  <td data-label="Amount type">Volume</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0006</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Percentage</td>
-                  <td data-label="Type value">£100.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Percentage</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0007</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£200.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Flat</td>
+                  <!--
                   <td data-label="Event">Appeal</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
+
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0008</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
-                  <td data-label="Type value">£50.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Ranged</td>
+                  <td data-label="Amount type">Volume</td>
+
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0009</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Percentage</td>
-                  <td data-label="Type value">£100.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Percentage</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0010</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£200.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
+                  <td data-label="Amount type">Flat</td>
+                  <!--
                   <td data-label="Event">Appeal</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0011</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
-                  <td data-label="Type value">£50.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Service">General</td>
+                  <td data-label="Description">An application for..</td>
+                  <td data-label="Type" style="padding-left:10px;">Ranged</td>
+                  <td data-label="Amount type">Volume</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
                 <tr>
                   <td data-label="Code"><a href="">FEE0012</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Percentage</td>
-                  <td data-label="Type value">£100.00</td>
+                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
+                  <td data-label="Service">General</td>
                   <td data-label="Jurisdiction 1">Family</td>
                   <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Service">General</td>
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="">FEE0013</a></td>
                   <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <td data-label="Type value">£200.00</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Service">General</td>
-                  <td data-label="Event">Appeal</td>
-                  <td data-label="Channel">Defult</td>
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="">FEE0014</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
-                  <td data-label="Type value">£50.00</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Service">General</td>
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="">FEE0015</a></td>
-                  <td data-label="Description">An application for..</td>
-                  <td data-label="Type">Fixed</td>
+                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Percentage</td>
-                  <td data-label="Type value">£100.00</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Service">General</td>
+                  <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
+                  -->
                 </tr>
 
 
