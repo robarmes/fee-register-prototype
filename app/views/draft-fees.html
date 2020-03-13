@@ -55,83 +55,61 @@ Reference data
 
 
 
-            <main role="main" class="govuk-main-wrapper">
+    <main role="main" class="govuk-main-wrapper">
 
 
-              <h1 class="govuk-heading-xl">Draft fees</h1>
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Draft fees</h1>
 
 
+       <table class="govuk-table">
 
-
-
-              <table class="govuk-table govuk-!-font-size-14">
-
-        <caption class="govuk-table__caption">Fees to submit
-        </caption>
-        <thead class="govuk-table__head">
-
+        <!-- <caption class="govuk-table__caption">Fees to submit </caption> -->
+        <thead class="govuk-table__head font-16">
           <tr class="govuk-table__row">
-
-            <th class="govuk-table__header" scope="col">All<div class="govuk-checkboxes__item">
+            <!--<th class="govuk-table__header" scope="col">All<div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
               <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
             </label>
-            </div></th>
-            <th class="govuk-table__header" scope="col">Code</th>
-            <th class="govuk-table__header" scope="col">Description</th>
-            <th class="govuk-table__header" scope="col">Type</th>
-            <th class="govuk-table__header" scope="col">Amount type</th>
-            <th class="govuk-table__header" scope="col">Type value</th>
-            <th class="govuk-table__header" scope="col">Jurisdiction 1</th>
-            <th class="govuk-table__header" scope="col">Jurisdiction 2</th>
+            </div></th>-->
+            <th class="govuk-table__header" scope="col" style="width: 90px;">Code</th>
+            <th class="govuk-table__header" scope="col" style="width:130px;">Version</th>
             <th class="govuk-table__header" scope="col">Service</th>
-            <th class="govuk-table__header" scope="col">Event</th>
-            <th class="govuk-table__header" scope="col">Channel</th>
-            <th class="govuk-table__header" scope="col">Reason</th>
-
+            <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>
+            <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 2</th>
+            <th class="govuk-table__header" scope="col">Description</th>
+            <!--
+                <th class="govuk-table__header" scope="col">Type</th>
+                <th class="govuk-table__header" scope="col">Amount type</th>
+                <th class="govuk-table__header" scope="col">Type value</th>
+                <th class="govuk-table__header" scope="col">Event</th>
+                <th class="govuk-table__header" scope="col">Channel</th>
+            -->
           </tr>
         </thead>
+
         <tbody>
           <tr>
-            <td data-label=""><div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
-              <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
-            </label>
-            </div></td>
-            <td data-label="Code"><a href="">FEE0089</a></td>
-              <td colspan="10">
-                <table>
-                  <tr>
-                      <td data-label="Description">An application for..</td>
-                      <td data-label="Type">Fixed</td>
-                      <td data-label="Amount type">Flat</td>
-                      <td data-label="Type value">£25.00</td>
-                      <td data-label="Jurisdiction 1">Tribunal</td>
-                      <td data-label="Jurisdiction 2">Upper tribunal</td>
-                      <td data-label="Service">Immigration and asylum</td>
-                      <td data-label="Event">Issue</td>
-                      <td data-label="Channel">Defult</td>
-                      <td data-label="Reason">Immigration tribunal</td>
-
-                  </tr>
-                  <tr class='row-no-border'>
-                      <td data-label="Description">An application for..</td>
-                      <td data-label="Type">Fixed</td>
-                      <td data-label="Amount type">Volume</td>
-                      <td data-label="Type value">£50.00</td>
-                      <td data-label="Jurisdiction 1">Tribunal</td>
-                      <td data-label="Jurisdiction 2">Upper tribunal</td>
-                      <td data-label="Service">Immigration and asylum</td>
-                      <td data-label="Event">Issue</td>
-                      <td data-label="Channel">Defult</td>
-                      <td data-label="Reason">Asylum tribunal</td>
-                  </tr>
-                </table>
-              </td>
+              <td data-label="Code"><a href="fee0001-summary">FEE0001</a></td>
+              <td data-label="Service">Change to fee</td>
+              <td data-label="Service">Immigration and asylum</td>
+              <td data-label="Jurisdiction 1">Tribunal</td>
+              <td data-label="Jurisdiction 2">Upper tribunal</td>
+              <td data-label="Description">An application for..</td>
+          </tr>
+          <tr>
+              <td data-label="Code"><a href="fee0001-summary">FEE0862</a></td>
+              <td data-label="Service">New fee</td>
+              <td data-label="Service">Civil Money Claims</td>
+              <td data-label="Jurisdiction 1">Tribunal</td>
+              <td data-label="Jurisdiction 2">Upper tribunal</td>
+              <td data-label="Description">An application to set aside a claim</td>
           </tr>
         </tbody>
+
       </table>
 
+
+        <!--
               <a href="/draft-fees-delete" role="button" class="govuk-button hmcts-button--secondary">
                   <div class= "black-text">Delete</div>
                 </a>
@@ -139,21 +117,59 @@ Reference data
               <a href="/draft-fees-submit" role="button" class="govuk-button">
                   Submit
                 </a>
+        -->
+
 
             <br>
-            <br>
-
+            <table class="govuk-table">
+            <caption class="govuk-table__caption">Fees pending approval<br><br> <span id="nationality-hint" class="govuk-hint">
 
                 <table class="govuk-table">
-                <caption class="govuk-table__caption">Fees pending approval<br><br> <span id="nationality-hint" class="govuk-hint">
-                        No fees pending approval
-                    </span></caption>
+
+                    <!-- <caption class="govuk-table__caption">Fees to submit </caption> -->
+                    <thead class="govuk-table__head font-16">
+                    <tr class="govuk-table__row">
+                        <!--<th class="govuk-table__header" scope="col">All<div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+                          <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                        </label>
+                        </div></th>-->
+                        <th class="govuk-table__header" scope="col" style="width: 90px;">Code</th>
+                        <th class="govuk-table__header" scope="col" style="width:130px;">Version</th>
+                        <th class="govuk-table__header" scope="col">Service</th>
+                        <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>
+                        <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 2</th>
+                        <th class="govuk-table__header" scope="col">Description</th>
+                        <!--
+                            <th class="govuk-table__header" scope="col">Type</th>
+                            <th class="govuk-table__header" scope="col">Amount type</th>
+                            <th class="govuk-table__header" scope="col">Type value</th>
+                            <th class="govuk-table__header" scope="col">Event</th>
+                            <th class="govuk-table__header" scope="col">Channel</th>
+                        -->
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <tr>
+                        <td data-label="Code"><a href="fee0088-change">FEE0088</a></td>
+                        <td data-label="Service">Change to fee</td>
+                        <td data-label="Service">Immigration and asylum</td>
+                        <td data-label="Jurisdiction 1">Tribunal</td>
+                        <td data-label="Jurisdiction 2">Upper tribunal</td>
+                        <td data-label="Description">An application for leave to remain</td>
+                    </tr>
+                    </tbody>
+
                 </table>
 
+                </span></caption>
+            </table>
 
-            </main>
 
-            <br>
+        </main>
+
+        <br>
 
 
 
