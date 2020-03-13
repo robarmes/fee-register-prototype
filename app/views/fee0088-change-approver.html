@@ -87,11 +87,7 @@
         </div>
     </div>
 
-
     <br>
-
-
-
 
     <dl class="govuk-check-your-answers govuk-check-your-answers--short">
         <div class="govuk-check-your-answers__contents">
@@ -113,6 +109,21 @@
                 Free increased with new financial year.
             </dd>
             <dd class="govuk-check-your-answers__change"  style="width: 250px; padding-left: 15px;">
+            </dd>
+        </div>
+
+
+        <div class="govuk-check-your-answers__contents">
+            <dt class="govuk-check-your-answers__question">
+                Version
+            </dt>
+            <dd class="govuk-check-your-answers__answer">
+                2
+            </dd>
+            <dd class="govuk-check-your-answers__change">
+                <a href="#">
+                    <span class="visually-hidden"></span>
+                </a>
             </dd>
         </div>
 
@@ -189,19 +200,6 @@
             </dt>
             <dd class="govuk-check-your-answers__answer">
                 Flat
-            </dd>
-            <dd class="govuk-check-your-answers__change">
-                <a href="#">
-                    <span class="visually-hidden"></span>
-                </a>
-            </dd>
-        </div>
-        <div class="govuk-check-your-answers__contents">
-            <dt class="govuk-check-your-answers__question">
-                Version
-            </dt>
-            <dd class="govuk-check-your-answers__answer">
-                2
             </dd>
             <dd class="govuk-check-your-answers__change">
                 <a href="#">
@@ -306,9 +304,12 @@
 
     <div class="form-group" style="width:130px;">
 
-        <a href="/approval-confirmation"> <button class="govuk-button">Approve fee</button> </a>
+        {% if  data['usertype'] == 'approver' %}
+            <a href="/approval-confirmation"> <button class="govuk-button">Approve fee</button> </a>
 
-        <p><a href="">Reject fee</a></p>
+            <p><a href="">Reject fee</a></p>
+        {% endif %}
+
 
         <!-- <button class="govuk-button2" style="width:110px;" href="/fee0001-edit">Reject fee</button> -->
 

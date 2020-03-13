@@ -1,0 +1,375 @@
+{% extends "layouts/admin/casefile.html" %}
+
+{% block pageTitle %}
+  Fee details
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="hmcts-header__container">
+
+        <ul class="hmcts-primary-navigation__list">
+
+            <li class="hmcts-primary-navigation__item">
+                <a class="hmcts-primary-navigation__link" href="/all-fees">
+                All fees
+                </a>
+            </li>
+
+            <li class="hmcts-primary-navigation__item">
+                <a class="hmcts-primary-navigation__link" href="/draft-fees">
+                Draft fees
+                </a>
+            </li>
+
+            <li class="hmcts-primary-navigation__item">
+                <a class="hmcts-primary-navigation__link" href="/create-a-fee">
+                Create a fee
+                </a>
+            </li>
+
+            <li class="hmcts-primary-navigation__item">
+                <a class="hmcts-primary-navigation__link" href="/upload-fee">
+                Upload a fee
+                </a>
+            </li>
+
+            <li class="hmcts-primary-navigation__item">
+                <a class="hmcts-primary-navigation__link" href="/reference-data">
+                Reference data
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</nav>
+
+
+
+
+
+<div class="hmcts-header__container">
+
+
+  <div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-full">
+
+      <nav class="hmcts-sub-navigation" aria-label="Sub navigation">
+        <div class="jui-width-container">
+
+          <ul class="hmcts-sub-navigation__list">
+
+            <li class="hmcts-sub-navigation__item">
+              <a class="hmcts-sub-navigation__link" aria-current="page" href="/fee0001-summary">
+                Fee details
+              </a>
+            </li>
+
+            <li class="hmcts-sub-navigation__item">
+              <a class="hmcts-sub-navigation__link" href="/previous-versions">
+                Previous versions
+              </a>
+            </li>
+
+            <!--
+            <li class="hmcts-sub-navigation__item">
+              <a class="hmcts-sub-navigation__link" href="/fee0001-timeline">
+                Timeline
+              </a>
+            </li>
+            -->
+
+          </ul>
+        </div>
+      </nav>
+
+      <h1 class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">
+        {% if  data['draft'] == 'true' %}
+            Draft fee details
+        {% else %}
+            Fee details
+        {% endif %}
+      </h1>
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <br>
+
+  <dl class="govuk-check-your-answers govuk-check-your-answers--short">
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Fee code
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+         {{ data['feecode'] }}
+      </dd>
+      {% if  data['draft'] == 'true' and  data['brandnewfee'] != 'true'  %}
+          <dd class="govuk-check-your-answers__change"  style="width: 250px; padding-left: 15px;"> </dd>
+      {% else %}
+          <dd class="govuk-check-your-answers__change" > </dd>
+      {% endif %}
+    </div>
+
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Reason for change
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Free increased with new financial year.
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+      </dd>
+    </div>
+
+
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Version
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        2
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Natural account code
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        X07238
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Description
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Filing an application for a divorce.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a sapien id arcu ullamcorper bibendum.
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Jurisdiction 1
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Family
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Jurisdiction 2
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Family court
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Fee type
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Fixed
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Amount type
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Flat
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Memo line
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Filing an application for a divorce
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Active date
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        23 Apr 1995 - present
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Fee amount
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        £550.00
+      </dd>
+      {% if  data['draft'] == 'true' and  data['brandnewfee'] != 'true' %}
+          <dd class="govuk-check-your-answers__change"  style="width: 250px; padding-left: 15px; text-align: left">
+            Was: £480.00
+          </dd>
+      {% else %}
+          <dd class="govuk-check-your-answers__change" > </dd>
+      {% endif %}
+
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Service
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Divorce
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Fee Order Name
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Lorem ipsum
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        Statutory Instrument
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Lorem ipsum
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+    <div class="govuk-check-your-answers__contents">
+      <dt class="govuk-check-your-answers__question">
+        SI REF ID
+      </dt>
+      <dd class="govuk-check-your-answers__answer">
+        Lorem ipsum
+      </dd>
+      <dd class="govuk-check-your-answers__change">
+        <a href="#">
+          <span class="visually-hidden"></span>
+        </a>
+      </dd>
+    </div>
+  </dl>
+
+  <br>
+
+    <div class="form-group">
+
+    {% if  data['draft'] == 'true' %}
+
+
+
+              {% if  data['usertype'] == 'approver' %}
+                  <div class="" style="width:130px;">
+                      <a href="/approval-confirmation"> <button class="govuk-button">Approve fee</button> </a>
+                      <p><a href="">Reject fee</a></p>
+                  </div>
+
+              {% else %}
+                  <!-- editor user -->
+                  <div class="" style="width:2000px;">
+
+                      {% if  data['waitingforapproval'] != 'true' %}
+                          <a href="/approval-request-confirmation"> <button class="govuk-button">Request approval</button> </a>
+                          <p><a href="">Delete draft</a></p>
+                      {% endif %}
+
+                  </div>
+              {% endif %}
+
+
+
+    {% else %}
+
+            <a class="govuk-button" href="#">Create a new version of this fee</a>
+
+    {% endif %}
+
+    <!-- <button class="govuk-button2" style="width:110px;" href="/fee0001-edit">Reject fee</button> -->
+
+    <p><a href="javascript:history.back()">Back</a></p>
+
+    <br>
+
+
+  </div>
+
+
+
+</div>
+
+{% endblock %}
+

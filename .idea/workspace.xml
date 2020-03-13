@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30a9e502-23b1-4a07-abf3-aae425746975" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/approval-confirmation.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/fee0088-change.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/approval-request-confirmation.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/fee-details.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/previous-versions.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/app/views/fee0088-change.html" afterPath="$PROJECT_DIR$/app/views/fee0088-change-approver.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/all-fees.html" afterPath="$PROJECT_DIR$/app/views/all-fees.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/draft-fees.html" afterPath="$PROJECT_DIR$/app/views/draft-fees.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/type-of-user.html" afterPath="$PROJECT_DIR$/app/views/type-of-user.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/prototype-admin/clear-data.html" afterPath="$PROJECT_DIR$/lib/prototype-admin/clear-data.html" />
     </list>
     <ignored path="fee-register-prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,9 +35,10 @@
       <file leaf-file-name="draft-fees.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.163636">
-              <caret line="154" column="62" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
+            <state vertical-scroll-proportion="-15.346154">
+              <caret line="91" column="110" selection-start-line="91" selection-start-column="110" selection-end-line="91" selection-end-column="110" />
               <folding>
+                <element signature="n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -45,85 +52,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fee0001-summary.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fee0001-summary.html">
+      <file leaf-file-name="fee-details.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/fee-details.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.65384614">
-              <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="423" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fee0088-change.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/fee0088-change.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2181816">
-              <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="76" />
+            <state vertical-scroll-proportion="0.715311">
+              <caret line="364" column="8" selection-start-line="364" selection-start-column="8" selection-end-line="364" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dd#1;n#div#1;n#dl#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#dd#1;n#div#11;n#dl#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="approval-confirmation.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/approval-confirmation.html">
+      <file leaf-file-name="approval-request-confirmation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/approval-request-confirmation.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4764574">
-              <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
+            <state vertical-scroll-proportion="-19.615385">
+              <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/sass/application.scss">
+      <file leaf-file-name="previous-versions.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/previous-versions.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8292682">
-              <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all-fees.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.2181816">
-              <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="38" />
+            <state vertical-scroll-proportion="-13.150944">
+              <caret line="90" column="15" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
               <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#td#6;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#nav#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="clear-data.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/prototype-admin/clear-data.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.65384614">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fee0001-summary.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/fee0001-summary.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-25.153847">
+              <caret line="416" column="16" selection-start-line="416" selection-start-column="16" selection-end-line="416" selection-end-column="97" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fee0088-change-approver.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/fee0088-change-approver.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.923077">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#dl#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#dd#1;n#div#1;n#dl#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#dd#1;n#div#11;n#dl#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -138,10 +136,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/app/views/index.html" />
-        <option value="$PROJECT_DIR$/app/views/all-fees.html" />
-        <option value="$PROJECT_DIR$/app/views/draft-fees.html" />
-        <option value="$PROJECT_DIR$/app/views/fee0088-change.html" />
         <option value="$PROJECT_DIR$/app/views/approval-confirmation.html" />
+        <option value="$PROJECT_DIR$/app/views/fee0088-change.html" />
+        <option value="$PROJECT_DIR$/app/views/view-data.html" />
+        <option value="$PROJECT_DIR$/lib/prototype-admin/clear-data.html" />
+        <option value="$PROJECT_DIR$/app/routes.js" />
+        <option value="$PROJECT_DIR$/app/views/type-of-user.html" />
+        <option value="$PROJECT_DIR$/app/views/all-fees.html" />
+        <option value="$PROJECT_DIR$/app/views/fee0088-change-approver.html" />
+        <option value="$PROJECT_DIR$/app/views/previous-versions.html" />
+        <option value="$PROJECT_DIR$/app/views/approval-request-confirmation.html" />
+        <option value="$PROJECT_DIR$/app/views/draft-fees.html" />
+        <option value="$PROJECT_DIR$/app/views/fee-details.html" />
       </list>
     </option>
   </component>
@@ -208,6 +214,38 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="fee-register-prototype">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="fee-register-prototype">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="fee-register-prototype">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lib">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="prototype-admin">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -324,6 +362,11 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -366,7 +409,6 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -378,6 +420,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -401,8 +444,9 @@
     <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="154" column="62" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
           <folding>
+            <element signature="n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -415,39 +459,78 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fee0001-summary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="423" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fee0088-change-approver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="76" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#dl#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#dd#1;n#div#1;n#dl#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#dd#1;n#div#11;n#dl#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/approval-confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/sass/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="67" />
+          <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="38" />
           <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -457,6 +540,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -474,34 +558,89 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="67" />
           <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#span#0;n#caption#0;n#table#1;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#span#0;n#caption#0;n#table#1;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#span#0;n#caption#0;n#table#1;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#span#0;n#caption#0;n#table#1;n#main#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="176" column="43" selection-start-line="176" selection-start-column="43" selection-end-line="176" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -517,14 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fee0001-summary.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="66" column="0" selection-start-line="66" selection-start-column="0" selection-end-line="423" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -544,11 +675,147 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../cmc-prototype/app/views/prototypes/prototype-dec-2019/defendant/confirmation-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27514452">
+          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/prototype-admin/view-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.185185">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/sass/application.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9618834">
+          <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32174888">
+          <caret line="449" column="78" selection-start-line="449" selection-start-column="78" selection-end-line="449" selection-end-column="78" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#th#5;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#td#5;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/approval-confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21860987">
+          <caret line="57" column="57" selection-start-line="57" selection-start-column="57" selection-end-line="57" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fee0088-change-approver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.923077">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="324" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#dl#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#dd#1;n#div#1;n#dl#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#dd#1;n#div#11;n#dl#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/fee0001-summary.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.153847">
+          <caret line="416" column="16" selection-start-line="416" selection-start-column="16" selection-end-line="416" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/type-of-user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4955157">
+          <caret line="26" column="71" selection-start-line="26" selection-start-column="71" selection-end-line="26" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/prototype-admin/clear-data.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.65384614">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/previous-versions.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.150944">
+          <caret line="90" column="15" selection-start-line="90" selection-start-column="15" selection-end-line="90" selection-end-column="15" />
+          <folding>
+            <element signature="n#div#0;n#nav#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/approval-request-confirmation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-19.615385">
+          <caret line="66" column="20" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.163636">
-          <caret line="154" column="62" selection-start-line="154" selection-start-column="62" selection-end-line="154" selection-end-column="62" />
+        <state vertical-scroll-proportion="-15.346154">
+          <caret line="91" column="110" selection-start-line="91" selection-start-column="110" selection-end-line="91" selection-end-column="110" />
           <folding>
+            <element signature="n#ul#0;n#div#0;n#nav#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -561,69 +828,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
+    <entry file="file://$PROJECT_DIR$/app/views/fee-details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2181816">
-          <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#6;n#tr#0;n#thead#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#1;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#2;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#3;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#4;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#5;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#6;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#7;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#8;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#9;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#10;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#6;n#tr#11;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/sass/application.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8292682">
-          <caret line="291" column="1" selection-start-line="291" selection-start-column="1" selection-end-line="291" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/fee0088-change.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2181816">
-          <caret line="18" column="57" selection-start-line="18" selection-start-column="57" selection-end-line="18" selection-end-column="76" />
+        <state vertical-scroll-proportion="0.715311">
+          <caret line="364" column="8" selection-start-line="364" selection-start-column="8" selection-end-line="364" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#dd#1;n#div#0;n#dl#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dd#1;n#div#1;n#dl#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#dd#1;n#div#11;n#dl#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/approval-confirmation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4764574">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
