@@ -75,13 +75,13 @@
               </a>
             </li>
 
-            <!--
+
             <li class="hmcts-sub-navigation__item">
-              <a class="hmcts-sub-navigation__link" href="/fee0001-timeline">
+              <a class="hmcts-sub-navigation__link" href="/timeline">
                 Timeline
               </a>
             </li>
-            -->
+
 
           </ul>
         </div>
@@ -330,21 +330,20 @@
 
     {% if  data['draft'] == 'true' %}
 
-
-
               {% if  data['usertype'] == 'approver' %}
-                  <div class="" style="width:130px;">
-                      <a href="/approval-confirmation"> <button class="govuk-button">Approve fee</button> </a>
-                      <p><a href="">Reject fee</a></p>
-                  </div>
-
+                  {% if    data['waitingforapproval'] == 'true' %}
+                      <div class="" style="width:130px;">
+                          <a href="/approval-confirmation"> <button class="govuk-button">Approve fee</button> </a>
+                          <p><a href="approval-rejected-confirmation">Reject fee</a></p>
+                      </div>
+                  {% endif %}
               {% else %}
                   <!-- editor user -->
                   <div class="" style="width:2000px;">
 
                       {% if  data['waitingforapproval'] != 'true' %}
                           <a href="/approval-request-confirmation"> <button class="govuk-button">Request approval</button> </a>
-                          <p><a href="">Delete draft</a></p>
+                          <p><a href="draft-deleted-confirmation">Delete draft</a></p>
                       {% endif %}
 
                   </div>

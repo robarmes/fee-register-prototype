@@ -49,20 +49,6 @@
 
 </nav>
 
-<!-- <div class="jui-casebar">
-
-  <div class="hmcts-width-container">
-
-    <div class="jui-casebar__details">
-
-        <span class="jui-casebar__reference">FEE0001</span>
-
-    </div>
-
-  </div>
-
-</div> -->
-
 <nav class="hmcts-sub-navigation" aria-label="Sub navigation">
     <div class="hmcts-header__container">
 
@@ -75,20 +61,19 @@
             </li>
 
             <li class="hmcts-sub-navigation__item">
-              <a class="hmcts-sub-navigation__link" aria-current="page" href="/fee0001-previous-version">
+              <a class="hmcts-sub-navigation__link" aria-current="page" href="/previous-versions
+              0">
                 Previous versions
               </a>
             </li>
 
-            <!--
 
             <li class="hmcts-sub-navigation__item">
-              <a class="hmcts-sub-navigation__link" href="/fee0001-timeline">
+              <a class="hmcts-sub-navigation__link" href="/timeline">
                 Timeline
               </a>
             </li>
 
-            -->
 
         </ul>
     </div>
@@ -110,21 +95,9 @@
           Previous versions
         </h1>
 
-        <dl class="govuk-check-your-answers govuk-check-your-answers--short">
-           <div class="govuk-check-your-answers__contents">
-             <dt class="govuk-check-your-answers__question">
-               Fee code
-             </dt>
-             <dd class="govuk-check-your-answers__answer">
-               {{ data['feecode'] }}
-             </dd>
-             {% if  data['draft'] == 'true' %}
-             <dd class="govuk-check-your-answers__change"  style="width: 250px; padding-left: 15px;"> </dd>
-             {% else %}
-             <dd class="govuk-check-your-answers__change" > </dd>
-             {% endif %}
-           </div>
-        </dl>
+
+         <p>Fee code: {{ data['feecode'] }}</p>
+
 
           <details class="govuk-details">
             <summary class="govuk-details__summary">

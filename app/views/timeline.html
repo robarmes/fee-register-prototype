@@ -1,0 +1,257 @@
+{% extends "layouts/admin/casefile.html" %}
+
+{% block pageTitle %}
+  Timeline
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="hmcts-header__container">
+
+
+<ul class="hmcts-primary-navigation__list">
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link"  href="/all-fees">
+All fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/draft-fees">
+Draft fees
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/create-a-fee">
+Create a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/upload-fee">
+Upload a fee
+</a>
+</li>
+
+<li class="hmcts-primary-navigation__item">
+<a class="hmcts-primary-navigation__link" href="/reference-data">
+Reference data
+</a>
+</li>
+
+
+
+</ul>
+
+</div>
+
+
+</nav>
+
+<!-- <div class="jui-casebar">
+
+  <div class="hmcts-width-container">
+
+    <div class="jui-casebar__details">
+
+        <span class="jui-casebar__reference">FEE0001</span>
+
+
+    </div>
+
+  </div>
+
+</div> -->
+
+
+
+
+
+
+
+
+     <div class="hmcts-header__container">
+
+
+
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+
+          <nav class="hmcts-sub-navigation" aria-label="Sub navigation">
+              <div class="jui-width-container">
+
+          <ul class="hmcts-sub-navigation__list">
+
+          <li class="hmcts-sub-navigation__item">
+            <a class="hmcts-sub-navigation__link" href="/fee-details">
+              Summary
+            </a>
+          </li>
+
+          <li class="hmcts-sub-navigation__item">
+            <a class="hmcts-sub-navigation__link" href="/previous-versions">
+              Previous versions
+            </a>
+          </li>
+
+          <li class="hmcts-sub-navigation__item">
+            <a class="hmcts-sub-navigation__link" aria-current="page" href="/fee0001-timeline">
+              Timeline
+            </a>
+          </li>
+
+          </ul>
+          </div>
+
+          </nav>
+
+          <h1 class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold">
+            Timeline
+
+
+            </h1>
+
+                <!-- <nav class="jui-secondary-nav" aria-label="">
+          <ul class="jui-secondary-nav__list">
+
+              <li class="jui-secondary-nav__item">
+                  <a class="jui-secondary-nav__link" aria-current="page" href="/fee0001-summary">Summary</a>
+              </li>
+
+              <li class="jui-secondary-nav__item">
+                <a class="jui-secondary-nav__link" href="/fee0001-previous-version">Previous versions</a>
+              </li>
+          </ul>
+        </nav> -->
+
+
+
+
+
+        </div>
+      </div>
+
+
+         <p>Fee code: {{ data['feecode'] }}</p>
+
+         
+      <br>
+
+          <div>
+              <p class="govuk-!-margin-bottom-1"> <span class="govuk-!-font-weight-bold" >Version 2</span>
+              <br>Jamie Smith
+              <br>13 March 2020 at 3:11pm</p>
+              <div class="govuk-details__text">
+                  <p>Amount changed from £500.00 to £550.00</p>
+                  <p>Reason:s "The rules changed"</p>
+              </div>
+          </div>
+
+          <br>
+          <br>
+          <br>
+
+          <div>
+            <p> <span class="govuk-!-font-weight-bold">Version 1</span>
+              <br>Anne Jones
+              <br>23 April 2018 at 4:48pm</p>
+          </div>
+
+
+          <br>
+          <br>
+
+
+ <!--
+
+          <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+
+                <div class="jui-timeline">
+
+
+                  <div class="jui-timeline__item">
+
+                    <div class="jui-timeline__header">
+                      <h3 class="jui-timeline__title">Version 2 created</h3>
+
+
+                        <p class="jui-timeline__by">by Jamie Hunt</p>
+
+
+
+
+
+
+                    </div>
+
+
+
+                    <p class="jui-timeline__date"><time datetime="2018-01-25T16:48">23 April 1995 at 4:48pm</time></p>
+
+
+
+
+                            <span class="govuk-body govuk-!-font-size-18"><br>Price increase in fee due to inflation</span>
+
+
+                  </div>
+
+
+
+                  <div class="jui-timeline__item">
+
+                    <div class="jui-timeline__header">
+                      <h3 class="jui-timeline__title">Version 1 created</h3>
+
+                        <p class="jui-timeline__by">by Lucy Jones</p>
+
+                    </div>
+
+                    <p class="jui-timeline__date"><time datetime="2017-11-20T13:01">02 January 1990 at 1:01pm</time></p>
+
+                  </div>
+
+
+
+
+                </div>
+
+
+
+
+
+              </div>
+
+
+
+
+              <div class="govuk-grid-column-one-third">
+
+
+
+
+
+
+
+                </div>
+              </div>
+
+-->
+
+
+
+            <br>
+
+
+
+
+    </div>
+
+
+
+{% endblock %}
