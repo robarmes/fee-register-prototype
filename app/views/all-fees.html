@@ -5,50 +5,13 @@
 {% endblock %}
 
 {% block content %}
-<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
-
-    <div class="hmcts-header__container">
 
 
-<ul class="hmcts-primary-navigation__list">
+<!--  TOP LINKS LIKE ALL FEES ETC -->
+{% include "includes/topnav.html" %}
 
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" aria-current="page" href="/all-fees">
-All fees
-</a>
-</li>
 
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/draft-fees">
-Draft fees
-</a>
-</li>
 
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/create-a-fee">
-Create a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/upload-fee">
-Upload a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/reference-data">
-Reference data
-</a>
-</li>
-  <li class="hmcts-primary-navigation__item hmcts-primary-navigation__item-position"  onclick="hideAndShow()">
-    <a class="hmcts-primary-navigation__link" href="Javascript:void(0);">
-      Advanced Search
-    </a>
-  </li>
-</ul>
-
-</div>
 <div class="second-nav blue hidden">
 
     <br/>
@@ -167,6 +130,9 @@ Reference data
 
 
 
+
+
+
   <div class="hmcts-header__container">
 
       <main role="main" class="govuk-main-wrapper">
@@ -177,7 +143,7 @@ Reference data
                 <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">All fees</h1>
 
 
-
+                <!-- SEARCH  -->
                 <div class="" >
                   <label class="govuk-label" for="email">
                     Enter a decription or fee code
@@ -209,7 +175,7 @@ Reference data
 
 
 
-
+                <!-- FILTER  -->
                 <h2 class="govuk-heading-m">Filter by</h2>
 
                 <div class="govuk-form-group">
@@ -243,6 +209,8 @@ Reference data
 
 
 
+          <!--  RESULTS  -->
+
           <div class="">
             <h2 class="govuk-heading-m">Results</h2>
             <!-- <p id="numberOfRows">15 fees</p>  -->
@@ -252,10 +220,12 @@ Reference data
                   <th class="govuk-table__header" scope="col" style="width:100px;">Fee code</th>
                   <th class="govuk-table__header" scope="col" style="width:95px;">Amount</th>
 
-                  <th class="govuk-table__header" scope="col" style="width:135px;">Jurisdiction 1</th>
-                  <!--<th class="govuk-table__header" scope="col" style="width:137px;">Jurisdiction 2</th>-->
+                  <!--<th class="govuk-table__header" scope="col" style="width:135px;">Jurisdiction 1</th>-->
+                  <th class="govuk-table__header" scope="col" style="width:137px;">Jurisdiction 2</th>
                   <th class="govuk-table__header" scope="col">Service</th>
                   <th class="govuk-table__header" scope="col">Description</th>
+
+                  <!--
                   <th class="govuk-table__header" scope="col" style="padding-left:10px;">Type</th>
                   <th class="govuk-table__header" scope="col">Amount type</th>
                   <!--
@@ -279,11 +249,12 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0001">FEE0001</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£550.00</td>
                   <td data-label="Service">Divorce</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Family court</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Family court</td>
+                  <td data-label="Description">Filing an application for a divorce</td>
+                  <!--
                   <td data-label="Type">Fixed</td>
                   <td data-label="Amount type" style="padding-left:10px;">Flat</td>
-                  <td data-label="Description">Filing an application for a divorce</td>
                   <!--
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
@@ -294,9 +265,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0002">FEE0002</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£0.50</td>
                   <td data-label="Service">Probate</td>
-                  <td data-label="Jurisdiction 1">Probate registry</td>
-                  <!--<td data-label="Jurisdiction 2">Probate registry</td>-->
+                  <!--<td data-label="Jurisdiction 1">Probate registry</td>-->
+                  <td data-label="Jurisdiction 2">Probate registry</td>
                   <td data-label="Description">Additional copies of grant</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Flat</td>
                   <!--
@@ -309,9 +281,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0003">FEE0003</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£480.00</td>
                   <td data-label="Service">Possession claim</td>
-                  <td data-label="Jurisdiction 1">Civil</td>
-                  <!--<td data-label="Jurisdiction 2">High court</td>-->
+                  <!--<td data-label="Jurisdiction 1">Civil</td>-->
+                  <td data-label="Jurisdiction 2">High court</td>
                   <td data-label="Description">Recovery of Land</td>
+                  <!--
                   <td data-label="Type"  style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Flat</td>
                   <!--
@@ -324,9 +297,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0004">FEE0004</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">County court</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">County court</td>
                   <td data-label="Description">Where the party filing the request is legally aided</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Flat</td>
                   <!--
@@ -339,9 +313,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0005">FEE0005</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Ranged</td>
                   <td data-label="Amount type">Volume</td>
                   <!--
@@ -354,9 +329,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0006">FEE0006</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Property chamber</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Property chamber</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Percentage</td>
                   <!--
@@ -369,9 +345,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0007">FEE0007</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">High court</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">High court</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Flat</td>
                   <!--
@@ -385,9 +362,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0008">FEE0008</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Ranged</td>
                   <td data-label="Amount type">Volume</td>
 
@@ -401,9 +379,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0009">FEE0009</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Property chamber</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Property chamber</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Percentage</td>
                   <!--
@@ -416,9 +395,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE00010">FEE0010</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">High court</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">High court</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Flat</td>
                   <!--
@@ -431,9 +411,10 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0011">FEE0011</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>-->
+                  <!--<td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Ranged</td>
                   <td data-label="Amount type">Volume</td>
                   <!--
@@ -446,12 +427,13 @@ Reference data
                   <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0012">FEE0012</a></td>
                   <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
                   <td data-label="Service">General</td>
-                  <td data-label="Jurisdiction 1">Family</td>
-                  <!--<td data-label="Jurisdiction 2">Property chamber</td>-->
+                  <!-- <td data-label="Jurisdiction 1">Family</td>-->
+                  <td data-label="Jurisdiction 2">Property chamber</td>
                   <td data-label="Description">An application for..</td>
+                  <!--
                   <td data-label="Type" style="padding-left:10px;">Fixed</td>
                   <td data-label="Amount type">Percentage</td>
-                  <!--
+
                   <td data-label="Event">Issue</td>
                   <td data-label="Channel">Defult</td>
                   -->

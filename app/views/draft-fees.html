@@ -5,63 +5,22 @@
 {% endblock %}
 
 {% block content %}
-<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
-
-    <div class="hmcts-header__container">
 
 
-<ul class="hmcts-primary-navigation__list">
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/all-fees">
-All fees
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" aria-current="page" href="/draft-fees">
-Draft fees
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/create-a-fee">
-Create a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/upload-fee">
-Upload a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/reference-data">
-Reference data
-</a>
-</li>
+<!--  TOP LINKS LIKE ALL FEES ETC -->
+{% include "includes/topnav.html" %}
 
 
 
-</ul>
 
-</div>
-
-
-</nav>
-
-  <div class="hmcts-header__container">
-
-
+<div class="hmcts-header__container">
 
     <main role="main" class="govuk-main-wrapper">
 
+        <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Drafts</h1>
 
-       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">Draft fees</h1>
 
-
-       <table class="govuk-table">
+        <table class="govuk-table">
 
         <!-- <caption class="govuk-table__caption">Fees to submit </caption> -->
         <thead class="govuk-table__head font-16">
@@ -71,12 +30,12 @@ Reference data
               <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
             </label>
             </div></th>-->
-            <th class="govuk-table__header" scope="col" style="width: 90px;">Code</th>
-            <th class="govuk-table__header" scope="col" style="width:130px;">Version</th>
-            <th class="govuk-table__header" scope="col">Service</th>
-            <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>
-            <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 2</th>
-            <th class="govuk-table__header" scope="col">Description</th>
+              <th class="govuk-table__header" scope="col" style="width: 100px;">Code</th>
+              <th class="govuk-table__header" scope="col" style="width:100px;">Version</th>
+              <th class="govuk-table__header" scope="col">Service</th>
+              <!--<th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>-->
+              <th class="govuk-table__header" scope="col" style="width:200px;">Jurisdiction 2</th>
+              <th class="govuk-table__header" scope="col">Description</th>
             <!--
                 <th class="govuk-table__header" scope="col">Type</th>
                 <th class="govuk-table__header" scope="col">Amount type</th>
@@ -87,20 +46,21 @@ Reference data
           </tr>
         </thead>
 
+
         <tbody>
           <tr>
-              <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=false&feecode=FEE0001">FEE0001</a></td>
-              <td data-label="Service">Change to fee</td>
+              <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=false&feecode=FEE0001&rejected=false&">FEE0001</a></td>
+              <td data-label="Service">2</td>
               <td data-label="Service">Immigration and asylum</td>
-              <td data-label="Jurisdiction 1">Tribunal</td>
+              <!-- <td data-label="Jurisdiction 1">Tribunal</td> -->
               <td data-label="Jurisdiction 2">Upper tribunal</td>
               <td data-label="Description">An application for..</td>
           </tr>
           <tr>
-              <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=true&waitingforapproval=false&feecode=FEE0862&">FEE0862</a></td>
-              <td data-label="Service">New fee</td>
+              <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=true&waitingforapproval=false&feecode=FEE0862&rejected=false&">FEE0862</a></td>
+              <td data-label="Service">1</td>
               <td data-label="Service">Civil Money Claims</td>
-              <td data-label="Jurisdiction 1">Tribunal</td>
+              <!-- <td data-label="Jurisdiction 1">Tribunal</td>  -->
               <td data-label="Jurisdiction 2">Upper tribunal</td>
               <td data-label="Description">An application to set aside a claim</td>
           </tr>
@@ -109,20 +69,19 @@ Reference data
       </table>
 
 
-        <!--
-              <a href="/draft-fees-delete" role="button" class="govuk-button hmcts-button--secondary">
-                  <div class= "black-text">Delete</div>
-                </a>
-
-              <a href="/draft-fees-submit" role="button" class="govuk-button">
-                  Submit
-                </a>
-        -->
+        <a href="/create-a-fee">
+            <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:170px">Create new draft</button></a>
+        <br>
+        <p><a href="/#">Upload fees</a></p>
 
 
-            <br>
-            <table class="govuk-table">
-            <caption class="govuk-table__caption">Pending approval<br><br> <span id="nationality-hint" class="govuk-hint">
+
+        <br>
+        <!--  REJECTED FEES  -->
+
+        <br>
+        <table class="govuk-table">
+            <caption class="govuk-table__caption">Rejected by approver<br><br> <span id="nationality-hint" class="govuk-hint">
 
                 <table class="govuk-table">
 
@@ -134,11 +93,11 @@ Reference data
                           <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
                         </label>
                         </div></th>-->
-                        <th class="govuk-table__header" scope="col" style="width: 90px;">Code</th>
-                        <th class="govuk-table__header" scope="col" style="width:130px;">Version</th>
+                        <th class="govuk-table__header" scope="col" style="width: 100px;">Code</th>
+                        <th class="govuk-table__header" scope="col" style="width:100px;">Version</th>
                         <th class="govuk-table__header" scope="col">Service</th>
-                        <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>
-                        <th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 2</th>
+                        <!--<th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>-->
+                        <th class="govuk-table__header" scope="col" style="width:200px;">Jurisdiction 2</th>
                         <th class="govuk-table__header" scope="col">Description</th>
                         <!--
                             <th class="govuk-table__header" scope="col">Type</th>
@@ -152,10 +111,10 @@ Reference data
 
                     <tbody>
                     <tr>
-                        <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0088&">FEE0088</a></td>
-                        <td data-label="Service">Change to fee</td>
+                        <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0052&rejected=true&">FEE0052</a></td>
+                        <td data-label="Service">1</td>
                         <td data-label="Service">Immigration and asylum</td>
-                        <td data-label="Jurisdiction 1">Tribunal</td>
+                        <!-- <td data-label="Jurisdiction 1">Tribunal</td>  -->
                         <td data-label="Jurisdiction 2">Upper tribunal</td>
                         <td data-label="Description">An application for leave to remain</td>
                     </tr>
@@ -164,7 +123,56 @@ Reference data
                 </table>
 
                 </span></caption>
-            </table>
+        </table>
+
+
+
+
+        <!--  Waiting for APPROVAL  -->
+        <table class="govuk-table">
+            <!-- <caption class="govuk-table__caption">Pending approval<br><br> <span id="nationality-hint" class="govuk-hint">  -->
+
+
+             <caption class="govuk-table__caption">Waiting for approval</caption>
+            <thead class="govuk-table__head font-16">
+            <tr class="govuk-table__row">
+                <!--<th class="govuk-table__header" scope="col">All<div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish">
+                  <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                </label>
+                </div></th>-->
+                <th class="govuk-table__header" scope="col" style="width: 100px;">Code</th>
+                <th class="govuk-table__header" scope="col" style="width:100px;">Version</th>
+                <th class="govuk-table__header" scope="col">Service</th>
+                <!--<th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>-->
+                <th class="govuk-table__header" scope="col" style="width:200px;">Jurisdiction 2</th>
+                <th class="govuk-table__header" scope="col">Description</th>
+                <!--
+                    <th class="govuk-table__header" scope="col">Type</th>
+                    <th class="govuk-table__header" scope="col">Amount type</th>
+                    <th class="govuk-table__header" scope="col">Type value</th>
+                    <th class="govuk-table__header" scope="col">Event</th>
+                    <th class="govuk-table__header" scope="col">Channel</th>
+                -->
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0088&rejected=false&">FEE0088</a></td>
+                <td data-label="Service">1</td>
+                <td data-label="Service">Civil Money Claims</td>
+                <!-- <td data-label="Jurisdiction 1">Tribunal</td>  -->
+                <td data-label="Jurisdiction 2">Upper tribunal</td>
+                <td data-label="Description">An application for leave to remain</td>
+            </tr>
+            </tbody>
+
+
+        </table>
+
+
+
 
 
         </main>

@@ -1,0 +1,61 @@
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+  <div class="hmcts-header__container">
+
+    <ul class="hmcts-primary-navigation__list">
+
+      <li class="hmcts-primary-navigation__item">
+        <a class="hmcts-primary-navigation__link" href="/all-fees">
+          All fees
+        </a>
+      </li>
+
+      {% if  data['usertype'] == 'approver' %}
+          <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="/pending-approval">
+              Pending approval
+            </a>
+          </li>
+          <!-- Spacer -->
+          <li class="hmcts-primary-navigation__item" style="width:534px;"> </li>
+
+
+      {% else %}
+          <li class="hmcts-primary-navigation__item">
+            <a class="hmcts-primary-navigation__link" href="/draft-fees">
+              Drafts
+            </a>
+          </li>
+          <!-- Spacer -->
+          <li class="hmcts-primary-navigation__item" style="width:630px;"> </li>
+
+      {% endif %}
+
+
+        <!--
+      <li class="hmcts-primary-navigation__item">
+        <a class="hmcts-primary-navigation__link" href="/create-a-fee">
+          Create a fee
+        </a>
+      </li>
+
+      <li class="hmcts-primary-navigation__item">
+        <a class="hmcts-primary-navigation__link" href="/upload-fee">
+          Upload a fee
+        </a>
+      </li>
+
+      -->
+
+
+      <li class="hmcts-primary-navigation__item">
+        <a class="hmcts-primary-navigation__link" href="/reference-data">
+          Reference data
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>

@@ -5,51 +5,12 @@
 {% endblock %}
 
 {% block content %}
-<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
-
-    <div class="hmcts-header__container">
 
 
-<ul class="hmcts-primary-navigation__list">
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link"  href="/all-fees">
-All fees
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/draft-fees">
-Draft fees
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/create-a-fee">
-Create a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/upload-fee">
-Upload a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/reference-data">
-Reference data
-</a>
-</li>
+<!--  TOP LINKS LIKE ALL FEES ETC -->
+{% include "includes/topnav.html" %}
 
 
-
-</ul>
-
-</div>
-
-
-</nav>
 
 <!-- <div class="jui-casebar">
 
@@ -138,7 +99,7 @@ Reference data
 
          <p>Fee code: {{ data['feecode'] }}</p>
 
-         
+
       <br>
 
           <div>
@@ -147,7 +108,7 @@ Reference data
               <br>13 March 2020 at 3:11pm</p>
               <div class="govuk-details__text">
                   <p>Amount changed from £500.00 to £550.00</p>
-                  <p>Reason:s "The rules changed"</p>
+                  <p>Reasons "The rules changed"</p>
               </div>
           </div>
 

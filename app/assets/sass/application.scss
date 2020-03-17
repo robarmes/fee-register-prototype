@@ -309,7 +309,7 @@ mark.comment {
     border: 2px solid transparent;
     border-radius: 0;
     color: 000;
-    background-color: #bfc1c3;
+    background-color:  #dbdad9;
     -webkit-box-shadow: 0 2px 0 #003618;
     box-shadow: 0 2px 0 #003618;
     text-align: center;
@@ -317,6 +317,11 @@ mark.comment {
     cursor: pointer;
     -webkit-appearance: none;
 }
+
+.govuk-button2:hover {
+  background-color: #bfc1c3;
+}
+
 
 .black-text {
   color: black;
