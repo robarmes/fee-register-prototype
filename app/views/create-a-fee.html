@@ -26,12 +26,13 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
                   Fee code: FEE0089
                 </div>
 
+                <div style="width:940px;">
 
-                <div class="govuk-grid-column-two-thirds">
+                    <div style="width:600px;">
 
                         <div class="govuk-form-group">
                             <label class="govuk-label" for="email">
-                              Memo line
+                                Memo line
                             </label>
                             <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" value="">
                         </div>
@@ -39,7 +40,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
 
                         <div class="govuk-form-group">
                             <label class="govuk-label" for="account-code">
-                              Natural account code
+                                Natural account code
                             </label>
                             <input class="govuk-input govuk-input--width-10" id="account-code" name="email" type="text" aria-describedby="email-hint">
                         </div>
@@ -47,11 +48,14 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
                         <!--  DESCRIPTION -->
                         <div class="govuk-form-group">
                             <label class="govuk-label" for="more-detail">
-                              Description
+                                Description
                             </label>
                             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
                         </div>
+
+                    </div>
                 </div>
+
 
 
                 <!--  DATE FROM -->
