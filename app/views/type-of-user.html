@@ -1,4 +1,4 @@
-conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
+{% extends "layouts/admin/base-signin.html" %}
 
 {% block pageTitle %}
  Select the user
@@ -18,15 +18,11 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
 
     <main role="main" class="govuk-main-wrapper govuk-main-wrapper--maxhight">
 
-      <h3>Please select your user type : </h3>
-      <ul class="govuk-list">
-        <li>
-          <a class="govuk-link govuk-link--nounderline" href="/all-fees?usertype=editor&">Editor</a>
-        </li>
-        <li>
-          <a class="govuk-link govuk-link--nounderline" href="/all-fees?usertype=approver&">Approver</a>
-        </li>
-      </ul>
+      <h3  class="govuk-heading-m">User types</h3>
+
+      <p><a class="govuk-link " href="/signin?usertype=editor&">Editor</a></p>
+      <p><a class="govuk-link" href="/signin?usertype=approver&">Approver</a></p>
+
     </main>
 
 

@@ -1,4 +1,4 @@
-{% extends "layouts/admin/base.html" %}
+{% extends "layouts/admin/newlayout.html" %}
 
 {% block pageTitle %}
   All fees
@@ -7,8 +7,7 @@
 {% block content %}
 
 
-<!--  TOP LINKS LIKE ALL FEES ETC -->
-{% include "includes/topnav.html" %}
+
 
 
 <div class="second-nav blue hidden">
@@ -139,10 +138,20 @@
 
           <div class="govuk-grid-row">
               <div class="govuk-grid-column-full">
-                <h1 class="govuk-heading-xl govuk-!-margin-bottom-6">All fees</h1>
 
+                  <div style="display: flex;">
+
+                      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-margin-top-5">Live fees</h1>
+
+                      <div style="display: flex; flex-grow: 1;">
+                      </div>
+
+                      <p class="govuk-!-margin-top-8 govuk-!-margin-bottom-0">Other fees: &nbsp; <a href="#" >Discontinued</a>  &nbsp; &nbsp; <a href="#">Live and discontinued</a>  </p>
+
+                  </div>
 
                 <!-- SEARCH  -->
+                <!-- no dev effort to make this
                 <div class="" >
                   <label class="govuk-label" for="email">
                     Enter a decription or fee code
@@ -153,7 +162,7 @@
                       <button type="button" class="govuk-button" onclick="myFunction()">Search</button>
                   </div>
                 </div>
-
+                -->
 
                   <!-- <form class="govuk-form-group">
                     <span id="nationality-hint" class="govuk-hint">
@@ -175,13 +184,14 @@
 
 
                 <!-- FILTER  -->
+                <!-- no dev effort to make this
                 <h2 class="govuk-heading-m">Filter by</h2>
 
                 <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                           <!-- <label class="govuk-label" for="sort">
                             <b>View fees</b>
-                          </label>-->
+                          </label>--><!--
                           <div class="govuk-radios govuk-radios--inline">
                             <div class="govuk-radios__item">
                               <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" data-rel="Amount type" value="All">
@@ -204,14 +214,15 @@
                           </div>
                     </fieldset>
                 </div>
+                 -->
 
 
-
-
-          <!--  RESULTS  -->
+                <!--   RESULTS  -->
 
           <div class="">
-            <h2 class="govuk-heading-m">Results</h2>
+
+            <!--   <h2 class="govuk-heading-m">Results</h2> -->
+
             <!-- <p id="numberOfRows">15 fees</p>  -->
             <table class="govuk-body" id="testtable">
               <thead class="font-14">
