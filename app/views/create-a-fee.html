@@ -1,4 +1,4 @@
-conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
+conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 {% block pageTitle %}
   Create a fee
@@ -6,9 +6,6 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
 
 {% block content %}
 
-
-<!--  TOP LINKS LIKE ALL FEES ETC -->
-{% include "includes/topnav.html" %}
 
 
 
@@ -20,23 +17,15 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/base.html" %}
             <div class="govuk-grid-column-full">
 
                 {% if  data['editexisitingfee'] == 'true' %}
-                    <h1 class="govuk-heading-xl">Create a new version of this fee</h1>
+                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create a new version of this fee</h1>
                 {% else %}
-                    <h1 class="govuk-heading-xl">Create a draft for a new fee</h1>
+                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create a draft for a new fee</h1>
                 {% endif %}
 
 
 
-
-
-
-
-
-
-
-
                 <div class="govuk-inset-text">
-                  Fee code: FEE0089
+                  Fee code: FEE0989
                 </div>
 
                 <div style="width:940px;">

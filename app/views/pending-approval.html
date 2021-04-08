@@ -1,14 +1,10 @@
-{% extends "layouts/admin/base.html" %}
+{% extends "layouts/admin/newlayout.html" %}
 
 {% block pageTitle %}
   Draft fees
 {% endblock %}
 
 {% block content %}
-
-<!--  TOP LINKS LIKE ALL FEES ETC -->
-{% include "includes/topnav.html" %}
-
 
 
 
@@ -89,8 +85,8 @@
                         <th class="govuk-table__header" scope="col" style="width:100px;">Version</th>
                         <th class="govuk-table__header" scope="col">Service</th>
                         <!--<th class="govuk-table__header" scope="col" style="width:140px;">Jurisdiction 1</th>-->
-                        <th class="govuk-table__header" scope="col" style="width:200px;">Jurisdiction 2</th>
-                        <th class="govuk-table__header" scope="col">Description</th>
+                        <th class="govuk-table__header" scope="col" style="width:200px;">Date Approved</th>
+                        <th class="govuk-table__header" scope="col">Date valid from</th>
                         <!--
                             <th class="govuk-table__header" scope="col">Type</th>
                             <th class="govuk-table__header" scope="col">Amount type</th>
@@ -103,12 +99,12 @@
 
                     <tbody>
                     <tr>
-                        <td data-label="Code"><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=false&feecode=FEE0052&rejected=true&rejected=false&">FEE0052</a></td>
+                        <td data-label="Code"><a href="fee-details?draft=false&brandnewfee=false&waitingforapproval=false&feecode=FEE0052&rejected=true&rejected=false&">FEE0052</a></td>
                         <td data-label="Service">1</td>
                         <td data-label="Service">Immigration and asylum</td>
                         <!-- <td data-label="Jurisdiction 1">Tribunal</td>  -->
-                        <td data-label="Jurisdiction 2">Upper tribunal</td>
-                        <td data-label="Description">An application for leave to remain</td>
+                        <td data-label="Jurisdiction 2">10-04-2021</td>
+                        <td data-label="Description">1-9-2021</td>
                     </tr>
                     </tbody>
 
