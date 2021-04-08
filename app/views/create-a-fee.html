@@ -28,76 +28,610 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                   Fee code: FEE0989
                 </div>
 
-                <div style="width:940px;">
-
-                    <div style="width:600px;">
-
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="email">
-                                Memo line
+                        <!--   REASON FOR NEW THING  -->
+                        <div class="govuk-form-group" style="width:600px;">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="more-detail">
+                                {% if  data['editexisitingfee'] == 'true' %}
+                                    Reason for new version of fee
+                                {% else %}
+                                    Reason for new fee
+                                {% endif %}
                             </label>
-                            <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" value="">
+                            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2" aria-describedby="more-detail-hint"></textarea>
                         </div>
 
 
+                        <!-- SI REF ID-->
                         <div class="govuk-form-group">
-                            <label class="govuk-label" for="account-code">
-                                Natural account code
+                            <label class="govuk-label govuk-!-font-weight-bold" for="email">
+                                SI REF ID
                             </label>
-                            <input class="govuk-input govuk-input--width-10" id="account-code" name="email" type="text" aria-describedby="email-hint">
+                            <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:150px;">
                         </div>
+
+
+                        <!--  SERVICE  -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Service</strong>
+                                </label>
+
+                                <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-1" name="service" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="service-1">
+                                                Civil money claims
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-2" name="service" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="service-2">
+                                                Possession claim
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-3" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-3">
+                                                Insolvency
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-4" name="service" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="service-4">
+                                                Private law
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-5" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-5">
+                                                Public law
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-2-1" name="service" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="service-2-1">
+                                                Divorce
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-2-2" name="service" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="service-2-2">
+                                                Adoption
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-2-3" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-2-3">
+                                                Gambling
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-2-4" name="service" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="service-2-4">
+                                                Gender recognition
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-2-5" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-2-5">
+                                                Immigration and asylum
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-3-1" name="service" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="service-3-1">
+                                                Property
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-3-2" name="service" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="service-3-2">
+                                                Tax
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-3-3" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-3-3">
+                                                Probate
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-3-4" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-3-4">
+                                                General
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="service-3-5" name="service" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="service-3-5">
+                                                Magistrates
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+
+                        <!--  EVENT  -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Event</strong>
+                                </label>
+
+                                <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-1" name="event" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="event-1">
+                                                Enforcement
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-2" name="event" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="event-2">
+                                                Appeal
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-3" name="event" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="event-3">
+                                                Search
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-2-1" name="event" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="event-2-1">
+                                                Issue
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-2-2" name="event" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="event-2-2">
+                                                General application
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-2-3" name="event" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="event-2-3">
+                                                Copies
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-3-1" name="event" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="event-3-1">
+                                                Hearing
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-3-2" name="event" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="event-3-2">
+                                                Miscellaneous
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="event-3-3" name="event" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="event-3-3">
+                                                Cost assessment
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
 
                         <!--  DESCRIPTION -->
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="more-detail">
+                        <div class="govuk-form-group" style="width:600px;">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="more-detail">
                                 Description
                             </label>
                             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"></textarea>
                         </div>
 
-                    </div>
-                </div>
 
-
-
-                <!--  DATE FROM -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                        <label class="govuk-label" for="more-detail">
-                            <strong>Date fee will start</strong>
-                        </label>
-                        <div class="govuk-date-input" id="passport-issued">
-                            <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                                        Day
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
-                                </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                                        Month
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
-                                </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                                <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                                        Year
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" style="width:70px;">
-                                </div>
-                            </div>
+                        <!--  Statutory Instrument  -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="email">
+                                Statutory Instrument
+                            </label>
+                            <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:400px;">
                         </div>
-                    </fieldset>
-                </div>
 
 
-                <!--  DATE TO -->
-                <div class="govuk-form-group">
+                        <!--  Fee Order Name  -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="email">
+                                Fee Order Name
+                            </label>
+                            <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" style="width:400px;">
+                        </div>
+
+
+
+                        <!--  JURISDICTION 1 -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Jurisdiction 1</strong>
+                                </label>
+
+                                <div class="govuk-radios" data-module="radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="jurisdiction-one-1" name="jurisdiction-one" type="radio" value="email">
+                                        <label class="govuk-label govuk-radios__label" for="jurisdiction-one-1">
+                                            Civil
+                                        </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="jurisdiction-one-2" name="jurisdiction-one" type="radio" value="phone" >
+                                        <label class="govuk-label govuk-radios__label" for="jurisdiction-one-2">
+                                            Family
+                                        </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="jurisdiction-one-3" name="jurisdiction-one" type="radio" value="phone">
+                                        <label class="govuk-label govuk-radios__label" for="applicant-3">
+                                            Tribunal
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+                        <!--  JURISDICTION 2 -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Jurisdiction 2</strong>
+                                </label>
+
+                                <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-1" name="jurisdiction-two" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-1">
+                                                County court
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-2" name="jurisdiction-two" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2">
+                                                High court
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-3" name="jurisdiction-two" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3">
+                                                Magistrates court
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-4" name="jurisdiction-two" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-4">
+                                                Court of protection
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-5" name="jurisdiction-two" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-5">
+                                                Family court
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-2-1" name="jurisdiction-two" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-1">
+                                                Probate registry
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-2-2" name="jurisdiction-two" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-2">
+                                                Gambling tribunal
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-2-3" name="jurisdiction-two" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-3">
+                                                Gender recognition panel
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-2-4" name="jurisdiction-two" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-4">
+                                                Tax chamber
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-2-5" name="jurisdiction-two" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-5">
+                                                Property chamber
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-3-1" name="jurisdiction-two" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3-1">
+                                                Immigration and asylum chamber
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-3-2" name="jurisdiction-two" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3-2">
+                                                Upper tribunal immigration and asylum chamber
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="jurisdiction-two-3-3" name="jurisdiction-two" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3-3">
+                                                Upper tribunal lands chamber
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+
+                        <!--  FEE TYPE  -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Fee Type</strong>
+                                </label>
+
+                                <div class="govuk-radios" data-module="radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="fee-type-conditional-1" name="fee-type" type="radio" value="email" data-aria-controls="conditional-fee-type-conditional-1">
+                                        <label class="govuk-label govuk-radios__label" for="fee-type-conditional-1">
+                                            Fixed
+                                        </label>
+                                    </div>
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="fee-type-conditional-2" name="fee-type" type="radio" value="phone" data-aria-controls="conditional-fee-type-conditional-2">
+                                        <label class="govuk-label govuk-radios__label" for="fee-type-conditional-2">
+                                            Ranged
+                                        </label>
+                                    </div>
+
+                                    <!--  EXPANDED AREA FOR RANGED FEE TYPE RADIO -->
+                                    <div class="govuk-radios__conditional" id="conditional-fee-type-conditional-2" style="padding-top: 20px; padding-bottom: 20px;">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="for-more-than">
+                                                From more than
+                                            </label>
+                                            <p style="float:left; margin-top: 9px; margin-right:4px;">£</p>
+                                            <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
+                                        </div>
+
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label" for="up-to">
+                                                Up to (optional)
+                                            </label>
+                                            <p style="float:left; margin-top: 9px; margin-right:4px;">£</p>
+                                            <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
+                                        </div>
+
+
+                                        <div class="govuk-form-group">
+                                            <fieldset class="govuk-fieldset">
+                                                <label class="govuk-label" for="account-code">
+                                                    <strong>Ranged units</strong>
+                                                </label>
+                                                <div class="govuk-radios">
+                                                    <div class="govuk-radios__item">
+                                                        <input class="govuk-radios__input" id="where-do-you-live-1" name="ranged-units" type="radio" value="england">
+                                                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
+                                                            GBP
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="govuk-radios__item">
+                                                        <input class="govuk-radios__input" id="where-do-you-live-2" name="ranged-units" type="radio" value="scotland">
+                                                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                                                            Volume
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+                        <!-- AMOUNT TYPE  -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="more-detail">
+                                    <strong>Amount Type</strong>
+                                </label>
+
+                                <div class="govuk-radios" data-module="radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="amount-type" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
+                                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                                            Flat
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+
+                                        <div class="govuk-currency-input">
+                                            <label class="govuk-label" for="contact-by-email">
+                                                Amount
+                                            </label>
+                                            <div class="govuk-currency-input__inner">
+                                                <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                                                <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+                                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                                            Percentage
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
+                                        <div class="govuk-currency-input">
+                                            <label class="govuk-label" for="contact-by-email">
+                                                Amount
+                                            </label>
+                                            <div class="govuk-currency-input__inner">
+                                                <span class="govuk-currency-input__inner__unit govuk-body">%</span>
+                                                <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:80px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="how-contacted-conditional-3" name="amount-type" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3">
+                                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                                            Volume
+                                        </label>
+                                    </div>
+                                    <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
+                                        <div class="govuk-currency-input">
+                                            <label class="govuk-label" for="contact-by-email">
+                                                Amount
+                                            </label>
+                                            <div class="govuk-currency-input__inner">
+                                                <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                                                <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:120px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+
+                        <!--  DATE FROM -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                                <label class="govuk-label" for="more-detail">
+                                    <strong>Date fee will start</strong>
+                                </label>
+                                <div class="govuk-date-input" id="passport-issued">
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                                Day
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                                Month
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                                        </div>
+                                    </div>
+                                    <div class="govuk-date-input__item">
+                                        <div class="govuk-form-group">
+                                            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                                Year
+                                            </label>
+                                            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" style="width:70px;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+
+                        <!--  DATE TO -->
+                        <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
                         <label class="govuk-label" for="more-detail">
                             <strong>Date fee will stop (optional)/<strong>
@@ -132,475 +666,141 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                 </div>
 
 
+                        <!--  Natural account code  -->
+                        <div class="govuk-form-group">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="account-code">
+                                Natural account code
+                            </label>
+                            <input class="govuk-input govuk-input--width-10" id="account-code" name="email" type="text" aria-describedby="email-hint">
+                        </div>
 
-                <!--  FEE TYPE  -->
-                <div class="govuk-form-group">
-                      <fieldset class="govuk-fieldset">
-                          <label class="govuk-label" for="account-code">
-                              <strong>Fee Type</strong>
-                          </label>
 
-                          <div class="govuk-radios" data-module="radios">
-                              <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="fee-type-conditional-1" name="fee-type" type="radio" value="email" data-aria-controls="conditional-fee-type-conditional-1">
-                                  <label class="govuk-label govuk-radios__label" for="fee-type-conditional-1">
-                                        Fixed
-                                  </label>
-                              </div>
+                        <!--  Memo line  -->
+                        <div class="govuk-form-group" style="width:600px;">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="email">
+                                Memo line
+                            </label>
+                            <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" value="">
+                        </div>
 
-                              <div class="govuk-radios__item">
-                                  <input class="govuk-radios__input" id="fee-type-conditional-2" name="fee-type" type="radio" value="phone" data-aria-controls="conditional-fee-type-conditional-2">
-                                  <label class="govuk-label govuk-radios__label" for="fee-type-conditional-2">
-                                      Ranged
-                                  </label>
-                              </div>
 
-                                    <!--  EXPANDED AREA FOR RANGED FEE TYPE RADIO -->
-                                    <div class="govuk-radios__conditional" id="conditional-fee-type-conditional-2" style="padding-top: 20px; padding-bottom: 20px;">
-                                        <div class="govuk-form-group">
-                                              <label class="govuk-label" for="for-more-than">
-                                                From more than
-                                              </label>
-                                              <p style="float:left; margin-top: 9px; margin-right:4px;">£</p>
-                                              <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
-                                        </div>
 
-                                        <div class="govuk-form-group">
-                                            <label class="govuk-label" for="up-to">
-                                                  Up to (optional)
+                        <!--  DIRECTION  -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Direction</strong>
+                                </label>
+
+                                <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-1" name="direction" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="direction-1">
+                                                Cost recovery
                                             </label>
-                                            <p style="float:left; margin-top: 9px; margin-right:4px;">£</p>
-                                            <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
                                         </div>
 
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-2" name="direction" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="direction-2">
+                                                Enhanced
+                                            </label>
+                                        </div>
 
-                                        <div class="govuk-form-group">
-                                            <fieldset class="govuk-fieldset">
-                                                <label class="govuk-label" for="account-code">
-                                                    <strong>Ranged units</strong>
-                                                </label>
-                                                  <div class="govuk-radios">
-                                                      <div class="govuk-radios__item">
-                                                        <input class="govuk-radios__input" id="where-do-you-live-1" name="ranged-units" type="radio" value="england">
-                                                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                                                          GBP
-                                                        </label>
-                                                      </div>
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-3" name="direction" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="direction-3">
+                                                Licence
+                                            </label>
+                                        </div>
 
-                                                      <div class="govuk-radios__item">
-                                                        <input class="govuk-radios__input" id="where-do-you-live-2" name="ranged-units" type="radio" value="scotland">
-                                                        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-                                                            Volume
-                                                        </label>
-                                                      </div>
-                                                  </div>
-                                            </fieldset>
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-4" name="direction" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="direction-4">
+                                                Partial cost recovery
+                                            </label>
                                         </div>
 
                                     </div>
 
                                 </div>
-                      </fieldset>
-                    </div>
 
+                                <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
 
-                <!-- AMOUNT TYPE  -->
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset">
-                    <label class="govuk-label" for="more-detail">
-                        <strong>Amount Type</strong>
-                    </label>
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-2-1" name="direction" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="direction-2-1">
+                                                Pre cost recovery
+                                            </label>
+                                        </div>
 
-                    <div class="govuk-radios" data-module="radios">
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="how-contacted-conditional-1" name="amount-type" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
-                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                            Flat
-                          </label>
-                      </div>
-                      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-2-2" name="direction" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="direction-2-2">
+                                                Reduced churn
+                                            </label>
+                                        </div>
 
-                        <div class="govuk-currency-input">
-                          <label class="govuk-label" for="contact-by-email">
-                          Amount
-                        </label>
-                          <div class="govuk-currency-input__inner">
-                            <span class="govuk-currency-input__inner__unit govuk-body">£</span>
-                            <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number" id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
-                          </div>
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="direction-2-3" name="direction" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="direction-2-3">
+                                                Simplified
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </fieldset>
                         </div>
 
-                      </div>
 
-
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                        Percentage
-                      </label>
-                      </div>
-                      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
-                        <div class="govuk-currency-input">
-                          <label class="govuk-label" for="contact-by-email">
-                          Amount
-                        </label>
-                          <div class="govuk-currency-input__inner">
-                            <span class="govuk-currency-input__inner__unit govuk-body">%</span>
-                            <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:80px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div class="govuk-radios__item">
-                        <input class="govuk-radios__input" id="how-contacted-conditional-3" name="amount-type" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3">
-                        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-                        Volume
-                      </label>
-                      </div>
-                      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
-                        <div class="govuk-currency-input">
-                          <label class="govuk-label" for="contact-by-email">
-                          Amount
-                        </label>
-                          <div class="govuk-currency-input__inner">
-                            <span class="govuk-currency-input__inner__unit govuk-body">£</span>
-                            <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:120px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
-                          </div>
-                        </div>
-
-                      </div>
-                    </div>
-                  </fieldset>
-                </div>
-
-
-                <!--  APPLICANT -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <label class="govuk-label" for="account-code">
-                            <strong>Applicant</strong>
-                        </label>
-
-                        <div class="govuk-radios" data-module="radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="applicant-1" name="applicant-type" type="radio" value="email">
-                                <label class="govuk-label govuk-radios__label" for="applicant-1">
-                                    Personal
+                        <!--  APPLICANT -->
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset">
+                                <label class="govuk-label" for="account-code">
+                                    <strong>Applicant</strong>
                                 </label>
-                            </div>
 
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="applicant-2" name="applicant-type" type="radio" value="phone" >
-                                <label class="govuk-label govuk-radios__label" for="applicant-2">
-                                    Professional
-                                </label>
-                            </div>
+                                <div class="govuk-radios" data-module="radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="applicant-1" name="applicant-type" type="radio" value="email">
+                                        <label class="govuk-label govuk-radios__label" for="applicant-1">
+                                            Personal
+                                        </label>
+                                    </div>
 
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="applicant-3" name="applicant-type" type="radio" value="phone">
-                                <label class="govuk-label govuk-radios__label" for="applicant-3">
-                                    All
-                                </label>
-                            </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="applicant-2" name="applicant-type" type="radio" value="phone" >
+                                        <label class="govuk-label govuk-radios__label" for="applicant-2">
+                                            Professional
+                                        </label>
+                                    </div>
 
-                        </div>
-                    </fieldset>
-                </div>
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="applicant-3" name="applicant-type" type="radio" value="phone">
+                                        <label class="govuk-label govuk-radios__label" for="applicant-3">
+                                            All
+                                        </label>
+                                    </div>
 
-
-                <!--  JURISDICTION 1 -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <label class="govuk-label" for="account-code">
-                            <strong>Jurisdiction 1</strong>
-                        </label>
-
-                        <div class="govuk-radios" data-module="radios">
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="jurisdiction-one-1" name="jurisdiction-one" type="radio" value="email">
-                                <label class="govuk-label govuk-radios__label" for="jurisdiction-one-1">
-                                    Civil
-                                </label>
-                            </div>
-
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="jurisdiction-one-2" name="jurisdiction-one" type="radio" value="phone" >
-                                <label class="govuk-label govuk-radios__label" for="jurisdiction-one-2">
-                                    Family
-                                </label>
-                            </div>
-
-                            <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="jurisdiction-one-3" name="jurisdiction-one" type="radio" value="phone">
-                                <label class="govuk-label govuk-radios__label" for="applicant-3">
-                                    Tribunal
-                                </label>
-                            </div>
-
-                        </div>
-                    </fieldset>
-                </div>
-
-
-                <!--  JURISDICTION 2 -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <label class="govuk-label" for="account-code">
-                            <strong>Jurisdiction 2</strong>
-                        </label>
-
-                        <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-1" name="jurisdiction-two" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-1">
-                                        County court
-                                    </label>
                                 </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-2" name="jurisdiction-two" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2">
-                                        High court
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-3" name="jurisdiction-two" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3">
-                                        Magistrates court
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-4" name="jurisdiction-two" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-4">
-                                        Court of protection
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-5" name="jurisdiction-two" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-5">
-                                        Family court
-                                    </label>
-                                </div>
-                            </div>
-
+                            </fieldset>
                         </div>
 
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
 
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-2-1" name="jurisdiction-two" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-1">
-                                        Probate registry
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-2-2" name="jurisdiction-two" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-2">
-                                        Gambling tribunal
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-2-3" name="jurisdiction-two" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-3">
-                                        Gender recognition panel
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-2-4" name="jurisdiction-two" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-4">
-                                        Tax chamber
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-2-5" name="jurisdiction-two" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-2-5">
-                                        Property chamber
-                                    </label>
-                                </div>
-                            </div>
-
+                        <!--  Memo line  -->
+                        <div class="govuk-form-group" style="width:600px;">
+                            <label class="govuk-label govuk-!-font-weight-bold" for="keyword">
+                                Keyword                            </label>
+                            <input class="govuk-input" id="keyword" name="email" type="text" aria-describedby="email-hint" value="">
                         </div>
 
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-3-1" name="jurisdiction-two" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3-1">
-                                        Immigration and asylum chamber
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-3-2" name="jurisdiction-two" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3-2">
-                                        Upper tribunal immigration and asylum chamber
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="jurisdiction-two-3-3" name="jurisdiction-two" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="jurisdiction-two-3-3">
-                                        Upper tribunal lands chamber
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </fieldset>
-                </div>
-
-
-
-                <!--  SERVICE  -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <label class="govuk-label" for="account-code">
-                            <strong>Service</strong>
-                        </label>
-
-                        <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-1" name="service" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="service-1">
-                                        Civil money claims
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-2" name="service" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="service-2">
-                                        Possession claim
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-3" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-3">
-                                        Insolvency
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-4" name="service" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="service-4">
-                                        Private law
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-5" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-5">
-                                        Public law
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-2-1" name="service" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="service-2-1">
-                                        Divorce
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-2-2" name="service" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="service-2-2">
-                                        Adoption
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-2-3" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-2-3">
-                                        Gambling
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-2-4" name="service" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="service-2-4">
-                                        Gender recognition
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-2-5" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-2-5">
-                                        Immigration and asylum
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-3-1" name="service" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="service-3-1">
-                                        Property
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-3-2" name="service" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="service-3-2">
-                                        Tax
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-3-3" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-3-3">
-                                        Probate
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-3-4" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-3-4">
-                                        General
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="service-3-5" name="service" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="service-3-5">
-                                        Magistrates
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </fieldset>
-                </div>
-
-
-
-
-                <!--  CHANNEL  -->
-                <div class="govuk-form-group">
+                        <!--  CHANNEL  -->
+                        <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset">
                         <label class="govuk-label" for="account-code">
                             <strong>Channel</strong>
@@ -634,187 +834,8 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
-                <!--  EVENT  -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <label class="govuk-label" for="account-code">
-                            <strong>Event</strong>
-                        </label>
-
-                        <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-1" name="event" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="event-1">
-                                        Enforcement
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-2" name="event" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="event-2">
-                                        Appeal
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-3" name="event" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="event-3">
-                                        Search
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-2-1" name="event" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="event-2-1">
-                                        Issue
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-2-2" name="event" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="event-2-2">
-                                        General application
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-2-3" name="event" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="event-2-3">
-                                        Copies
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-3-1" name="event" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="event-3-1">
-                                        Hearing
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-3-2" name="event" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="event-3-2">
-                                        Miscellaneous
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="event-3-3" name="event" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="event-3-3">
-                                        Cost assessment
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                    </fieldset>
-                </div>
 
 
-
-                <!--  DIRECTION  -->
-                <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset">
-                        <label class="govuk-label" for="account-code">
-                            <strong>Direction</strong>
-                        </label>
-
-                        <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-1" name="direction" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="direction-1">
-                                        Cost recovery
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-2" name="direction" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="direction-2">
-                                        Enhanced
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-3" name="direction" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="direction-3">
-                                        Licence
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-4" name="direction" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="direction-4">
-                                        Partial cost recovery
-                                    </label>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="govuk-grid-column-one-thirds"  style="float: left; width:300px;">
-
-                            <div class="govuk-radios" data-module="radios">
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-2-1" name="direction" type="radio" value="email">
-                                    <label class="govuk-label govuk-radios__label" for="direction-2-1">
-                                        Pre cost recovery
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-2-2" name="direction" type="radio" value="phone" >
-                                    <label class="govuk-label govuk-radios__label" for="direction-2-2">
-                                        Reduced churn
-                                    </label>
-                                </div>
-
-                                <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input" id="direction-2-3" name="direction" type="radio" value="phone">
-                                    <label class="govuk-label govuk-radios__label" for="direction-2-3">
-                                        Simplified
-                                    </label>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </fieldset>
-                </div>
-
-
-
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="email">
-                    Fee Order Name
-                  </label>
-                  <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" style="width:400px;">
-            </div>
-
-            <div class="govuk-form-group">
-                  <label class="govuk-label" for="email">
-                    Statutory Instrument
-                  </label>
-                  <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:400px;">
-            </div>
-
-            <div class="govuk-form-group">
-                  <label class="govuk-label" for="email">
-                    SI REF ID
-                  </label>
-                  <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:150px;">
-            </div>
 
 
             <!--   BUTTONS  -->

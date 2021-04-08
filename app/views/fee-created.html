@@ -1,87 +1,43 @@
-{% extends "layouts/admin/base.html" %}
+{% extends "layouts/admin/newlayout.html" %}
 
 {% block pageTitle %}
   Fee creaated
 {% endblock %}
 
 {% block content %}
-<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
 
-    <div class="hmcts-header__container">
-
-
-<ul class="hmcts-primary-navigation__list">
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/all-fees">
-All fees
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/draft-fees">
-Draft fees
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/create-a-fee">
-Create a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/upload-fee">
-Upload a fee
-</a>
-</li>
-
-<li class="hmcts-primary-navigation__item">
-<a class="hmcts-primary-navigation__link" href="/reference-data">
-Reference data
-</a>
-</li>
-
-
-
-</ul>
-
-</div>
-
-
-</nav>
 
   <div class="hmcts-header__container">
 
 
 
-            <main role="main" class="govuk-main-wrapper">
+    <main role="main" class="govuk-main-wrapper">
 
 
-              <!-- <h1 class="govuk-heading-xl">Blank</h1> -->
+      <!-- <h1 class="govuk-heading-xl">Blank</h1> -->
 
-              <div class="govuk-panel govuk-panel--confirmation">
-                <h2 class="govuk-panel__title">
-                  Draft fee created
-                </h2>
-                <div class="govuk-panel__body">
-                  Fee code<br><strong>FEE0089</strong>
-                </div>
-              </div>
+      <div class="govuk-panel govuk-panel--confirmation" style="background-color: #00823b">
+        <h2 class="govuk-panel__title">
+          Draft fee created
+        </h2>
+        <div class="govuk-panel__body">
+          Draft not yet submitted for approval
+        </div>
+      </div>
 
-              <br>
+      <br>
 
-              <h2 class="govuk-heading-m">What happens next</h2>
-              <p class="govuk-body">Your fee has been added to your draft fees.</p>
-              <p class="govuk-body">You will need to submit this for appoval.</p>
-
-
-              <a href="/create-a-fee" role="button" class="govuk-button">
-                Create another fee
-              </a>
+      <h2 class="govuk-heading-m">What happens next</h2>
+      <p class="govuk-body">Your fee has been added to your draft fees.</p>
+      <p class="govuk-body">You will need to submit this for appoval.</p>
 
 
-            </main>
+      <a href="/fee-details?draft=true&brandnewfee=false&waitingforapproval=false&feecode=FEE0001&rejected=false&" role="button" class="govuk-button">
+         View this draft
+      </a>
+
+
+    </main>
 
 
 
