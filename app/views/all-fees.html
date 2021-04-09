@@ -9,7 +9,6 @@
 
 
 
-
 <div class="second-nav blue hidden">
 
     <br/>
@@ -133,7 +132,7 @@
 
   <div class="hmcts-header__container">
 
-      <main role="main" class="govuk-main-wrapper govuk-!-padding-top-0">
+      <main role="main" class="govuk-main-wrapper govuk-!-padding-top-0" >
 
 
           <div class="govuk-grid-row">
@@ -251,7 +250,7 @@
 
                 <!--   RESULTS  -->
 
-          <div class="">
+          <div class=""  style="width:3800px">
 
             <!--   <h2 class="govuk-heading-m">Results</h2> -->
 
@@ -259,228 +258,640 @@
             <table class="govuk-body" id="testtable">
               <thead class="font-14">
                 <tr class="govuk-table__row">
-                  <th class="govuk-table__header" scope="col" style="width:100px;">Fee code</th>
-                  <th class="govuk-table__header" scope="col" style="width:95px;">Amount</th>
 
-                  <!--<th class="govuk-table__header" scope="col" style="width:135px;">Jurisdiction 1</th>-->
-                  <th class="govuk-table__header" scope="col" style="width:137px;">Jurisdiction 2</th>
+                  <th class="govuk-table__header" scope="col" >Code</th>
+                  <th class="govuk-table__header" scope="col" >Description</th>
+                  <th class="govuk-table__header" scope="col" >Statutory Instrument</th>
+                  <th class="govuk-table__header" scope="col">SI Ref ID</th>
+                  <th class="govuk-table__header" scope="col">Fee Order Name</th>
                   <th class="govuk-table__header" scope="col">Service</th>
-                  <th class="govuk-table__header" scope="col">Description</th>
+                  <th class="govuk-table__header" scope="col">Jurisdiction1</th>
+                  <th class="govuk-table__header" scope="col">Jurisdiction2</th>
 
-                  <!--
-                  <th class="govuk-table__header" scope="col" style="padding-left:10px;">Type</th>
-                  <th class="govuk-table__header" scope="col">Amount type</th>
-                  <!--
-                  <th class="govuk-table__header" scope="col">Code</th>
-                  <th class="govuk-table__header" scope="col">Description</th>
-                  <th class="govuk-table__header" scope="col">Type</th>
-                  <th class="govuk-table__header" scope="col">Amount type</th>
-                  <th class="govuk-table__header" scope="col">Type value</th>
-                  <th class="govuk-table__header" scope="col">Jurisdiction 1</th>
-                  <th class="govuk-table__header" scope="col">Jurisdiction 2</th>
-                  <th class="govuk-table__header" scope="col">Service</th>
+
+                  <th class="govuk-table__header" scope="col" style="width:135px;">Range to</th>
+                  <th class="govuk-table__header" scope="col" style="width:137px;">Unit</th>
+                  <th class="govuk-table__header" scope="col">Fee type</th>
+                  <th class="govuk-table__header" scope="col">Amount Type</th>
+
+
+                  <th class="govuk-table__header" scope="col" style="padding-left:10px;">Amount</th>
+                  <th class="govuk-table__header" scope="col">%</th>
+
+
                   <th class="govuk-table__header" scope="col">Event</th>
                   <th class="govuk-table__header" scope="col">Channel</th>
-                  -->
+                  <th class="govuk-table__header" scope="col">Keyword</th>
+                  <th class="govuk-table__header" scope="col">Applicant Type</th>
+                  <th class="govuk-table__header" scope="col">Direction</th>
+                  <th class="govuk-table__header" scope="col">Memo</th>
+                  <th class="govuk-table__header" scope="col">Version</th>
+                  <th class="govuk-table__header" scope="col">Valid From</th>
+                  <th class="govuk-table__header" scope="col">Valid To</th>
+                  <th class="govuk-table__header" scope="col">Status</th>
+
+
+                  <th class="govuk-table__header" scope="col">Natural Account Code</th>
+
                 </tr>
               </thead>
 
 
               <tbody class="font-14">
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0001">FEE0001</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£550.00</td>
-                  <td data-label="Service">Divorce</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Family court</td>
-                  <td data-label="Description">Filing an application for a divorce</td>
-                  <!--
-                  <td data-label="Type">Fixed</td>
-                  <td data-label="Amount type" style="padding-left:10px;">Flat</td>
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+                    <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0545">FEE0545</a></td>
+                    <td data-label="Type value">Appointment of a High Court judge</td>
+                    <td data-label="Service">2019 No 1063</td>
+                    <td>10.4</td>
+                    <td>The Court Fees (Miscellaneous Amendments) Order 2019</td>
+                    <td>other </td>
+                    <td>civil </td>
+                    <td>high court</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>fixed </td>
+                    <td>Flat </td>
+                    <td>£610 </td>
+                    <td></td>
+                    <td>issue</td>
+                    <td>default</td>
+                    <td> </td>
+                    <td>all </td>
+                    <td>cost recovery </td>
+                    <td>RECEIPT OF FEES - Civil issue other  </td>
+                    <td>1 </td>
+                    <td>22-07-2019</td>
+                    <td> </td>
+                    <td>approved  </td>
+                    <td>4481102137 </td>
                 </tr>
 
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0002">FEE0002</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£0.50</td>
-                  <td data-label="Service">Probate</td>
-                  <!--<td data-label="Jurisdiction 1">Probate registry</td>-->
-                  <td data-label="Jurisdiction 2">Probate registry</td>
-                  <td data-label="Description">Additional copies of grant</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <!--
-                  <td data-label="Event">Copies</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+                    <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0522">FEE0522</a></td>
+                    <td data-label="Type value" >Counter Claim Discounted - 300.01 up to 500 GBP</td>
+                    <td data-label="Service">2015 No 576</td>
+                    <td>1.7 </td>
+                    <td>Civil Proceedings</td>
+                    <td>civil money claims </td>
+                    <td>civil </td>
+                    <td>civil</td>
+                    <td> </td>
+                    <td>GBP </td>
+                    <td>ranged</td>
+                    <td>Flat </td>
+                    <td>£35 </td>
+                    <td></td>
+                    <td>issue</td>
+                    <td>default</td>
+                    <td> </td>
+                    <td>all </td>
+                    <td>enhanced</td>
+                    <td>RECEIPT OF FEES - Civil issue money</td>
+                    <td>2 </td>
+                    <td>22-04-2014 </td>
+                    <td> </td>
+                    <td>approved  </td>
+                    <td>4481102133</td>
                 </tr>
 
-                <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0003">FEE0003</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£480.00</td>
-                  <td data-label="Service">Possession claim</td>
-                  <!--<td data-label="Jurisdiction 1">Civil</td>-->
-                  <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Description">Recovery of Land</td>
-                  <!--
-                  <td data-label="Type"  style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0004">FEE0004</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">County court</td>
-                  <td data-label="Description">Where the party filing the request is legally aided</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <!--
-                  <td data-label="Event">Cost assessment</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0005">FEE0005</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Description">An application for...</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0006">FEE0006</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Percentage</td>
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
-                </tr>
-
-                <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0007">FEE0007</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <!--
-                  <td data-label="Event">Appeal</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
-                </tr>
 
 
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0008">FEE0008</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
+                    <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0514">FEE0514</a></td>
+                    <td data-label="Type value" >Counter Claim - 0.01 up to 300 GBP</td>
+                    <td data-label="Service">2015 No 576</td>
+                    <td>1.7 </td>
+                    <td>Civil Proceedings</td>
+                    <td>civil money claims </td>
+                    <td>civil </td>
+                    <td>civil</td>
+                    <td> </td>
+                    <td>GBP </td>
+                    <td>ranged</td>
+                    <td>Flat </td>
+                    <td>£35 </td>
+                    <td></td>
+                    <td>issue</td>
+                    <td>default</td>
+                    <td> </td>
+                    <td>all </td>
+                    <td>enhanced</td>
+                    <td>RECEIPT OF FEES - Civil issue money</td>
+                    <td>2 </td>
+                    <td>22-04-2014 </td>
+                    <td> </td>
+                    <td>approved  </td>
+                    <td>4481102133</td>
+                </tr>
 
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+
+
+
+                <tr>
+                    <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0429">FEE0429</a></td>
+                    <td data-label="Type value">Appraisement of goods. FEE AMOUNT = 5p in every 1GBP (or part of 1GBP) of the appraised value</td>
+                    <td data-label="Service">2014 No 877 </td>
+                    <td>16.2 </td>
+                    <td>Family Proceedings</td>
+                    <td>other</td>
+                    <td>family </td>
+                    <td>family court</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>rateable</td>
+                    <td>Flat </td>
+                    <td>£0 </td>
+                    <td></td>
+                    <td>enforcement</td>
+                    <td>default</td>
+                    <td>QRS</td>
+                    <td>all </td>
+                    <td>cost recovery</td>
+                    <td>RECEIPT OF FEES - Family enforcement other </td>
+                    <td>1 </td>
+                    <td>22-04-2014 </td>
+                    <td> </td>
+                    <td>approved  </td>
+                    <td>4481102167 </td>
                 </tr>
 
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0009">FEE0009</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Percentage</td>
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+                    <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0324">FEE0324</a></td>
+                    <td data-label="Type value" >Warrant to assist person exercising powers under emergency protection order (section 48)</td>
+                    <td data-label="Service">2014 No 877 </td>
+                    <td>2.1p </td>
+                    <td>Family Proceedings</td>
+                    <td>private law</td>
+                    <td>family </td>
+                    <td>family court</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>fixed </td>
+                    <td>Flat </td>
+                    <td>£215 </td>
+                    <td></td>
+                    <td>miscellaneous</td>
+                    <td>default</td>
+                    <td>HIJ</td>
+                    <td>all </td>
+                    <td>cost recovery</td>
+                    <td>RECEIPT OF FEES - Family misc private </td>
+                    <td>1 </td>
+                    <td>21-04-2014 </td>
+                    <td> </td>
+                    <td>approved  </td>
+                    <td>4481102174</td>
+                </tr>
+
+
+                <tr>
+                    <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0429">FEE0429</a></td>
+                    <td data-label="Type value" >General Application - By consent</td>
+                    <td data-label="Service">2016 No 402 </td>
+                    <td>2.2 </td>
+                    <td>The Civil Proceedings, Family Proceedings and Upper Tribunal Fees (Amendment) Order 2016</td>
+                    <td>judicial review </td>
+                    <td>tribunal</td>
+                    <td>upper tribunal immigration and asylum chamber</td>
+                    <td> </td>
+                    <td> </td>
+                    <td>fixed </td>
+                    <td>Flat </td>
+                    <td>£100 </td>
+                    <td></td>
+                    <td>general application</td>
+                    <td>default</td>
+                    <td>ABC</td>
+                    <td>all </td>
+                    <td>enhanced</td>
+                    <td>RECEIPT OF FEES - Tribunal misc JR</td>
+                    <td>1 </td>
+                    <td>21-03-2016              </td>
+                    <td> </td>
+                    <td>approved  </td>
+                    <td>4481102184 </td>
+                </tr>
+
+
+                <tr>
+                  <td data-label="Channel">.. another row</td>
+                  <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE00010">FEE0010</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£200.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">High court</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Flat</td>
-                  <!--
-                  <td data-label="Event">Appeal</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0011">FEE0011</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£50.00</td>
-                  <td data-label="Service">General</td>
-                  <!--<td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Upper tribunal lands chamber</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Ranged</td>
-                  <td data-label="Amount type">Volume</td>
-                  <!--
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
                 <tr>
-                  <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0012">FEE0012</a></td>
-                  <td data-label="Type value" style="text-align:right; padding-right:10px;">£100.00</td>
-                  <td data-label="Service">General</td>
-                  <!-- <td data-label="Jurisdiction 1">Family</td>-->
-                  <td data-label="Jurisdiction 2">Property chamber</td>
-                  <td data-label="Description">An application for..</td>
-                  <!--
-                  <td data-label="Type" style="padding-left:10px;">Fixed</td>
-                  <td data-label="Amount type">Percentage</td>
-
-                  <td data-label="Event">Issue</td>
-                  <td data-label="Channel">Defult</td>
-                  -->
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                 </tr>
 
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Channel">.. another row</td>
+                    <td data-label="Channel"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
 
               </tbody>
             </table>
