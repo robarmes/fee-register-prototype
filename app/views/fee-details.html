@@ -68,10 +68,8 @@
 
 
 
-
-
   {% if  data['rejected'] == 'true' and  data['usertype'] != 'approver' %}
-      <dl class="govuk-check-your-answers govuk-check-your-answers--short">
+      <dl class="govuk-check-your-answers govuk-check-your-answers--short govuk-!-margin-bottom-7 ">
         <div class="govuk-check-your-answers__contents">
           <dt class="govuk-check-your-answers__question">
             Reason approver rejected fee
@@ -115,11 +113,17 @@
               {% else %}
                   <!-- editor user -->
                   <div class="" style="width:2000px;">
+                      {% if  data['rejected'] == 'true' and  data['usertype'] != 'approver' %}
+                          <a href="/create-a-fee?editexisitingfee=true&"> <button class="govuk-button">Edit</button> </a>
+                          <p><a href="/approval-request-confirmation">Request approval</a></p>
+                          <p><a href="draft-deleted-confirmation">Delete</a></p>
 
-                      {% if  data['waitingforapproval'] != 'true' or data['rejected'] == 'true'  %}
+
+                      {% elif  data['waitingforapproval'] != 'true' or data['rejected'] == 'true'  %}
                           <a href="/approval-request-confirmation"> <button class="govuk-button">Request approval</button> </a>
                           <p><a href="/create-a-fee?editexisitingfee=true&">Edit</a></p>
                           <p><a href="draft-deleted-confirmation">Delete</a></p>
+
                       {% endif %}
 
 
