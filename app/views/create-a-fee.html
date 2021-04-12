@@ -17,9 +17,9 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
             <div class="govuk-grid-column-full">
 
                 {% if  data['editexisitingfee'] == 'true' %}
-                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create a new version of this fee</h1>
+                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Edit fee and create new version’</h1>
                 {% else %}
-                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create a draft for a new fee</h1>
+                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create new fee</h1>
                 {% endif %}
 
 
@@ -701,7 +701,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                             <div class="govuk-radios__item">
                                                 <input class="govuk-radios__input" id="channel-2" name="channel" type="radio" value="phone" >
                                                 <label class="govuk-label govuk-radios__label" for="jurisdiction-one-2">
-                                                    Bluk
+                                                    Bulk
                                                 </label>
                                             </div>
 
@@ -943,7 +943,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
             <br>
             <div class="govuk-form-group">
                 <a href="/fee-created" role="button" class="govuk-button">
-                Create draft
+                Save as draft
               </a>
             </div>
 
