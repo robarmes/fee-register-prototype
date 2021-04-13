@@ -121,7 +121,9 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 Statutory Instrument
                             </label>
                             <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:400px;"
-                                   {% if  data['editexisitingfee'] == 'true'  %} value="2016 No 402" {% endif %}>
+                                   {% if  data['rejectionscenario'] == 'true'  %} value="2021 No 587"
+                                    {% elif  data['editexisitingfee'] == 'true'  %} value="2016 No 402"
+                                        {% endif %}>
                         </div>
 
 
@@ -130,7 +132,9 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                             <label class="govuk-label govuk-!-font-weight-bold" for="email">
                                 SI REF ID
                             </label>
-                            {% if  data['editexisitingfee'] == 'true'  %}
+                            {% if  data['rejectionscenario'] == 'true'  %}
+                                <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:150px;" value="2.5">
+                            {% elif  data['editexisitingfee'] == 'true'  %}
                                 <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:150px;" value="2.2">
                             {% else %}
                                 <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint"  style="width:150px;">
@@ -540,7 +544,10 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                     <div class="govuk-currency-input__inner">
                                                         <span class="govuk-currency-input__inner__unit govuk-body">£</span>
                                                         <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number"
-                                                               id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?" {% if  data['editexisitingfee'] == 'true' %} value="100.00" {% endif %}>
+                                                               id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?"
+                                                               {% if  data['rejectionscenario'] == 'true'  %} value="110.00"
+                                                                {% elif  data['editexisitingfee'] == 'true' %} value="100.00"
+                                                                {% endif %}>
                                                     </div>
                                                 </div>
 
@@ -862,7 +869,10 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                 Day
                                             </label>
                                             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"
-                                                   {% if  data['editexisitingfee'] == 'true'  %} value="21" {% endif %}>
+
+                                                   {% if  data['rejectionscenario'] == 'true'  %} value="1"
+                                                    {% elif  data['editexisitingfee'] == 'true'  %} value="21"
+                                                    {% endif %}>
                                         </div>
                                     </div>
                                     <div class="govuk-date-input__item">
@@ -871,7 +881,9 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                 Month
                                             </label>
                                             <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"
-                                                   {% if  data['editexisitingfee'] == 'true'  %} value="3" {% endif %}>
+                                                   {% if  data['rejectionscenario'] == 'true'  %} value="9"
+                                                    {% elif   data['editexisitingfee'] == 'true'  %} value="3"
+                                                    {% endif %}>
                                         </div>
                                     </div>
                                     <div class="govuk-date-input__item">
@@ -880,7 +892,9 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                 Year
                                             </label>
                                             <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric" style="width:70px;"
-                                                   {% if  data['editexisitingfee'] == 'true'  %} value="2016" {% endif %}>
+                                                   {% if  data['rejectionscenario'] == 'true'  %} value="2021"
+                                                    {% elif data['editexisitingfee'] == 'true'  %} value="2016"
+                                                    {% endif %}>
                                         </div>
                                     </div>
                                 </div>

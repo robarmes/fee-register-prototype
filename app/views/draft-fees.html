@@ -40,8 +40,17 @@
             </ul>
             <div class="govuk-tabs__panel" id="past-day">
 
+                <div style="display: flex;">
+                    <h1 class="govuk-heading-x govuk-!-margin-top-3 govuk-!-margin-bottom-6">Drafts</h1>
 
-                <h1 class="govuk-heading-x govuk-!-margin-top-3 govuk-!-margin-bottom-6">Drafts</h1>
+                    <div style="display: flex; flex-grow: 1;"></div>
+
+                    <div class="govuk-!-margin-top-1 ">
+                        <a href="/create-a-fee?editexisitingfee=false&">
+                            <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:150px">Create new fee</button>
+                        </a>
+                    </div>
+                </div>
 
 
                 <table class="govuk-table">
@@ -61,7 +70,7 @@
 
 
                     <tbody>
-                    {% if  data['showeditondrafts'] == 'true'  and   data['showeditasapprovedpending'] != 'true'  %}
+                    {% if  data['showeditondrafts'] == 'true'  and   data['showeditasapprovedpending'] != 'true'  and   data['brandnewfeescenario']  != 'true' %}
                         <tr>
                             <td data-label="Code">FEE0429</td>
                             <td data-label="Service" style="text-align: center;  padding-right: 20px;">2</td>
@@ -86,8 +95,7 @@
                 </table>
 
 
-                <a href="/create-a-fee?editexisitingfee=false&">
-                    <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:150px">Create new fee</button></a>
+
                 <br>
 
 

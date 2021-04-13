@@ -83,8 +83,11 @@
 
 
 
+  {% if  data['brandnewfeescenario'] == 'true'    %}
+    {% include "includes/feedetailsfull.html" %}
 
-  {% if  data['draft'] == 'true' %}
+
+  {% elif  data['draft'] == 'true' %}
     {% include "includes/feedetailschanged.html" %}
     {% include "includes/feedetailsunchanged.html" %}
 

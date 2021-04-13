@@ -88,7 +88,11 @@
                 Valid from
             </dt>
             <dd class="govuk-check-your-answers__answer">
-                1 September 2021
+                {% if  data['rejectionscenario'] == 'true'  %}
+                    1 October 2021
+                {% else  %}
+                    1 September 2021
+                {% endif %}
             </dd>
             <dd class="govuk-check-your-answers__change"  style="width: 250px; padding-left: 15px; text-align: left">
                 Previously: 21 March 2016
