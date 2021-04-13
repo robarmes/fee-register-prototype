@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30a9e502-23b1-4a07-abf3-aae425746975" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/all-approvedbutnotlive.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/all-fees.html" afterPath="$PROJECT_DIR$/app/views/all-fees.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/create-a-fee.html" afterPath="$PROJECT_DIR$/app/views/create-a-fee.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/draft-fees.html" afterPath="$PROJECT_DIR$/app/views/draft-fees.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/includes/feedetailschanged.html" afterPath="$PROJECT_DIR$/app/views/includes/feedetailschanged.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pending-approval.html" afterPath="$PROJECT_DIR$/app/views/pending-approval.html" />
     </list>
     <ignored path="fee-register-prototype.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,13 +26,54 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="all-fees.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="all-fees.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.9719731">
-              <caret line="147" column="99" selection-start-line="147" selection-start-column="99" selection-end-line="147" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="329" column="36" selection-start-line="329" selection-start-column="36" selection-end-line="329" selection-end-column="36" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create-a-fee.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/create-a-fee.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-55.576923">
+              <caret line="94" column="56" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#3;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#input#0;n#div#4;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#4;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#5;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#6;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#7;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#fieldset#0;n#div#7;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#9;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#10;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#11;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#12;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#13;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#14;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="n#div#17;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="draft-fees.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.0683856">
+              <caret line="161" column="14" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="14" />
+              <folding>
+                <element signature="n#style#0;n#button#0;n#a#0;n#main#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,16 +113,16 @@
         <option value="$PROJECT_DIR$/app/views/includes/feedetailsunchanged.html" />
         <option value="$PROJECT_DIR$/app/views/draft-deleted-confirmation.html" />
         <option value="$PROJECT_DIR$/app/views/approval-request-confirmation.html" />
-        <option value="$PROJECT_DIR$/app/views/create-a-fee.html" />
         <option value="$PROJECT_DIR$/app/views/fee-details.html" />
         <option value="$PROJECT_DIR$/app/views/previous-versions.html" />
         <option value="$PROJECT_DIR$/app/views/layouts/all-aprovedbutnotlive.html" />
         <option value="$PROJECT_DIR$/app/views/all-aprovedbutnotlive.html" />
-        <option value="$PROJECT_DIR$/app/views/all-fees.html" />
         <option value="$PROJECT_DIR$/app/views/all-approvedbutnotlive.html" />
-        <option value="$PROJECT_DIR$/app/views/draft-fees.html" />
         <option value="$PROJECT_DIR$/app/views/pending-approval.html" />
         <option value="$PROJECT_DIR$/app/views/includes/feedetailschanged.html" />
+        <option value="$PROJECT_DIR$/app/views/all-fees.html" />
+        <option value="$PROJECT_DIR$/app/views/create-a-fee.html" />
+        <option value="$PROJECT_DIR$/app/views/draft-fees.html" />
       </list>
     </option>
   </component>
@@ -317,10 +356,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-263" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -656,13 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/create-a-fee.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.019058296">
-          <caret line="21" column="77" selection-start-line="21" selection-start-column="77" selection-end-line="21" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/fee-details.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.019058296">
@@ -681,7 +713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="30" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,15 +720,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57174885">
           <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25672644">
-          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="183" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -705,16 +727,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.019058296">
           <caret line="184" column="27" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/all-fees.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9719731">
-          <caret line="147" column="99" selection-start-line="147" selection-start-column="99" selection-end-line="147" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="329" column="36" selection-start-line="329" selection-start-column="36" selection-end-line="329" selection-end-column="36" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/create-a-fee.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-55.576923">
+          <caret line="94" column="56" selection-start-line="94" selection-start-column="56" selection-end-line="94" selection-end-column="56" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#input#0;n#div#4;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#1;n#div#4;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#5;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#6;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#7;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#fieldset#0;n#div#7;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#9;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#10;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#11;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#12;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#13;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#14;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#17;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/draft-fees.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.0683856">
+          <caret line="161" column="14" selection-start-line="161" selection-start-column="14" selection-end-line="161" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#a#0;n#main#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
