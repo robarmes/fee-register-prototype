@@ -1,0 +1,101 @@
+{% extends "layouts/admin/newlayout.html" %}
+
+{% block pageTitle %}
+  Draft fees
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="hmcts-header__container">
+
+    <main role="main" class="govuk-main-wrapper">
+
+
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="/draft-fees" style="text-decoration: underline;">
+                        Drafts
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="/draft-fees-rejected"
+                       style=" border: 1px solid #b1b4b6;
+                               border-bottom: 0;
+                               margin-bottom: -1px;
+                               background-color: #fff;">
+                        Rejected by approver
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="/draft-fees-awaiting-approval" style="text-decoration: underline;">
+                        Awaiting approval
+                    </a>
+                </li>
+            </ul>
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+
+                <h1 class="govuk-heading-x govuk-!-margin-top-3 govuk-!-margin-bottom-6">Rejected by approver</h1>
+
+                <table class="govuk-table">
+
+
+                    <thead class="govuk-table__head font-16">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="col" style="width: 80px;">Code</th>
+                            <th class="govuk-table__header" scope="col" style="width:84px;">Version</th>
+                            <th class="govuk-table__header" scope="col" style="width: 180px;">Service</th>
+                            <th class="govuk-table__header" scope="col">Description</th>
+                            <th class="govuk-table__header" scope="col" style="width: 140px;">Statutory Instrument</th>
+                            <th class="govuk-table__header" scope="col" style="width:80px;">SI REF ID</th>
+                            <th class="govuk-table__header" scope="col" style="width:40px;"></th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody>
+                        <tr>
+                            <td data-label="Code">FEE0862</td>
+                            <td data-label="Service" style="text-align: center;  padding-right: 20px;">1</td>
+                            <td data-label="Service">Civil Money Claims</td>
+                            <td data-label="Jurisdiction 2">Counter Claim - 0.01 up to 300 ...</td>
+                            <td data-label="Description">2021 No 576</td>
+                            <td data-label=""></td>
+                            <td data-label=""><a href="fee-details?draft=true&brandnewfee=true&waitingforapproval=false&feecode=FEE0862&rejected=true&">View</a></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</div>
+
+
+
+{% endblock %}

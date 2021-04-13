@@ -114,14 +114,14 @@
                   <!-- editor user -->
                   <div class="" style="width:2000px;">
                       {% if  data['rejected'] == 'true' %}
-                          <a href="/create-a-fee?editexisitingfee=true&"> <button class="govuk-button">Edit</button> </a>
+                          <a href="/create-a-fee?editexisitingfee=true&"> <button class="govuk-button">Edit fee</button> </a>
                           <p><a href="/approval-request-confirmation">Request approval</a></p>
                           <p><a href="draft-deleted-confirmation">Delete</a></p>
 
 
                       {% elif  data['waitingforapproval'] != 'true'   %}
                           <a href="/approval-request-confirmation"> <button class="govuk-button">Request approval</button> </a>
-                          <p><a href="/create-a-fee?editexisitingfee=true&">Edit</a></p>
+                          <p><a href="/create-a-fee?editexisitingfee=true&">Edit fee</a></p>
                           <p><a href="draft-deleted-confirmation">Delete</a></p>
 
                       {% endif %}

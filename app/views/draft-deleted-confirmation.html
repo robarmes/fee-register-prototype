@@ -1,86 +1,37 @@
-{% extends "layouts/admin/base.html" %}
+{% extends "layouts/admin/newlayout.html" %}
 
 {% block pageTitle %}
-  Fee creaated
+Fee details
 {% endblock %}
 
 {% block content %}
-<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
-
-    <div class="hmcts-header__container">
-
-
-            <ul class="hmcts-primary-navigation__list">
-
-                    <li class="hmcts-primary-navigation__item">
-                            <a class="hmcts-primary-navigation__link" href="/all-fees">
-                                    All fees
-                            </a>
-                    </li>
-
-                    <li class="hmcts-primary-navigation__item">
-                            <a class="hmcts-primary-navigation__link" href="/draft-fees">
-                                    Draft fees
-                            </a>
-                    </li>
-
-                    <li class="hmcts-primary-navigation__item">
-                            <a class="hmcts-primary-navigation__link" href="/create-a-fee">
-                                    Create a fee
-                            </a>
-                    </li>
-
-                    <li class="hmcts-primary-navigation__item">
-                            <a class="hmcts-primary-navigation__link" href="/upload-fee">
-                                    Upload a fee
-                            </a>
-                    </li>
-
-                    <li class="hmcts-primary-navigation__item">
-                            <a class="hmcts-primary-navigation__link" href="/reference-data">
-                                    Reference data
-                            </a>
-                    </li>
-
-            </ul>
-
-    </div>
-
-
-</nav>
 
   <div class="hmcts-header__container">
 
 
          <main role="main" class="govuk-main-wrapper">
 
-
-              <!-- <h1 class="govuk-heading-xl">Blank</h1> -->
-
+             <!-- <h1 class="govuk-heading-xl">Blank</h1> -->
               <div class="govuk-panel govuk-panel--confirmation" style="background-color: #00823b">
                 <h2 class="govuk-panel__title">
-                    FEE0001 has been deleted
+                    {{ data['feecode'] }} has been deleted
                 </h2>
                 <div class="govuk-panel__body">
-                   <br><strong> No changes have been saved.</strong>
+                   <br><strong></strong>
                 </div>
               </div>
 
               <br>
               <br>
 
-              <a  href="/draft-fees" role="button" class="govuk-button">
-                View draft fees
-              </a>
+             <h2 class="govuk-heading-m">What happens next</h2>
+             <p class="govuk-body">You can go back to your draft fees to edit fee details or create a new fee.</p>
 
+             <a  href="/draft-fees" role="button" class="govuk-button">
+                 View draft fees
+             </a>
 
             </main>
-
-
-
-
-
-
 
     </div>
 

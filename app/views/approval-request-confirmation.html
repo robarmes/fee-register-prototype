@@ -18,15 +18,18 @@
 
               <div class="govuk-panel govuk-panel--confirmation"  style="background-color: #00823b">
                 <h2 class="govuk-panel__title">
-                    FEE0001 has been submitted for approval
+                    {{ data['feecode'] }} has been submitted for approval
                 </h2>
                 <div class="govuk-panel__body">
-                   <br><strong>{{ data['feecode'] }}</strong>
+                   <br><strong></strong>
                 </div>
               </div>
 
               <br>
                 <br>
+
+             <h2 class="govuk-heading-m">What happens next</h2>
+             <p class="govuk-body">This fee will appear in the Fee Register once it’s been approved.</p>
 
               <a  href="/draft-fees" role="button" class="govuk-button">
                 View draft fees

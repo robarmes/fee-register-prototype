@@ -19,7 +19,7 @@ Fee creaated
 
               <div class="govuk-panel govuk-panel--confirmation" style="background-color: #00823b">
                 <h2 class="govuk-panel__title">
-                  Draft fee rejected
+                    {{ data['feecode'] }} has been rejected’
                 </h2>
                 <div class="govuk-panel__body">
 
@@ -33,9 +33,16 @@ Fee creaated
               <br>
              <br>
 
-              <a  href="/pending-approval" role="button" class="govuk-button">
-                  View pending fees
-              </a>
+
+             <h2 class="govuk-heading-m">What happens next</h2>
+             <p class="govuk-body">This fee has been moved back to drafts for the editor to review.</p>
+
+
+
+             <a  href="/pending-approval" role="button" class="govuk-button">
+                 View fees awaiting approval
+             </a>
+
 
             </main>
 

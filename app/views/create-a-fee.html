@@ -460,9 +460,10 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                         </div>
 
                                         <div class="govuk-radios__item">
-                                            <input class="govuk-radios__input" id="fee-type-conditional-2" name="fee-type" type="radio" value="phone" data-aria-controls="conditional-fee-type-conditional-2">
+                                            <input class="govuk-radios__input" id="fee-type-conditional-2" name="fee-type" type="radio" value="phone" data-aria-controls="conditional-fee-type-conditional-2"
+                                                   {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %}>
                                             <label class="govuk-label govuk-radios__label" for="fee-type-conditional-2">
-                                                Ranged
+                                                Ranged  {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
                                             </label>
                                         </div>
 
