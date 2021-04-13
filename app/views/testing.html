@@ -1,0 +1,66 @@
+{% extends "layouts/admin/base-signin.html" %}
+
+{% block pageTitle %}
+ Select the user
+{% endblock %}
+
+{% block content %}
+<nav class="hmcts-primary-navigation" aria-label="Primary navigation">
+
+    <div class="hmcts-header__container">
+
+  </div>
+</nav>
+
+
+
+
+  <div class="hmcts-header__container ">
+
+      <main role="main" class="govuk-main-wrapper govuk-main-wrapper--maxhight">
+
+        <h3  class="govuk-heading-m">User types</h3>
+
+        <p>Approver </p>
+
+        <p><a class="govuk-link" href="/signin?usertype=approver&">Scenario 1</a></p>
+
+        <br>
+
+        <p>Editor</p>
+
+        <p><a class="govuk-link " href="/signin?usertype=editor&showeditondrafts=false&showeditasapprovedpending=false&">Scenario 1</a></p>
+
+        <p><a class="govuk-link " href="/signin?usertype=editor&showeditondrafts=true&showeditasapprovedpending=false&">Scenario 2</a></p>
+
+
+      </main>
+
+
+  </div>
+
+
+
+
+
+  {% endblock %}
+  {% block page_scripts %}
+  <script>
+
+  $(function() {
+    $('input[name="birthday"]').daterangepicker({
+      singleDatePicker: true,
+      showDropdowns: true,
+      minYear: 1901,
+      maxYear: parseInt(moment().format('YYYY'),10)
+    }, function(start, end, label) {
+      var years = moment().diff(start, 'years');
+      // alert("You are " + years + " years old!");
+    });
+
+  });
+
+
+
+  </script>
+  {% endblock %}

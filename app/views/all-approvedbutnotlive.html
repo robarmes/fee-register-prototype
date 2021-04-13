@@ -9,125 +9,6 @@
 
 
 
-<div class="second-nav blue hidden">
-
-    <br/>
-  
-    <div class="second-nav__menu">
-      <form>
-        <ul class="advanced-search-block nav-links">
-          <li>
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-                    Fee type
-                  </label>
-                  <select class="govuk-select" id="feeType" name="sort" data-rel="Type">
-                    <option value="All" selected >All</option>
-                    <option value="Fixed">Fixed</option>
-                    <option value="Ranged">Ranged</option>
-                  </select>
-                </div>
-          </li>
-  
-          <li>
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-                    Amount type
-                  </label>
-                  <select class="govuk-select" id="amountType" name="sort" data-rel="Amount type">
-                    <option value="All" selected >All</option>
-                    <option value="Flat">Flat</option>
-                    <option value="Percentage">Percentage</option>
-                    <option value="Volume">Volume</option>
-                  </select>
-                </div>
-          </li>
-
-          <li>
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-                    Jurisdiction 1
-                  </label>
-                  <select class="govuk-select" id="Jurisdiction1" name="sort" data-rel="Jurisdiction 1">
-                    <option value="All" selected >All</option>
-                    <option value="Civil">Civil</option>
-                    <option value="Family">Family</option>
-                    <option value="Tribunal">Tribunal</option>
-                  </select>
-                </div>
-            </li>
-
-          <li>
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-                    Jurisdiction 2
-                  </label>
-                  <select class="govuk-select" id="Jurisdiction2" name="sort" data-rel="Jurisdiction 2">
-                    <option value="All" selected >All</option>
-                    <option value="County court">County court</option>
-                    <option value="High court">High court</option>
-                    <option value="Magistrates court">Magistrates court</option>
-                    <option value="Court of protection">Court of protection</option>
-                    <option value="Family court">Family court</option>
-                    <option value="Probate registry">Probate registry</option>
-                    <option value="Gambling tribunal">Gambling tribunal</option>
-                    <option value="Gender recognition panel">Gender recognition panel</option>
-                    <option value="Immigration and asylum chamber">Immigration and asylum chamber</option>
-                    <option value="Property chamber">Property chamber</option>
-                    <option value="Tax chamber">Tax chamber</option>
-                    <option value="Upper tribunal immigration and asylum chamber">Upper tribunal immigration and asylum chamber</option>
-                    <option value="Upper tribunal lands chamber">Upper tribunal lands chamber</option>
-
-                  </select>
-                </div>
-            </li>
-
-          <li>
-              <div class="govuk-form-group">
-                  <label class="govuk-label" for="sort">
-                    Service
-                  </label>
-                  <select class="govuk-select" id="service" name="sort" data-rel="Service">
-                    <option value="All" selected >All</option>
-                    <option value="Civil money claims">Civil money claims</option>
-                    <option value="Possession claim">Possession claim</option>
-                    <option value="Insolvency">Insolvency</option>
-                    <option value="Private law">Private law</option>
-                    <option value="Public law">Public law</option>
-                    <option value="Divorce">Divorce</option>
-                    <option value="Adoption">Adoption</option>
-                    <option value="Gambling">Gambling</option>
-                    <option value="Gender recognition">Gender recognition</option>
-                    <option value="Immigration and asylum">Immigration and asylum</option>
-                    <option value="Property">Property</option>
-                    <option value="Tax">Tax</option>
-                    <option value="Probate">Probate</option>
-                    <option value="General">General</option>
-                    <option value="Magistrates">Magistrates</option>
-
-                  </select>
-                </div>
-            </li>
-
-            <li>
-              <div class="govuk-form-group">
-                <div class="reset-button-float">
-                  <button type="button" class="govuk-button" onclick="resetSearchFilters()">Reset</button>
-                </div>
-                </div>
-            </li>
-        </ul>
-  
-      </form>
-    </div>
-
-  </div>
-
-</nav>
-
-
-
-
 
 
   <div class="hmcts-header__container">
@@ -139,38 +20,33 @@
               <div class="govuk-grid-column-full">
 
 
-                <nav class="hmcts-sub-navigation" aria-label="Sub navigation">
-                  <div class="jui-width-container">
 
-                    <ul class="hmcts-sub-navigation__list">
-
-                        <li class="hmcts-sub-navigation__item">
-                          <a  aria-current="page" href="/all-fees">
-                            Live fees
+                  <ul class="govuk-tabs__list govuk-!-margin-top-7">
+                      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                          <a class="govuk-tabs__tab" href="/all-fees" style="text-decoration: underline;">
+                              Live fees
                           </a>
-                        </li>
-
-                        <li class="hmcts-sub-navigation__item">
-                            <a class="hmcts-sub-navigation__link" aria-current="page" href="/all-approvedbutnotlive">
-                                Approved but not live
-                            </a>
-                        </li>
-
-                        <li class="hmcts-sub-navigation__item">
-                          <a class="hmcts-sub-navigation__link" href="#">
-                            Discontinued fees
+                      </li>
+                      <li class="govuk-tabs__list-item">
+                          <a class="govuk-tabs__tab" href="/all-approvedbutnotlive"
+                             style=" border: 1px solid #b1b4b6;
+                               border-bottom: 0;
+                               margin-bottom: -1px;
+                               background-color: #fff;">
+                              Approved but not live
                           </a>
-                        </li>
-
-                        <li class="hmcts-sub-navigation__item">
-                          <a class="hmcts-sub-navigation__link" href="#">
-                            Live and discontinued fees
+                      </li>
+                      <li class="govuk-tabs__list-item">
+                          <a class="govuk-tabs__tab" href="#" style="text-decoration: underline;">
+                              Discontinued fees
                           </a>
-                        </li>
-
-                    </ul>
-                  </div>
-                </nav>
+                      </li>
+                      <li class="govuk-tabs__list-item">
+                          <a class="govuk-tabs__tab" href="#" style="text-decoration: underline;">
+                              Live and discontinued fees
+                          </a>
+                      </li>
+                  </ul>
 
 
 
@@ -178,7 +54,7 @@
 
                   <div style="display: flex;">
 
-                      <h1 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-margin-top-3">Live fees</h1>
+                      <h1 class="govuk-heading-xl govuk-!-margin-top-7 govuk-!-margin-bottom-6">Approved but not live fees</h1>
 
                       <div style="display: flex; flex-grow: 1;"></div>
 

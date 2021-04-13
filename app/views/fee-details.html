@@ -120,7 +120,7 @@
 
 
                       {% elif  data['waitingforapproval'] != 'true'   %}
-                          <a href="/approval-request-confirmation"> <button class="govuk-button">Request approval</button> </a>
+                          <a href="/approval-request-confirmation?showeditasapprovedpending=true&"> <button class="govuk-button">Request approval</button> </a>
                           <p><a href="/create-a-fee?editexisitingfee=true&">Edit fee</a></p>
                           <p><a href="draft-deleted-confirmation">Delete</a></p>
 
@@ -142,7 +142,7 @@
 
     <!-- <button class="govuk-button2" style="width:110px;" href="/fee0001-edit">Reject fee</button> -->
 
-    <p><a href="javascript:history.back()">Back</a></p>
+        <!-- <p><a href="javascript:history.back()">Back</a></p>-->
 
     <br>
 
