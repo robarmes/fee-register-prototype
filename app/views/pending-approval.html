@@ -32,26 +32,64 @@
 
 
             <tbody>
-                {% if    data['approvedfeetesting'] != 'true' %}
+                {% if  data['approvedfeetesting'] != 'true' %}
                     <tr>
                         <td data-label="Code">FEE0429</td>
                         <td data-label="Service" style="text-align: center;  padding-right: 20px;">2</td>
-                        <td data-label="Service">Immigration and asylum</td>
+                        <td data-label="Service">General</td>
                         <td data-label="Jurisdiction 2">General Application - By consent </td>
                         <td data-label="Description">2021 No 576</td>
-                        <td data-label=""><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0429&rejected=false&">View</a></td>
+                        <td data-label=""><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0429&rejected=false&viewingrejectionfee=true&">View</a></td>
                     </tr>
                 {% endif %}
 
-
+                {% if  data['rejectedfeescenariocomplete'] != 'true' %}
                     <tr>
                         <td data-label="Code">FEE0862</td>
                         <td data-label="Service" style="text-align: center;  padding-right: 20px;">1</td>
                         <td data-label="Service">Civil Money Claims</td>
-                        <td data-label="Jurisdiction 2">Counter Claim - 0.01 up to 300 ...</td>
+                        <td data-label="Jurisdiction 2">Counter Claim - 0.01 up to 300 GBP</td>
                         <td data-label="Description">2021 No 576</td>
                         <td data-label=""><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0862&rejected=false&">View</a></td>
                     </tr>
+                {% endif %}
+
+
+                <tr>
+                    <td data-label="Code">FEE0545</td>
+                    <td data-label="Service" style="text-align: center;  padding-right: 20px;">2</td>
+                    <td data-label="Service">other</td>
+                    <td data-label="Jurisdiction 2">Appointment of a High Court judge</td>
+                    <td data-label="Description">2021 No 576</td>
+                    <td data-label=""><a href="#">View</a></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Code">FEE0324</td>
+                    <td data-label="Service" style="text-align: center;  padding-right: 20px;">3</td>
+                    <td data-label="Service">private law</td>
+                    <td data-label="Jurisdiction 2">Warrant to assist person exercising powers ...</td>
+                    <td data-label="Description">2021 No 576</td>
+                    <td data-label=""><a href="#">View</a></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Code">FEE0429</td>
+                    <td data-label="Service" style="text-align: center;  padding-right: 20px;">2</td>
+                    <td data-label="Service">other</td>
+                    <td data-label="Jurisdiction 2">Appraisement of goods. FEE AMOUNT = 5p ...</td>
+                    <td data-label="Description">2021 No 640</td>
+                    <td data-label=""><a href="#">View</a></td>
+                </tr>
+
+                <tr>
+                    <td data-label="Code">FEE0522</td>
+                    <td data-label="Service" style="text-align: center;  padding-right: 20px;">1</td>
+                    <td data-label="Service">civil money claims</td>
+                    <td data-label="Jurisdiction 2">Counter Claim Discounted - 300.01 up to 5 ...</td>
+                    <td data-label="Description">2021 No 576</td>
+                    <td data-label=""><a href="#">View</a></td>
+                </tr>
             </tbody>
         </table>
 

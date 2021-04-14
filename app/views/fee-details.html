@@ -82,12 +82,15 @@
   {% endif %}
 
 
+  {% if  data['rejectedfeescenariocomplete'] == 'false'  %}
+    {% include "includes/feedetailschangedrejected.html" %}
+    {% include "includes/feedetailsunchangedrejected.html" %}
 
-  {% if  data['brandnewfeescenario'] == 'true'    %}
+  {% elif  data['brandnewfeescenario'] == 'true'  %}
     {% include "includes/feedetailsfull.html" %}
 
 
-  {% elif  data['draft'] == 'true' %}
+  {% elif  data['draft'] == 'true'  or    data['approvedfeetesting'] == 'true'  %}
     {% include "includes/feedetailschanged.html" %}
     {% include "includes/feedetailsunchanged.html" %}
 
