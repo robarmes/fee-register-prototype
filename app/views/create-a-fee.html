@@ -474,22 +474,6 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
                                         <!--  EXPANDED AREA FOR RANGED FEE TYPE RADIO -->
                                         <div class="govuk-radios__conditional" id="conditional-fee-type-conditional-2" style="padding-top: 20px; padding-bottom: 20px;">
-                                            <div class="govuk-form-group">
-                                                <label class="govuk-label" for="for-more-than">
-                                                    From more than
-                                                </label>
-                                                <p style="float:left; margin-top: 9px; margin-right:4px;">£</p>
-                                                <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
-                                            </div>
-
-                                            <div class="govuk-form-group">
-                                                <label class="govuk-label" for="up-to">
-                                                    Up to (optional)
-                                                </label>
-                                                <p style="float:left; margin-top: 9px; margin-right:4px;">£</p>
-                                                <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
-                                            </div>
-
 
                                             <div class="govuk-form-group">
                                                 <fieldset class="govuk-fieldset">
@@ -500,7 +484,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                         <div class="govuk-radios__item">
                                                             <input class="govuk-radios__input" id="where-do-you-live-1" name="ranged-units" type="radio" value="england">
                                                             <label class="govuk-label govuk-radios__label" for="where-do-you-live-1">
-                                                                GBP
+                                                                Pounds
                                                             </label>
                                                         </div>
 
@@ -513,6 +497,25 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                     </div>
                                                 </fieldset>
                                             </div>
+
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label" for="for-more-than">
+                                                    From
+                                                </label>
+                                                <!--<p style="float:left; margin-top: 9px; margin-right:4px;"></p>-->
+                                                <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
+                                            </div>
+
+                                            <div class="govuk-form-group">
+                                                <label class="govuk-label" for="up-to">
+                                                    Up to (optional)
+                                                </label>
+                                                <!--<p style="float:left; margin-top: 9px; margin-right:4px;">£</p>-->
+                                                <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
+                                            </div>
+
+
+
 
                                         </div>
 
