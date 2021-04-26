@@ -58,13 +58,14 @@
 
                     <thead class="govuk-table__head font-16">
                     <tr class="govuk-table__row">
-                        <th class="govuk-table__header" scope="col" style="width: 80px;">Code</th>
-                        <th class="govuk-table__header" scope="col" style="width:84px;">Version</th>
-                        <th class="govuk-table__header" scope="col" style="width: 180px;">Service</th>
-                        <th class="govuk-table__header" scope="col">Description</th>
-                        <th class="govuk-table__header" scope="col" style="width: 140px;">Statutory Instrument</th>
-                        <th class="govuk-table__header" scope="col" style="width:80px;">SI REF ID</th>
+                        <th class="govuk-table__header" scope="col" style="width: 60px;">Code</th>
+                        <th class="govuk-table__header" scope="col" style="width:84px; text-align: right; padding-right: 20px;">Amount</th>
+                        <th class="govuk-table__header" scope="col" style="width: 120px;">Service</th>
+                        <th class="govuk-table__header" scope="col" style="width: 200px;">Description</th>
+                        <th class="govuk-table__header" scope="col" style="width: 100px;">Statutory Instrument</th>
+                        <th class="govuk-table__header" scope="col" style="width:100px;">Valid from</th>
                         <th class="govuk-table__header" scope="col" style="width:40px;"></th>
+
                     </tr>
                     </thead>
 
@@ -72,24 +73,27 @@
                     <tbody>
                     {% if  data['showeditondrafts'] == 'true'  and   data['showeditasapprovedpending'] != 'true'  and   data['brandnewfeescenario']  != 'true' %}
                         <tr>
-                            <td data-label="Code">FEE0429</td>
-                            <td data-label="Service" style="text-align: center;  padding-right: 20px;">2</td>
-                            <td data-label="Service">judicial review</td>
-                            <td data-label="Jurisdiction 2">General Application - By consent </td>
-                            <td data-label="Description">2021 No 587</td>
-                            <td data-label="Description">2.5</td>
+                            <td data-label="Code" style="padding-right:10px;">FEE0429</td>
+                            <td data-label="Service" style="text-align: right; padding-right: 20px;">£100.00</td>
+                            <td data-label="Service"style="padding-right:10px;">judicial review</td>
+                            <td data-label="Jurisdiction 2" style="padding-right:10px;">General Application - By consent </td>
+                            <td data-label="Description" style="padding-right:10px;">2021 No 587</td>
+
+                            <td data-label="Service" style="text-align: left;  padding-right: 20px;">9 September 2021</td>
                             <td data-label=""><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=false&feecode=FEE0429&rejected=false&">View</a></td>
                         </tr>
                     {% endif %}
 
                         <tr>
-                            <td data-label="Code">FEE0862</td>
-                            <td data-label="Service" style="text-align: center;  padding-right: 20px;">1</td>
-                            <td data-label="Service">Civil Money Claims</td>
-                            <td data-label="Jurisdiction 2">Counter Claim - 0.01 up to 300 ...</td>
-                            <td data-label="Description">2021 No 576</td>
-                            <td data-label=""></td>
+                            <td data-label="Code"style="padding-right:10px;">FEE0862</td>
+                            <td data-label="Service" style="text-align: right;  padding-right: 20px;">£100.00</td>
+                            <td data-label="Service"style="padding-right:10px;">Civil Money Claims</td>
+                            <td data-label="Jurisdiction 2" style="padding-right:10px;">Counter Claim - 0.01 up to 300 ...</td>
+                            <td data-label="Description" style="padding-right:10px;">2021 No 576</td>
+
+                            <td data-label="Service" style="text-align: left;  padding-right: 20px;">9 September 2021</td>
                             <td data-label=""><a href="fee-details?draft=true&brandnewfee=true&waitingforapproval=false&feecode=FEE0862&rejected=false&">View</a></td>
+
                         </tr>
                     </tbody>
                 </table>

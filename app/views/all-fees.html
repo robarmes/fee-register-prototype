@@ -63,6 +63,12 @@
 
                   </div>
 
+                  <div class="govuk-!-margin-top-1 ">
+                      <a href="/create-a-fee?editexisitingfee=false&">
+                          <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:150px">Create new fee</button>
+                      </a>
+                  </div>
+
                 <!-- SEARCH  -->
                 <!-- no dev effort to make this
                 <div class="" >
@@ -141,42 +147,47 @@
               <thead class="font-14">
                 <tr class="govuk-table__row">
 
-                  <th class="govuk-table__header" scope="col" >Code</th>
-                  <th class="govuk-table__header" scope="col" >Description</th>
-                  <th class="govuk-table__header" scope="col" >Statutory Instrument</th>
-                  <th class="govuk-table__header" scope="col">SI Ref ID</th>
-                  <th class="govuk-table__header" scope="col">Fee Order Name</th>
-                  <th class="govuk-table__header" scope="col">Service</th>
-                  <th class="govuk-table__header" scope="col">Jurisdiction1</th>
-                  <th class="govuk-table__header" scope="col">Jurisdiction2</th>
+                  <th class="govuk-table__header" scope="col" style=" width: 100px;">Code</th>
+                  <th class="govuk-table__header" scope="col"  style=" width: 250px;">Description</th>
+                    <th class="govuk-table__header" scope="col" style="padding-right:20px; text-align: right; width: 100px;">Amount</th>
 
+
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Statutory Instrument</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">SI Ref ID</th>
+                  <th class="govuk-table__header" scope="col" style=" width: 205px;">Fee Order Name</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Service</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Jurisdiction1</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Jurisdiction2</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Event</th>
 
                   <th class="govuk-table__header" scope="col" style="width:135px;">Range to</th>
                   <th class="govuk-table__header" scope="col" style="width:137px;">Unit</th>
-                  <th class="govuk-table__header" scope="col">Fee type</th>
-                  <th class="govuk-table__header" scope="col">Amount Type</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Fee type</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Amount Type</th>
 
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">%</th>
 
-                  <th class="govuk-table__header" scope="col" style="padding-left:10px;">Amount</th>
-                  <th class="govuk-table__header" scope="col">%</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Channel</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Keyword</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Applicant Type</th>
 
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Version</th>
 
-                  <th class="govuk-table__header" scope="col">Event</th>
-                  <th class="govuk-table__header" scope="col">Channel</th>
-                  <th class="govuk-table__header" scope="col">Keyword</th>
-                  <th class="govuk-table__header" scope="col">Applicant Type</th>
-                  <th class="govuk-table__header" scope="col">Direction</th>
-                  <th class="govuk-table__header" scope="col">Memo</th>
-                  <th class="govuk-table__header" scope="col">Version</th>
-                  <th class="govuk-table__header" scope="col">Valid From</th>
-                  <th class="govuk-table__header" scope="col">Valid To</th>
-                  <th class="govuk-table__header" scope="col">Status</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Direction</th>
 
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Valid From</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Valid To</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Status</th>
 
-                  <th class="govuk-table__header" scope="col">Natural Account Code</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px; width: 210px">Memo</th>
+                  <th class="govuk-table__header" scope="col" style="padding-right:20px;">Natural Account Code</th>
 
                 </tr>
               </thead>
+
+                <style>
+                    table td { padding-right:20px; }
+                </style>
 
 
               <tbody class="font-14">
@@ -184,28 +195,29 @@
                 <tr>
                     <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0545">FEE0545</a></td>
                     <td data-label="Type value">Appointment of a High Court judge</td>
+                    <td style="padding-right:20px; text-align: right; width: 90px;">£610.00 </td>
                     <td data-label="Service">2019 No 1063</td>
                     <td>10.4</td>
                     <td>The Court Fees (Miscellaneous Amendments) Order 2019</td>
                     <td>other </td>
                     <td>civil </td>
                     <td>high court</td>
+                    <td>issue</td>
                     <td> </td>
                     <td> </td>
                     <td>fixed </td>
                     <td>Flat </td>
-                    <td>£610 </td>
                     <td></td>
-                    <td>issue</td>
                     <td>default</td>
                     <td> </td>
                     <td>all </td>
-                    <td>cost recovery </td>
-                    <td>RECEIPT OF FEES - Civil issue other  </td>
                     <td>1 </td>
+                    <td>cost recovery </td>
+
                     <td>22 July 2016</td>
                     <td> </td>
                     <td>approved  </td>
+                    <td>RECEIPT OF FEES - Civil issue other  </td>
                     <td>4481102137 </td>
                 </tr>
 
@@ -213,28 +225,29 @@
                 <tr>
                     <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0522">FEE0522</a></td>
                     <td data-label="Type value" >Counter Claim Discounted - 300.01 up to 500 GBP</td>
+                    <td style="padding-right:20px; text-align: right; width: 90px;">£35.00 </td>
                     <td data-label="Service">2015 No 576</td>
                     <td>1.7 </td>
                     <td>Civil Proceedings</td>
                     <td>civil money claims </td>
                     <td>civil </td>
                     <td>civil</td>
+                    <td>issue</td>
                     <td> </td>
                     <td>GBP </td>
                     <td>ranged</td>
                     <td>Flat </td>
-                    <td>£35 </td>
                     <td></td>
-                    <td>issue</td>
                     <td>default</td>
                     <td> </td>
                     <td>all </td>
-                    <td>enhanced</td>
-                    <td>RECEIPT OF FEES - Civil issue money</td>
                     <td>2 </td>
+                    <td>enhanced</td>
+
                     <td>22 April 2014</td>
                     <td> </td>
                     <td>approved  </td>
+                    <td>RECEIPT OF FEES - Civil issue money</td>
                     <td>4481102133</td>
                 </tr>
 
@@ -243,28 +256,28 @@
                 <tr>
                     <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0514">FEE0514</a></td>
                     <td data-label="Type value" >Counter Claim - 0.01 up to 300 GBP</td>
+                    <td style="padding-right:20px; text-align: right; width: 90px;">£35.00 </td>
                     <td data-label="Service">2015 No 576</td>
                     <td>1.7 </td>
                     <td>Civil Proceedings</td>
                     <td>civil money claims </td>
                     <td>civil </td>
                     <td>civil</td>
+                    <td>issue</td>
                     <td> </td>
                     <td>GBP </td>
                     <td>ranged</td>
                     <td>Flat </td>
-                    <td>£35 </td>
                     <td></td>
-                    <td>issue</td>
                     <td>default</td>
                     <td> </td>
                     <td>all </td>
-                    <td>enhanced</td>
-                    <td>RECEIPT OF FEES - Civil issue money</td>
                     <td>2 </td>
+                    <td>enhanced</td>
                     <td>22 April 2019</td>
                     <td> </td>
                     <td>approved  </td>
+                    <td>RECEIPT OF FEES - Civil issue money</td>
                     <td>4481102133</td>
                 </tr>
 
@@ -273,28 +286,29 @@
                 <tr>
                     <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0429">FEE0429</a></td>
                     <td data-label="Type value">Appraisement of goods. FEE AMOUNT = 5p in every 1GBP (or part of 1GBP) of the appraised value</td>
+                    <td style="padding-right:20px; text-align: right; width: 90px;">£0.00 </td>
                     <td data-label="Service">2014 No 877 </td>
                     <td>16.2 </td>
                     <td>Family Proceedings</td>
                     <td>other</td>
                     <td>family </td>
                     <td>family court</td>
+                    <td>enforcement</td>
                     <td> </td>
                     <td> </td>
                     <td>rateable</td>
                     <td>Flat </td>
-                    <td>£0 </td>
                     <td></td>
-                    <td>enforcement</td>
                     <td>default</td>
                     <td>QRS</td>
                     <td>all </td>
-                    <td>cost recovery</td>
-                    <td>RECEIPT OF FEES - Family enforcement other </td>
                     <td>1 </td>
+                    <td>cost recovery</td>
                     <td>22 April 2019</td>
                     <td> </td>
                     <td>approved  </td>
+
+                    <td>RECEIPT OF FEES - Family enforcement other </td>
                     <td>4481102167 </td>
                 </tr>
 
@@ -303,28 +317,28 @@
                 <tr>
                     <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0429">FEE0429</a></td>
                     <td data-label="Type value" >General Application - By consent</td>
+                    <td style="padding-right:20px; text-align: right; width: 90px;">£100.00 </td>
                     <td data-label="Service">2016 No 402 </td>
                     <td>2.2 </td>
                     <td>The Civil Proceedings, Family Proceedings and Upper Tribunal Fees (Amendment) Order 2016</td>
                     <td>judicial review </td>
                     <td>tribunal</td>
                     <td>upper tribunal immigration and asylum chamber</td>
+                    <td>general application</td>
                     <td> </td>
                     <td> </td>
                     <td>fixed </td>
                     <td>Flat </td>
-                    <td>£100 </td>
                     <td></td>
-                    <td>general application</td>
                     <td>default</td>
                     <td>ABC</td>
                     <td>all </td>
-                    <td>enhanced</td>
-                    <td>RECEIPT OF FEES - Tribunal misc JR</td>
                     <td>1 </td>
+                    <td>enhanced</td>
                     <td>21 March 2016 </td>
                     <td> </td>
                     <td>approved  </td>
+                    <td>RECEIPT OF FEES - Tribunal misc JR</td>
                     <td>4481102184 </td>
                 </tr>
 
@@ -333,28 +347,28 @@
                 <tr>
                     <td data-label="Code"><a href="/fee-details?draft=false&brandnewfee=true&waitingforapproval=false&feecode=FEE0324">FEE0324</a></td>
                     <td data-label="Type value" >Warrant to assist person exercising powers under emergency protection order (section 48)</td>
+                    <td style="padding-right:20px; text-align: right; width: 90px;">£215.00 </td>
                     <td data-label="Service">2014 No 877 </td>
                     <td>2.1p </td>
                     <td>Family Proceedings</td>
                     <td>private law</td>
                     <td>family </td>
                     <td>family court</td>
+                    <td>miscellaneous</td>
                     <td> </td>
                     <td> </td>
                     <td>fixed </td>
                     <td>Flat </td>
-                    <td>£215 </td>
                     <td></td>
-                    <td>miscellaneous</td>
                     <td>default</td>
                     <td>HIJ</td>
                     <td>all </td>
-                    <td>cost recovery</td>
-                    <td>RECEIPT OF FEES - Family misc private </td>
                     <td>1 </td>
+                    <td>cost recovery</td>
                     <td>21 April 2019</td>
                     <td> </td>
                     <td>approved  </td>
+                    <td>RECEIPT OF FEES - Family misc private </td>
                     <td>4481102174</td>
                 </tr>
 

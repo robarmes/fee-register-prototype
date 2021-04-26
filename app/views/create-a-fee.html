@@ -149,10 +149,10 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                             </label>
 
                             {% if  data['editexisitingfee'] == 'true'  %}
-                                <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" style="width:600px;"
-                                       value="The Civil Proceedings, Family Proceedings and Upper Tribunal Fees (Amendment) Order 2016">
+                                <textarea class="govuk-textarea" id="fon" name="fon" rows="2" aria-describedby="more-detail-hint" style="width: 600px;"
+                                          value="The Civil Proceedings, Family Proceedings and Upper Tribunal Fees (Amendment) Order 2016"></textarea>
                             {% else %}
-                                <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint" style="width:600px;">
+                                <textarea class="govuk-textarea" id="fon" name="fon" rows="2" aria-describedby="more-detail-hint" style="width: 600px;"></textarea>
                             {% endif %}
 
                         </div>

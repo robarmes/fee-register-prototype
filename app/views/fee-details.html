@@ -122,13 +122,13 @@
                       {% if  data['rejected'] == 'true' %}
                           <a href="/create-a-fee?editexisitingfee=true&"> <button class="govuk-button">Edit fee</button> </a>
                           <p><a href="/approval-request-confirmation">Request approval</a></p>
-                          <p><a href="draft-deleted-confirmation">Delete</a></p>
+                          <p><a href="draft-delete-are-you-sure">Delete</a></p>
 
 
                       {% elif  data['waitingforapproval'] != 'true'   %}
-                          <a href="/approval-request-confirmation?showeditasapprovedpending=true&"> <button class="govuk-button">Request approval</button> </a>
+                          <a href="/new-fee-approval-are-you-sure"> <button class="govuk-button">Request approval</button> </a>
                           <p><a href="/create-a-fee?editexisitingfee=true&">Edit fee</a></p>
-                          <p><a href="draft-deleted-confirmation">Delete</a></p>
+                          <p><a href="draft-delete-are-you-sure">Delete</a></p>
 
                       {% endif %}
 

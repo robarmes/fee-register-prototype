@@ -1,0 +1,37 @@
+{% extends "layouts/admin/newlayout.html" %}
+
+{% block pageTitle %}
+Fee details
+{% endblock %}
+
+{% block content %}
+
+  <div class="hmcts-header__container">
+
+
+         <main role="main" class="govuk-main-wrapper" style="width: 650px;">
+
+            <h2 class="govuk-panel__title govuk-!-margin-top-3">
+                Submit approval request?
+            </h2>
+
+
+
+             <p class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+                 <a  href="/fee-details" role="button" >
+                     Don't submit request
+                 </a>
+             </p>
+
+             <a href="/approval-request-confirmation?showeditasapprovedpending=true&">
+                 <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:180px">Request approval</button>
+             </a>
+
+
+            </main>
+
+    </div>
+
+
+
+{% endblock %}

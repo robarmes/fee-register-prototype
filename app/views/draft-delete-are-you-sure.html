@@ -1,0 +1,37 @@
+{% extends "layouts/admin/newlayout.html" %}
+
+{% block pageTitle %}
+Fee details
+{% endblock %}
+
+{% block content %}
+
+  <div class="hmcts-header__container">
+
+
+         <main role="main" class="govuk-main-wrapper" style="width: 650px;">
+
+            <h2 class="govuk-panel__title govuk-!-margin-top-3">
+                Are you sure you want to delete this draft?
+            </h2>
+
+
+
+             <p class="govuk-!-margin-top-5 govuk-!-margin-bottom-5">
+                 <a  href="/fee-details" role="button" >
+                     Don't delete
+                 </a>
+             </p>
+
+             <a href="/draft-deleted-confirmation">
+                 <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:150px">Delete draft</button>
+             </a>
+
+
+            </main>
+
+    </div>
+
+
+
+{% endblock %}

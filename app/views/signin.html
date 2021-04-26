@@ -33,9 +33,21 @@
         classes: "govuk-!-width-one-third"
       }) }}
 
-      <a href="/all-fees" role="button" class="govuk-button">
-        Sign in
-      </a>
+
+      {% if  data['usertype'] == 'approver' %}
+          <a href="/pending-approval" role="button" class="govuk-button">
+              Sign in
+          </a>
+      {% else %}
+          <a href="/all-fees" role="button" class="govuk-button">
+              Sign in
+          </a>
+      {% endif %}
+
+
+
+
+
 
     </form>
 
