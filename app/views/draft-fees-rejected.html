@@ -46,40 +46,40 @@
 
 
 
-
+                {% if data.emptyrejectedslist != "true" %}
                     <table class="govuk-table">
 
-
                         <thead class="govuk-table__head font-16">
-                        <tr class="govuk-table__row">
-                            <th class="govuk-table__header" scope="col" style="width: 60px;">Code</th>
-                            <th class="govuk-table__header" scope="col" style="width:84px; text-align: right; padding-right: 20px;">Amount</th>
-                            <th class="govuk-table__header" scope="col" style="width: 120px;">Service</th>
-                            <th class="govuk-table__header" scope="col" style="width: 200px;">Description</th>
-                            <th class="govuk-table__header" scope="col" style="width: 100px;">Statutory Instrument</th>
-                            <th class="govuk-table__header" scope="col" style="width:100px;">Valid from</th>
-                            <th class="govuk-table__header" scope="col" style="width:40px;"></th>
+                            <tr class="govuk-table__row">
+                                <th class="govuk-table__header" scope="col" style="width: 60px;">Code</th>
+                                <th class="govuk-table__header" scope="col" style="width:84px; text-align: right; padding-right: 20px;">Amount</th>
+                                <th class="govuk-table__header" scope="col" style="width: 120px;">Service</th>
+                                <th class="govuk-table__header" scope="col" style="width: 200px;">Description</th>
+                                <th class="govuk-table__header" scope="col" style="width: 100px;">Statutory Instrument</th>
+                                <th class="govuk-table__header" scope="col" style="width:100px;">Valid from</th>
+                                <th class="govuk-table__header" scope="col" style="width:40px;"></th>
 
-                        </tr>
+                            </tr>
                         </thead>
 
-
                         <tbody>
+                            <tr>
+                                <td data-label="Code"style="padding-right:10px;">FEE0862</td>
+                                <td data-label="Service" style="text-align: right;  padding-right: 20px;">£100.00</td>
+                                <td data-label="Service"style="padding-right:10px;">Civil Money Claims</td>
+                                <td data-label="Jurisdiction 2" style="padding-right:10px;">Counter Claim - 0.01 up to 300 ...</td>
+                                <td data-label="Description" style="padding-right:10px;">2021 No 576</td>
 
-                        <tr>
-                            <td data-label="Code"style="padding-right:10px;">FEE0862</td>
-                            <td data-label="Service" style="text-align: right;  padding-right: 20px;">£100.00</td>
-                            <td data-label="Service"style="padding-right:10px;">Civil Money Claims</td>
-                            <td data-label="Jurisdiction 2" style="padding-right:10px;">Counter Claim - 0.01 up to 300 ...</td>
-                            <td data-label="Description" style="padding-right:10px;">2021 No 576</td>
+                                <td data-label="Service" style="text-align: left;  padding-right: 20px;">9 September 2021</td>
+                                <td data-label=""><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0429&rejected=true&">View</a></td>
 
-                            <td data-label="Service" style="text-align: left;  padding-right: 20px;">9 September 2021</td>
-                            <td data-label=""><a href="fee-details?draft=true&brandnewfee=false&waitingforapproval=true&feecode=FEE0429&rejected=true&">View</a></td>
-
-                        </tr>
+                            </tr>
                         </tbody>
-                    </table>
 
+                    </table>
+                {% else %}
+                    <p>No rejected fees.</p>
+                {% endif %}
 
 
 
@@ -107,6 +107,21 @@
 
 
 </div>
+
+
+
+<form method="post"  action="#" class="for4" style=" float: left; margin-top: 50px; padding-left: 20px; ">
+    <p style="margin-bottom: 5px;">Empty list</p>
+    <select style="height:25px;" onchange="window.location.href='?'+this.value">
+
+        <option value="emptyrejectedslist=false&" {% if data.emptyrejectedslist != "true" %} selected {% endif %}
+        >Populated list</option>
+
+        <option value="emptyrejectedslist=true&" {% if data.emptyrejectedslist == "true" %} selected {% endif %}
+        >Empty list</option>
+
+    </select>
+</form>
 
 
 

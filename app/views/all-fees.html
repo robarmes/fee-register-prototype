@@ -51,8 +51,6 @@
 
 
 
-
-
                   <div style="display: flex;">
 
                       <h1 class="govuk-heading-xl govuk-!-margin-bottom-6 govuk-!-margin-top-7">Live fees</h1>
@@ -63,11 +61,17 @@
 
                   </div>
 
-                  <div class="govuk-!-margin-top-1 ">
-                      <a href="/create-a-fee?editexisitingfee=false&">
-                          <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:160px">Create a new fee</button>
-                      </a>
-                  </div>
+
+                  {% if  data['usertype'] != 'approver' %}
+                      <div class="govuk-!-margin-top-1 ">
+                          <a href="/create-a-fee?editexisitingfee=false&">
+                              <button class=" govuk-button2 black-text" data-module="govuk-button" style="width:160px">Create a new fee</button>
+                          </a>
+                      </div>
+                  {% endif %}
+
+
+
 
                 <!-- SEARCH  -->
                 <!-- no dev effort to make this
