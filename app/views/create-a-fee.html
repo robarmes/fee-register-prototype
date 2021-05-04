@@ -17,7 +17,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
             <div class="govuk-grid-column-full">
 
 
-                {% if data.validationerros != "true" %}
+                {% if data.validationerros == "true" %}
                     <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
                         <h2 class="govuk-error-summary__title" id="error-summary-title">
                             There is a problem
@@ -25,37 +25,43 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                         <div class="govuk-error-summary__body">
                             <ul class="govuk-list govuk-error-summary__list">
                                 <li>
-                                    <a href="#">Enter a fee description</a>
+                                    <a href="#descriptionanchor">Enter a fee description</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select a service</a>
+                                    <a href="#servicesnanchor">Select a service</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select a jurisdiction 1</a>
+                                    <a href="#jur1anchor">Select a jurisdiction 1</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select a jurisdiction 2</a>
+                                    <a href="#jur2anchor">Select a jurisdiction 2</a>
                                 </li>
                                 <li>
-                                    <a href="#">Enter an amount</a>
+                                    <a href="#rangedanchor">Select ranged units</a>
                                 </li>
                                 <li>
-                                    <a href="#">Enter a percentage</a>
+                                    <a href="#rangedfromanchor">Enter range lower amount</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select an event</a>
+                                    <a href="#amountfieldanchor">Enter an amount</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select a channel</a>
+                                    <a href="#percentageanchor">Enter a percentage</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select an applicant</a>
+                                    <a href="#eventsanchor">Select an event</a>
                                 </li>
                                 <li>
-                                    <a href="#">Select a direction</a>
+                                    <a href="#channelanchor">Select a channel</a>
                                 </li>
                                 <li>
-                                    <a href="#">Enter a date the fee will start</a>
+                                    <a href="#apptypeanchor">Select an applicant</a>
+                                </li>
+                                <li>
+                                    <a href="#directionanchor">Select a direction</a>
+                                </li>
+                                <li>
+                                    <a href="#fromdateanchor">Enter a date the fee will start</a>
                                 </li>
                             </ul>
                         </div>
@@ -154,10 +160,20 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
                         <!--  DESCRIPTION -->
-                        <div class="govuk-form-group" style="width:600px;">
+                        {% if data.validationerros == "true" %}
+                            <div class="govuk-form-group govuk-form-group--error" style="width:600px;" id="descriptionanchor">
+                        {% else %}
+                            <div class="govuk-form-group" style="width:600px;">
+                        {% endif %}
+
                             <label class="govuk-label govuk-!-font-weight-bold" for="more-detail">
                                 Description
                             </label>
+                                {% if data.validationerros == "true" %}
+                                    <span id="passport-issued-error" class="govuk-error-message">
+                                      Enter a fee description
+                                    </span>
+                                {% endif %}
                             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="4" aria-describedby="more-detail-hint"
                                       >{% if  data['editexisitingfee'] == 'true'  %}General Application - By consent{% endif %}</textarea>
                         </div>
@@ -209,12 +225,21 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
                         {% if  data['editexisitingfee'] != 'true' %}
                                 <!--  SERVICE  -->
-                                <div class="govuk-form-group">
+
+                                {% if data.validationerros == "true" %}
+                                    <div class="govuk-form-group govuk-form-group--error"  id="servicesnanchor">
+                                {% else %}
+                                    <div class="govuk-form-group">
+                                {% endif %}
                                     <fieldset class="govuk-fieldset">
                                         <label class="govuk-label" for="account-code">
                                             <strong>Service</strong>
                                         </label>
-
+                                        {% if data.validationerros == "true" %}
+                                            <span id="" class="govuk-error-message">
+                                                Select a service
+                                            </span>
+                                        {% endif %}
                                         <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
 
                                             <div class="govuk-radios" data-module="radios">
@@ -342,12 +367,20 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 </div>
 
                                 <!--  JURISDICTION 1 -->
-                                <div class="govuk-form-group">
+                                {% if data.validationerros == "true" %}
+                                      <div class="govuk-form-group govuk-form-group--error"  id="jur1anchor">
+                                {% else %}
+                                      <div class="govuk-form-group">
+                                {% endif %}
                                     <fieldset class="govuk-fieldset">
                                         <label class="govuk-label" for="account-code">
                                             <strong>Jurisdiction 1</strong>
                                         </label>
-
+                                        {% if data.validationerros == "true" %}
+                                            <span id="" class="govuk-error-message">
+                                                Select a jurisdiction 1
+                                            </span>
+                                        {% endif %}
                                         <div class="govuk-radios" data-module="radios">
                                             <div class="govuk-radios__item">
                                                 <input class="govuk-radios__input" id="jurisdiction-one-1" name="jurisdiction-one" type="radio" value="email">
@@ -375,12 +408,20 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 </div>
 
                                 <!--  JURISDICTION 2 -->
-                                <div class="govuk-form-group">
+                                  {% if data.validationerros == "true" %}
+                                      <div class="govuk-form-group govuk-form-group--error"  id="jur2anchor">
+                                  {% else %}
+                                      <div class="govuk-form-group">
+                                  {% endif %}
                                     <fieldset class="govuk-fieldset">
                                         <label class="govuk-label" for="account-code">
                                             <strong>Jurisdiction 2</strong>
                                         </label>
-
+                                        {% if data.validationerros == "true" %}
+                                            <span id="" class="govuk-error-message">
+                                                Select a jurisdiction 2
+                                            </span>
+                                        {% endif %}
                                         <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
 
                                             <div class="govuk-radios" data-module="radios">
@@ -514,20 +555,30 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
                                         <div class="govuk-radios__item">
                                             <input class="govuk-radios__input" id="fee-type-conditional-2" name="fee-type" type="radio" value="phone" data-aria-controls="conditional-fee-type-conditional-2"
-                                                   {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %}>
+                                                   {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
                                             <label class="govuk-label govuk-radios__label" for="fee-type-conditional-2">
                                                 Ranged  {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
                                             </label>
                                         </div>
 
                                         <!--  EXPANDED AREA FOR RANGED FEE TYPE RADIO -->
-                                        <div class="govuk-radios__conditional" id="conditional-fee-type-conditional-2" style="padding-top: 20px; padding-bottom: 20px;">
+                                        <div class="govuk-radios__conditional" id="conditional-fee-type-conditional-2" style="padding-top: 20px; padding-bottom: 20px;"
+                                             >
 
-                                            <div class="govuk-form-group">
+                                            {% if data.validationerros == "true" %}
+                                                <div class="govuk-form-group govuk-form-group--error" id="rangedanchor">
+                                            {% else %}
+                                                <div class="govuk-form-group">
+                                            {% endif %}
                                                 <fieldset class="govuk-fieldset">
                                                     <label class="govuk-label" for="account-code">
                                                         <strong>Ranged units</strong>
                                                     </label>
+                                                    {% if data.validationerros == "true" %}
+                                                        <span id="" class="govuk-error-message">
+                                                            Select ranged units
+                                                        </span>
+                                                    {% endif %}
                                                     <div class="govuk-radios">
                                                         <div class="govuk-radios__item">
                                                             <input class="govuk-radios__input" id="where-do-you-live-1" name="ranged-units" type="radio" value="england">
@@ -546,10 +597,19 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                 </fieldset>
                                             </div>
 
-                                            <div class="govuk-form-group">
+                                            {% if data.validationerros == "true" %}
+                                                 <div class="govuk-form-group govuk-form-group--error" id="rangedfromanchor">
+                                            {% else %}
+                                                 <div class="govuk-form-group">
+                                            {% endif %}
                                                 <label class="govuk-label" for="for-more-than">
                                                     From
                                                 </label>
+                                                     {% if data.validationerros == "true" %}
+                                                        <span id="" class="govuk-error-message">
+                                                            Enter an amount
+                                                        </span>
+                                                     {% endif %}
                                                 <!--<p style="float:left; margin-top: 9px; margin-right:4px;"></p>-->
                                                 <input class="govuk-input" id="up-to" name="up-to" type="text" style="width:100px">
                                             </div>
@@ -571,6 +631,8 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 </fieldset>
                             </div>
 
+
+
                                 <!-- AMOUNT TYPE  -->
                                 <div class="govuk-form-group">
                                     <fieldset class="govuk-fieldset">
@@ -580,18 +642,29 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
                                         <div class="govuk-radios" data-module="radios">
                                             <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="amount-type" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1"
-                                                       {% if  data['editexisitingfee'] == 'true' %} checked {% endif %}>
+                                                <input class="govuk-radios__input" id="how-contacted-conditional-1"
+                                                       {% if data.validationerros != "true" %} name="amount-type"  {% endif %}
+                                                       type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1"
+                                                       {% if  data['editexisitingfee'] == 'true' %} checked {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
                                                 <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
                                                     Flat
                                                 </label>
                                             </div>
                                             <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
 
-                                                <div class="govuk-currency-input">
+                                                {% if data.validationerros == "true" %}
+                                                    <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="amountfieldanchor">
+                                                {% else %}
+                                                    <div class="govuk-form-group govuk-currency-input">
+                                                {% endif %}
                                                     <label class="govuk-label" for="contact-by-email">
                                                         Amount
                                                     </label>
+                                                        {% if data.validationerros == "true" %}
+                                                        <span id="" class="govuk-error-message">
+                                                            Enter an amount
+                                                        </span>
+                                                        {% endif %}
                                                     <div class="govuk-currency-input__inner">
                                                         <span class="govuk-currency-input__inner__unit govuk-body">£</span>
                                                         <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number"
@@ -607,16 +680,26 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
                                             <div class="govuk-radios__item">
                                                 <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2"
-                                                       {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %} >
+                                                       {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
                                                 <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
                                                     Percentage {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
                                                 </label>
                                             </div>
                                             <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
-                                                <div class="govuk-currency-input">
+
+                                                {% if data.validationerros == "true" %}
+                                                    <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="percentageanchor">
+                                                {% else %}
+                                                    <div class="govuk-form-group govuk-currency-input">
+                                                {% endif %}
                                                     <label class="govuk-label" for="contact-by-email">
 
                                                     </label>
+                                                        {% if data.validationerros == "true" %}
+                                                            <span id="" class="govuk-error-message">
+                                                                Enter a percentage
+                                                            </span>
+                                                        {% endif %}
                                                     <div class="">
                                                         <input class=" govuk-input"  name="tickets-cost" style="width:50px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
                                                     </div>
@@ -636,7 +719,6 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                                         Amount
                                                     </label>
                                                     <div class="govuk-currency-input__inner">
-                                                        <span class="govuk-currency-input__inner__unit govuk-body">£</span>
                                                         <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:120px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
                                                     </div>
                                                 </div>
@@ -647,13 +729,24 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 </div>
 
 
-                        {% if  data['editexisitingfee'] != 'true' %}
-                                <!--  EVENT  -->
-                                <div class="govuk-form-group">
+
+
+            {% if  data['editexisitingfee'] != 'true' %}
+                <!--  EVENT  -->
+              {% if data.validationerros == "true" %}
+                    <div class="govuk-form-group govuk-form-group--error"  id="eventsanchor">
+              {% else %}
+                  <div class="govuk-form-group">
+              {% endif %}
                     <fieldset class="govuk-fieldset">
                         <label class="govuk-label" for="account-code">
                             <strong>Event</strong>
                         </label>
+                        {% if data.validationerros == "true" %}
+                            <span id="" class="govuk-error-message">
+                                Select an event
+                            </span>
+                        {% endif %}
 
                         <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
                             <div class="govuk-radios" data-module="radios">
@@ -733,12 +826,26 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                     </fieldset>
                 </div>
 
+
+
+
+
+
                                 <!--  CHANNEL  -->
+                            {% if data.validationerros == "true" %}
+                                <div class="govuk-form-group govuk-form-group--error"  id="channelanchor">
+                            {% else %}
                                 <div class="govuk-form-group">
+                            {% endif %}
                                     <fieldset class="govuk-fieldset">
                                         <label class="govuk-label" for="account-code">
                                             <strong>Channel</strong>
                                         </label>
+                                        {% if data.validationerros == "true" %}
+                                            <span id="" class="govuk-error-message">
+                                                Select a channel
+                                            </span>
+                                        {% endif %}
 
                                         <div class="govuk-radios" data-module="radios">
                                             <div class="govuk-radios__item">
@@ -775,11 +882,20 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
                         <!--  APPLICANT TYPE-->
-                        <div class="govuk-form-group">
+                        {% if data.validationerros == "true" %}
+                             <div class="govuk-form-group govuk-form-group--error"  id="apptypeanchor">
+                        {% else %}
+                             <div class="govuk-form-group">
+                        {% endif %}
                             <fieldset class="govuk-fieldset">
                                 <label class="govuk-label" for="account-code">
                                     <strong>Applicant</strong>
                                 </label>
+                                {% if data.validationerros == "true" %}
+                                    <span id="" class="govuk-error-message">
+                                        Select an applicant
+                                    </span>
+                                {% endif %}
 
                                 <div class="govuk-radios" data-module="radios">
                                     <div class="govuk-radios__item">
@@ -813,12 +929,25 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                         </div>
 
 
+
+
                         <!--  DIRECTION  -->
-                        <div class="govuk-form-group">
+
+                        {% if data.validationerros == "true" %}
+                             <div class="govuk-form-group govuk-form-group--error"  id="directionanchor">
+                        {% else %}
+                             <div class="govuk-form-group">
+                        {% endif %}
+
                             <fieldset class="govuk-fieldset">
                                 <label class="govuk-label" for="account-code">
                                     <strong>Direction</strong>
                                 </label>
+                                {% if data.validationerros == "true" %}
+                                    <span id="" class="govuk-error-message">
+                                        Select a direction
+                                    </span>
+                                {% endif %}
 
                                 <div class="govuk-grid-column-one-thirds" style="float: left; width:300px;">
 
@@ -907,11 +1036,20 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
                         <!--  DATE FROM -->
-                        <div class="govuk-form-group">
+                        {% if data.validationerros == "true" %}
+                            <div class="govuk-form-group govuk-form-group--error"  id="fromdateanchor">
+                        {% else %}
+                            <div class="govuk-form-group">
+                        {% endif %}
                             <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
                                 <label class="govuk-label" for="more-detail">
                                     <strong>Date fee will start</strong>
                                 </label>
+                                {% if data.validationerros == "true" %}
+                                    <span id="" class="govuk-error-message">
+                                        Enter a date the fee will start
+                                    </span>
+                                {% endif %}
                                 <div class="govuk-date-input" id="passport-issued">
                                     <div class="govuk-date-input__item">
                                         <div class="govuk-form-group">
