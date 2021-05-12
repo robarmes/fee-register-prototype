@@ -73,22 +73,24 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                 {% if  data['editexisitingfee'] == 'true' %}
                     <h1 class="govuk-heading-xl govuk-!-margin-top-5">Edit fee and create a new version</h1>
                 {% else %}
-                    <h1 class="govuk-heading-xl govuk-!-margin-top-5">Create a new fee</h1>
+                    <h1 class="govuk-heading-xl govuk-!-margin-top-5 govuk-!-margin-bottom-0">Create a new fee</h1>
                 {% endif %}
 
 
 
                 <dl class="govuk-check-your-answers govuk-check-your-answers--short govuk-!-margin-bottom-7" style="width: 660px;">
-                    <div class="govuk-check-your-answers__contents">
-                        <dt class="govuk-check-your-answers__question">
-                            Code:
-                        </dt>
-                        <dd class="govuk-check-your-answers__answer">
-                            {{ data.feecode }}
-                        </dd>
-                    </div>
+
 
                     {% if  data['editexisitingfee'] == 'true' %}
+
+                        <div class="govuk-check-your-answers__contents">
+                            <dt class="govuk-check-your-answers__question">
+                                Code:
+                            </dt>
+                            <dd class="govuk-check-your-answers__answer">
+                                {{ data.feecode }}
+                            </dd>
+                        </div>
 
                         <div class="govuk-check-your-answers__contents">
                             <dt class="govuk-check-your-answers__question">
