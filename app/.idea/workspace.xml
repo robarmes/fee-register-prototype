@@ -24,7 +24,7 @@
       <file leaf-file-name="all-fees.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/all-fees.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.692307">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
               <folding />
             </state>
@@ -34,8 +34,8 @@
       <file leaf-file-name="all-discontinued.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/all-discontinued.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35201794">
-              <caret line="353" column="34" selection-start-line="353" selection-start-column="34" selection-end-line="353" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.86659193">
+              <caret line="380" column="0" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -47,7 +47,7 @@
       <file leaf-file-name="all-approvedbutnotlive.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/all-approvedbutnotlive.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.127273">
+            <state vertical-scroll-proportion="0.0">
               <caret line="39" column="76" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -641,7 +641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/all-fees.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.692307">
+        <state vertical-scroll-proportion="0.0">
           <caret line="39" column="60" selection-start-line="39" selection-start-column="60" selection-end-line="39" selection-end-column="60" />
           <folding />
         </state>
@@ -649,7 +649,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/all-approvedbutnotlive.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.127273">
+        <state vertical-scroll-proportion="0.0">
           <caret line="39" column="76" selection-start-line="39" selection-start-column="76" selection-end-line="39" selection-end-column="76" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -660,8 +660,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/all-discontinued.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35201794">
-          <caret line="353" column="34" selection-start-line="353" selection-start-column="34" selection-end-line="353" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.86659193">
+          <caret line="380" column="0" selection-start-line="380" selection-start-column="0" selection-end-line="380" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
