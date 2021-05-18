@@ -148,13 +148,13 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
-                        <!--   REASON FOR NEW THING  -->
+                        <!--   Reason for fee update  -->
                         <div class="govuk-form-group" style="width:600px;">
                             <label class="govuk-label govuk-!-font-weight-bold" for="more-detail">
                                 {% if  data['editexisitingfee'] == 'true' %}
-                                    Reason for new version of fee
+                                    Reason for fee update
                                 {% else %}
-                                    Reason for new fee
+                                    Reason for fee update
                                 {% endif %}
                             </label>
                             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2" aria-describedby="more-detail-hint"></textarea>
