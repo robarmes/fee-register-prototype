@@ -120,14 +120,14 @@
                   <!-- editor user -->
                   <div class="" style="width:2000px;">
                       {% if  data['rejected'] == 'true' %}
-                          <a href="/create-a-fee?editexisitingfee=true&"> <button class="govuk-button">Edit fee</button> </a>
+                          <a href="/create-a-fee?editexisitingfee=true&feecode=FEE0545&"> <button class="govuk-button">Edit fee</button> </a>
                           <p><a href="/approval-request-confirmation">Request approval</a></p>
                           <p><a href="draft-delete-are-you-sure">Delete</a></p>
 
 
                       {% elif  data['waitingforapproval'] != 'true'   %}
                           <a href="/new-fee-approval-are-you-sure"> <button class="govuk-button">Request approval</button> </a>
-                          <p><a href="/create-a-fee?editexisitingfee=true&">Edit fee</a></p>
+                          <p><a href="/create-a-fee?editexisitingfee=true&feecode=FEE0545&">Edit fee</a></p>
                           <p><a href="draft-delete-are-you-sure">Delete</a></p>
 
                       {% endif %}
@@ -141,7 +141,7 @@
       {% if  data['usertype'] == 'approver' %}
           <!--  Approvers can't create new versions -->
       {% else %}
-          <a class="govuk-button" href="/create-a-fee?editexisitingfee=true&">Edit fee</a>
+          <a class="govuk-button" href="/create-a-fee?editexisitingfee=true&feecode=FEE0545&">Edit fee</a>
       {% endif %}
 
     {% endif %}
