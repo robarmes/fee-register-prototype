@@ -24,7 +24,7 @@
       <file leaf-file-name="create-a-fee.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/create-a-fee.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-92.84615">
               <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
               <folding>
                 <element signature="n#style#0;n#dl#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -34,11 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="feedetailsfull.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="newlayout.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/layouts/admin/newlayout.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.61861074">
+              <caret line="97" column="204" selection-start-line="97" selection-start-column="204" selection-end-line="97" selection-end-column="204" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="feedetailsfull.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/includes/feedetailsfull.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7365662">
-              <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+            <state vertical-scroll-proportion="-1.3076923">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -67,7 +77,6 @@
         <option value="$PROJECT_DIR$/views/includes/feedetailschangedrejected.html" />
         <option value="$PROJECT_DIR$/views/includes/feedetailschanged.html" />
         <option value="$PROJECT_DIR$/views/includes/footer.html" />
-        <option value="$PROJECT_DIR$/views/layouts/admin/newlayout.html" />
         <option value="$PROJECT_DIR$/views/layouts/admin/base-signin.html" />
         <option value="$PROJECT_DIR$/views/draft-fees-rejected.html" />
         <option value="$PROJECT_DIR$/views/draft-fees.html" />
@@ -78,6 +87,7 @@
         <option value="$PROJECT_DIR$/views/all-fees.html" />
         <option value="$PROJECT_DIR$/views/create-a-fee.html" />
         <option value="$PROJECT_DIR$/views/includes/feedetailsfull.html" />
+        <option value="$PROJECT_DIR$/views/layouts/admin/newlayout.html" />
       </list>
     </option>
   </component>
@@ -117,8 +127,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -166,6 +176,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,13 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layouts/admin/newlayout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4473094">
-          <caret line="138" column="25" selection-start-line="138" selection-start-column="25" selection-end-line="138" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../xui-prototype/app/views/searchcases/pages/search.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57174885">
@@ -651,9 +676,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/views/includes/feedetailsfull.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3076923">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/views/create-a-fee.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-92.84615">
           <caret line="142" column="30" selection-start-line="142" selection-start-column="30" selection-end-line="142" selection-end-column="30" />
           <folding>
             <element signature="n#style#0;n#dl#0;n#div#0;n#div#0;n#main#0;n#div#0;n#!!top" expanded="true" />
@@ -662,10 +695,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/includes/feedetailsfull.html">
+    <entry file="file://$PROJECT_DIR$/views/layouts/admin/newlayout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7365662">
-          <caret line="282" column="0" selection-start-line="282" selection-start-column="0" selection-end-line="282" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.61861074">
+          <caret line="97" column="204" selection-start-line="97" selection-start-column="204" selection-end-line="97" selection-end-column="204" />
           <folding />
         </state>
       </provider>
