@@ -121,6 +121,8 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
+
+
                         <div class="govuk-check-your-answers__contents">
                             <dt class="govuk-check-your-answers__question">
                                 Channel
@@ -129,6 +131,17 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 default
                             </dd>
                         </div>
+
+
+                        <div class="govuk-check-your-answers__contents">
+                            <dt class="govuk-check-your-answers__question">
+                                Applicant type
+                            </dt>
+                            <dd class="govuk-check-your-answers__answer">
+                                Personal
+                            </dd>
+                        </div>
+
 
                         <div class="govuk-check-your-answers__contents">
                             <dt class="govuk-check-your-answers__question">
@@ -543,7 +556,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 <div class="govuk-form-group">
                                 <fieldset class="govuk-fieldset">
                                     <label class="govuk-label" for="account-code">
-                                        <strong>Fee Type</strong>
+                                        <strong>Fee type</strong>
                                     </label>
 
                                     <div class="govuk-radios" data-module="radios">
@@ -639,7 +652,7 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 <div class="govuk-form-group">
                                     <fieldset class="govuk-fieldset">
                                         <label class="govuk-label" for="more-detail">
-                                            <strong>Amount Type</strong>
+                                            <strong>Amount type</strong>
                                         </label>
 
                                         <div class="govuk-radios" data-module="radios">
@@ -733,7 +746,11 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
+
+            <!--  New FEE, so Edit more  fields     -->
             {% if  data['editexisitingfee'] != 'true' %}
+
+
                 <!--  EVENT  -->
               {% if data.validationerros == "true" %}
                     <div class="govuk-form-group govuk-form-group--error"  id="eventsanchor">
@@ -833,102 +850,108 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
-                                <!--  CHANNEL  -->
-                            {% if data.validationerros == "true" %}
-                                <div class="govuk-form-group govuk-form-group--error"  id="channelanchor">
-                            {% else %}
-                                <div class="govuk-form-group">
-                            {% endif %}
+                            <!--  CHANNEL  -->
+                        {% if data.validationerros == "true" %}
+                            <div class="govuk-form-group govuk-form-group--error"  id="channelanchor">
+                        {% else %}
+                            <div class="govuk-form-group">
+                        {% endif %}
+                                <fieldset class="govuk-fieldset">
+                                    <label class="govuk-label" for="account-code">
+                                        <strong>Channel</strong>
+                                    </label>
+                                    {% if data.validationerros == "true" %}
+                                        <span id="" class="govuk-error-message">
+                                            Select a channel
+                                        </span>
+                                    {% endif %}
+
+                                    <div class="govuk-radios" data-module="radios">
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="channel-1" name="channel" type="radio" value="email">
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-one-1">
+                                                Online
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="channel-2" name="channel" type="radio" value="phone" >
+                                            <label class="govuk-label govuk-radios__label" for="jurisdiction-one-2">
+                                                Bulk
+                                            </label>
+                                        </div>
+
+                                        <div class="govuk-radios__item">
+                                            <input class="govuk-radios__input" id="channel-3" name="channel" type="radio" value="phone">
+                                            <label class="govuk-label govuk-radios__label" for="applicant-3">
+                                                Default
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <!--  KEYWORD  -->
+                            <div class="govuk-form-group" style="width:600px;">
+                                <label class="govuk-label govuk-!-font-weight-bold" for="keyword"> Keyword </label>
+                                <input class="govuk-input" id="keyword" name="email" type="text" aria-describedby="email-hint" value="">
+                            </div>
+
+
+
+                                <!--  APPLICANT TYPE-->
+                                {% if data.validationerros == "true" %}
+                                    <div class="govuk-form-group govuk-form-group--error"  id="apptypeanchor">
+                                {% else %}
+                                    <div class="govuk-form-group">
+                                {% endif %}
+
                                     <fieldset class="govuk-fieldset">
                                         <label class="govuk-label" for="account-code">
-                                            <strong>Channel</strong>
+                                            <strong>Applicant type</strong>
                                         </label>
                                         {% if data.validationerros == "true" %}
                                             <span id="" class="govuk-error-message">
-                                                Select a channel
+                                                Select an applicant
                                             </span>
                                         {% endif %}
 
                                         <div class="govuk-radios" data-module="radios">
                                             <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="channel-1" name="channel" type="radio" value="email">
-                                                <label class="govuk-label govuk-radios__label" for="jurisdiction-one-1">
-                                                    Online
+                                                <input class="govuk-radios__input" id="applicant-1" name="applicant-type" type="radio" value="email">
+                                                <label class="govuk-label govuk-radios__label" for="applicant-1">
+                                                    Personal
                                                 </label>
                                             </div>
 
                                             <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="channel-2" name="channel" type="radio" value="phone" >
-                                                <label class="govuk-label govuk-radios__label" for="jurisdiction-one-2">
-                                                    Bulk
+                                                <input class="govuk-radios__input" id="applicant-2" name="applicant-type" type="radio" value="phone" >
+                                                <label class="govuk-label govuk-radios__label" for="applicant-2">
+                                                    Professional
                                                 </label>
                                             </div>
 
                                             <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="channel-3" name="channel" type="radio" value="phone">
+                                                {% if  data['editexisitingfee'] == 'true'  %}
+                                                <input class="govuk-radios__input" id="applicant-3" name="applicant-type" type="radio" value="phone" checked >
+                                                {% else %}
+                                                <input class="govuk-radios__input" id="applicant-3" name="applicant-type" type="radio" value="phone">
+                                                {% endif %}
+
                                                 <label class="govuk-label govuk-radios__label" for="applicant-3">
-                                                    Default
+                                                    All
                                                 </label>
                                             </div>
 
                                         </div>
                                     </fieldset>
-                                </div>
+                            </div>
 
-                                <!--  KEYWORD  -->
-                                <div class="govuk-form-group" style="width:600px;">
-                                    <label class="govuk-label govuk-!-font-weight-bold" for="keyword"> Keyword </label>
-                                    <input class="govuk-input" id="keyword" name="email" type="text" aria-describedby="email-hint" value="">
-                                </div>
                         {% endif %}
 
 
-                        <!--  APPLICANT TYPE-->
-                        {% if data.validationerros == "true" %}
-                             <div class="govuk-form-group govuk-form-group--error"  id="apptypeanchor">
-                        {% else %}
-                             <div class="govuk-form-group">
-                        {% endif %}
-                            <fieldset class="govuk-fieldset">
-                                <label class="govuk-label" for="account-code">
-                                    <strong>Applicant</strong>
-                                </label>
-                                {% if data.validationerros == "true" %}
-                                    <span id="" class="govuk-error-message">
-                                        Select an applicant
-                                    </span>
-                                {% endif %}
 
-                                <div class="govuk-radios" data-module="radios">
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="applicant-1" name="applicant-type" type="radio" value="email">
-                                        <label class="govuk-label govuk-radios__label" for="applicant-1">
-                                            Personal
-                                        </label>
-                                    </div>
-
-                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="applicant-2" name="applicant-type" type="radio" value="phone" >
-                                        <label class="govuk-label govuk-radios__label" for="applicant-2">
-                                            Professional
-                                        </label>
-                                    </div>
-
-                                    <div class="govuk-radios__item">
-                                        {% if  data['editexisitingfee'] == 'true'  %}
-                                            <input class="govuk-radios__input" id="applicant-3" name="applicant-type" type="radio" value="phone" checked >
-                                        {% else %}
-                                            <input class="govuk-radios__input" id="applicant-3" name="applicant-type" type="radio" value="phone">
-                                        {% endif %}
-
-                                        <label class="govuk-label govuk-radios__label" for="applicant-3">
-                                            All
-                                        </label>
-                                    </div>
-
-                                </div>
-                            </fieldset>
-                        </div>
 
 
 
