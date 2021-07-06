@@ -128,7 +128,12 @@
 
                       {% elif  data['waitingforapproval'] != 'true'   %}
                           <a href="/new-fee-approval-are-you-sure"> <button class="govuk-button">Request approval</button> </a>
-                          <p><a href="/create-a-fee?editexisitingfee=true&feecode=FEE0545&">Edit fee</a></p>
+                            {% if  data['brandnewfeescenario'] == 'true'  %}
+                                <p><a href="/create-a-fee?editexisitingfee=false&feecode=FEE0545&">Edit fee</a></p>
+                            {% else %}
+                                <p><a href="/create-a-fee?editexisitingfee=true&feecode=FEE0545&">Edit fee</a></p>
+                            {% endif %}
+
                           <p><a href="draft-delete-are-you-sure">Delete</a></p>
 
                       {% endif %}

@@ -74,6 +74,30 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                     <h1 class="govuk-heading-xl govuk-!-margin-top-5">Edit fee and create a new version</h1>
                 {% else %}
                     <h1 class="govuk-heading-xl govuk-!-margin-top-5 govuk-!-margin-bottom-0">Create a new fee</h1>
+
+                    <!--  WHEN EDITING A BRAND NEW FEE FROM A DRAFT -->
+                    {% if  data['brandnewfeescenario'] == 'true'  %}
+                        <dl class="govuk-check-your-answers govuk-check-your-answers--short govuk-!-margin-top-8" style="width:600px;">
+
+                            <div class="govuk-check-your-answers__contents">
+                                <dt class="govuk-check-your-answers__question">
+                                    Code
+                                </dt>
+                                <dd class="govuk-check-your-answers__answer">
+                                    {{ data.feecode }}
+                                </dd>
+                            </div>
+
+                            <div class="govuk-check-your-answers__contents">
+                                <dt class="govuk-check-your-answers__question">
+                                    Version
+                                </dt>
+                                <dd class="govuk-check-your-answers__answer">
+                                    1
+                                </dd>
+                            </div>
+                         </dl>
+                    {% endif %}
                 {% endif %}
 
 
@@ -109,6 +133,17 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 upper tribunal immigration and asylum chamber
                             </dd>
                         </div>
+
+
+                        <div class="govuk-check-your-answers__contents">
+                            <dt class="govuk-check-your-answers__question">
+                                Service
+                            </dt>
+                            <dd class="govuk-check-your-answers__answer">
+                                Money Claims
+                            </dd>
+                        </div>
+
 
                         <div class="govuk-check-your-answers__contents">
                             <dt class="govuk-check-your-answers__question">
@@ -151,6 +186,17 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
                                 ABC
                             </dd>
                         </div>
+
+                        <div class="govuk-check-your-answers__contents">
+                            <dt class="govuk-check-your-answers__question">
+                                Version
+                            </dt>
+                            <dd class="govuk-check-your-answers__answer">
+                                2
+                            </dd>
+                        </div>
+
+
 
                     {% else %}
 
@@ -648,100 +694,201 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
-                                <!-- AMOUNT TYPE  -->
-                                <div class="govuk-form-group">
-                                    <fieldset class="govuk-fieldset">
-                                        <label class="govuk-label" for="more-detail">
-                                            <strong>Amount type</strong>
-                                        </label>
+                            <!-- AMOUNT TYPE  -->
+                            <!-- for conveneince of the html there are 3 state for amount type, unselected, locked to flat and locked to percentage -->
 
-                                        <div class="govuk-radios" data-module="radios">
-                                            <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="how-contacted-conditional-1"
-                                                       {% if data.validationerros != "true" %} name="amount-type"  {% endif %}
-                                                       type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1"
-                                                       {% if  data['editexisitingfee'] == 'true' %} checked {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
-                                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
-                                                    Flat
-                                                </label>
-                                            </div>
-                                            <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+                              {% if data.amounttypesetting != "percentage" %}
+                                      <div class="govuk-form-group">
+                                          <fieldset class="govuk-fieldset">
+                                              <label class="govuk-label" for="more-detail">
+                                                  <strong>Amount type</strong>
+                                              </label>
 
-                                                {% if data.validationerros == "true" %}
-                                                    <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="amountfieldanchor">
-                                                {% else %}
-                                                    <div class="govuk-form-group govuk-currency-input">
-                                                {% endif %}
-                                                    <label class="govuk-label" for="contact-by-email">
-                                                        Amount
-                                                    </label>
-                                                        {% if data.validationerros == "true" %}
+                                              <div class="govuk-radios" data-module="radios">
+                                                  <div class="govuk-radios__item">
+                                                      <input class="govuk-radios__input" id="how-contacted-conditional-1"
+                                                             {% if data.validationerros != "true" %} name="amount-type"  {% endif %}
+                                                             type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1"
+                                                             {% if  data['editexisitingfee'] == 'true' %} checked {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
+                                                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                                                          Flat
+                                                      </label>
+                                                  </div>
+
+                                                  <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+
+                                                      {% if data.validationerros == "true" %}
+                                                      <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="amountfieldanchor">
+                                                          {% else %}
+                                                          <div class="govuk-form-group govuk-currency-input">
+                                                              {% endif %}
+                                                              <label class="govuk-label" for="contact-by-email">
+                                                                  Amount
+                                                              </label>
+                                                              {% if data.validationerros == "true" %}
+                                                    <span id="" class="govuk-error-message">
+                                                        Enter an amount
+                                                    </span>
+                                                              {% endif %}
+                                                              <div class="govuk-currency-input__inner">
+                                                                  <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                                                                  <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number"
+                                                                         id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?"
+                                                                         {% if  data['rejectionscenario'] == 'true'  %} value="110.00"
+                                                                  {% elif  data['editexisitingfee'] == 'true' %} value="100.00"
+                                                                  {% endif %}>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
+
+
+                                                      <div class="govuk-radios__item">
+                                                          <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2"
+                                                                 {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
+                                                          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                                                              Percentage {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
+                                                          </label>
+                                                      </div>
+                                                      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
+
+                                                          {% if data.validationerros == "true" %}
+                                                          <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="percentageanchor">
+                                                              {% else %}
+                                                              <div class="govuk-form-group govuk-currency-input">
+                                                                  {% endif %}
+                                                                  <label class="govuk-label" for="contact-by-email">
+
+                                                                  </label>
+                                                                  {% if data.validationerros == "true" %}
                                                         <span id="" class="govuk-error-message">
-                                                            Enter an amount
+                                                            Enter a percentage
                                                         </span>
-                                                        {% endif %}
-                                                    <div class="govuk-currency-input__inner">
-                                                        <span class="govuk-currency-input__inner__unit govuk-body">£</span>
-                                                        <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number"
-                                                               id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?"
-                                                               {% if  data['rejectionscenario'] == 'true'  %} value="110.00"
-                                                                {% elif  data['editexisitingfee'] == 'true' %} value="100.00"
-                                                                {% endif %}>
-                                                    </div>
-                                                </div>
+                                                                  {% endif %}
+                                                                  <div class="">
+                                                                      <input class=" govuk-input"  name="tickets-cost" style="width:50px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
+                                                                  </div>
+                                                              </div>
 
-                                            </div>
+                                                          </div>
+                                                          <div class="govuk-radios__item">
+                                                              <input class="govuk-radios__input" id="how-contacted-conditional-3" name="amount-type" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3"
+                                                                     {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %}>
+                                                              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                                                                  Volume   {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
+                                                              </label>
+                                                          </div>
+                                                          <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
+                                                              <div class="govuk-currency-input">
+                                                                  <label class="govuk-label" for="contact-by-email">
+                                                                      Amount
+                                                                  </label>
+                                                                  <div class="govuk-currency-input__inner">
+                                                                      <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:120px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                                                                  </div>
+                                                              </div>
+
+                                                          </div>
+                                                      </div>
+                                          </fieldset>
+                                      </div>
+                              {% else %}
+                                      <div class="govuk-form-group">
+                                          <fieldset class="govuk-fieldset">
+                                              <label class="govuk-label" for="more-detail">
+                                                  <strong>Amount type</strong>
+                                              </label>
+
+                                              <div class="govuk-radios" data-module="radios">
+                                                  <div class="govuk-radios__item">
+                                                      <input class="govuk-radios__input" id="how-contacted-conditional-1"
+                                                             {% if data.validationerros != "true" %} name="amount-type"  {% endif %}
+                                                             type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1"
+                                                             {% if data.validationerros == "true" %} checked="checked" {% endif %}
+                                                            {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %}>
+                                                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-1">
+                                                          Flat {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
+                                                      </label>
+                                                  </div>
+
+                                                  <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-1">
+
+                                                      {% if data.validationerros == "true" %}
+                                                      <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="amountfieldanchor">
+                                                          {% else %}
+                                                          <div class="govuk-form-group govuk-currency-input">
+                                                              {% endif %}
+                                                              <label class="govuk-label" for="contact-by-email">
+                                                                  Amount
+                                                              </label>
+                                                              {% if data.validationerros == "true" %}
+                                                    <span id="" class="govuk-error-message">
+                                                        Enter an amount
+                                                    </span>
+                                                              {% endif %}
+                                                              <div class="govuk-currency-input__inner">
+                                                                  <span class="govuk-currency-input__inner__unit govuk-body">£</span>
+                                                                  <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" data-non-numeric type="number"
+                                                                         id="tickets-cost"  style="width:120px;" pattern="[0-9]\d*(\.\d+)?"
+                                                                         {% if  data['rejectionscenario'] == 'true'  %} value="110.00"
+                                                                  {% elif  data['editexisitingfee'] == 'true' %} value="100.00"
+                                                                  {% endif %}>
+                                                              </div>
+                                                          </div>
+
+                                                      </div>
 
 
-                                            <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2"
-                                                       {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %} {% if data.validationerros == "true" %} checked="checked" {% endif %}>
-                                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                                                    Percentage {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
-                                                </label>
-                                            </div>
-                                            <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
+                                                      <div class="govuk-radios__item">
+                                                          <input class="govuk-radios__input" id="how-contacted-conditional-2" name="amount-type" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2"
+                                                                 {% if data.validationerros == "true" %} checked="checked" {% endif %} {% if  data['editexisitingfee'] == 'true' %} checked {% endif %} >
+                                                          <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                                                              Percentage
+                                                          </label>
+                                                      </div>
+                                                      <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-2">
 
-                                                {% if data.validationerros == "true" %}
-                                                    <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="percentageanchor">
-                                                {% else %}
-                                                    <div class="govuk-form-group govuk-currency-input">
-                                                {% endif %}
-                                                    <label class="govuk-label" for="contact-by-email">
+                                                          {% if data.validationerros == "true" %}
+                                                          <div class="govuk-form-group govuk-currency-input govuk-form-group--error"  id="percentageanchor">
+                                                              {% else %}
+                                                              <div class="govuk-form-group govuk-currency-input">
+                                                                  {% endif %}
+                                                                  <label class="govuk-label" for="contact-by-email">
 
-                                                    </label>
-                                                        {% if data.validationerros == "true" %}
-                                                            <span id="" class="govuk-error-message">
-                                                                Enter a percentage
-                                                            </span>
-                                                        {% endif %}
-                                                    <div class="">
-                                                        <input class=" govuk-input"  name="tickets-cost" style="width:50px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
-                                                    </div>
-                                                </div>
+                                                                  </label>
+                                                                  {% if data.validationerros == "true" %}
+                                                        <span id="" class="govuk-error-message">
+                                                            Enter a percentage
+                                                        </span>
+                                                                  {% endif %}
+                                                                  <div class="">
+                                                                      <input class=" govuk-input"  name="tickets-cost" style="width:50px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?">
+                                                                  </div>
+                                                              </div>
 
-                                            </div>
-                                            <div class="govuk-radios__item">
-                                                <input class="govuk-radios__input" id="how-contacted-conditional-3" name="amount-type" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3"
-                                                       {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %}>
-                                                <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-                                                    Volume   {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
-                                                </label>
-                                            </div>
-                                            <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
-                                                <div class="govuk-currency-input">
-                                                    <label class="govuk-label" for="contact-by-email">
-                                                        Amount
-                                                    </label>
-                                                    <div class="govuk-currency-input__inner">
-                                                        <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:120px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
-                                                    </div>
-                                                </div>
+                                                          </div>
+                                                          <div class="govuk-radios__item">
+                                                              <input class="govuk-radios__input" id="how-contacted-conditional-3" name="amount-type" type="radio" value="text" data-aria-controls="conditional-how-contacted-conditional-3"
+                                                                     {% if  data['editexisitingfee'] == 'true' %} disabled {% endif %}>
+                                                              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
+                                                                  Volume   {% if  data['editexisitingfee'] == 'true' %} (Not available for a new version) {% endif %}
+                                                              </label>
+                                                          </div>
+                                                          <div class="govuk-radios__conditional" id="conditional-how-contacted-conditional-3">
+                                                              <div class="govuk-currency-input">
+                                                                  <label class="govuk-label" for="contact-by-email">
+                                                                      Amount
+                                                                  </label>
+                                                                  <div class="govuk-currency-input__inner">
+                                                                      <input class="govuk-currency-input__inner__input govuk-input" aria-label="Enter amount in pounds" name="tickets-cost" style="width:120px;"  data-non-numeric type="number" id="tickets-cost" pattern="[0-9]\d*(\.\d+)?" {{ checked('tickets-cost','yes') }}>
+                                                                  </div>
+                                                              </div>
 
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </div>
+                                                          </div>
+                                                      </div>
+                                          </fieldset>
+                                      </div>
+                              {% endif %}
 
 
 
@@ -1195,6 +1342,8 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
   </div>
 
 
+
+
 <form method="post"  action="#" class="for4" style=" float: left; margin-top: 50px; padding-left: 20px; ">
     <p style="margin-bottom: 5px;">All validation errors</p>
     <select style="height:25px;" onchange="window.location.href='?'+this.value">
@@ -1210,26 +1359,38 @@ conditional-fee-type-conditional-1{% extends "layouts/admin/newlayout.html" %}
 
 
 
+<form method="post"  action="#" class="for4" style=" float: left; margin-top: 50px; padding-left: 20px; ">
+    <p style="margin-bottom: 5px;">Amount type</p>
+    <select style="height:25px;" onchange="window.location.href='?'+this.value">
+
+        <option value="amounttypesetting=flat&" {% if data.amounttypesetting != "percentage" %} selected {% endif %}
+        >Flat</option>
+
+        <option value="amounttypesetting=percentage&" {% if data.amounttypesetting == "percentage" %} selected {% endif %}
+        >Percentage</option>
+
+    </select>
+</form>
+
+
 
 
   {% endblock %}
   {% block page_scripts %}
   <script>
 
-  $(function() {
-    $('input[name="birthday"]').daterangepicker({
-      singleDatePicker: true,
-      showDropdowns: true,
-      minYear: 1901,
-      maxYear: parseInt(moment().format('YYYY'),10)
-    }, function(start, end, label) {
-      var years = moment().diff(start, 'years');
-      // alert("You are " + years + " years old!");
-    });
+          $(function() {
+            $('input[name="birthday"]').daterangepicker({
+              singleDatePicker: true,
+              showDropdowns: true,
+              minYear: 1901,
+              maxYear: parseInt(moment().format('YYYY'),10)
+            }, function(start, end, label) {
+              var years = moment().diff(start, 'years');
+              // alert("You are " + years + " years old!");
+            });
 
-  });
-
-
+          });
 
   </script>
   {% endblock %}
